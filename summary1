@@ -1,0 +1,92 @@
+due date: Jan.18th before class
+
+# Linux and C Programming Language features/commands you will need to used in most programs
+
+# how to use ssh
+
+Use Secure Shell (ssh) to connect to a remote machine and access the files. The syntax is "ssh <username>@<hostname> -p <portname>". A password might be needed.
+
+In this case, open the terminal and enter command "ssh <account>@mastiff.cs.rpi.edu -p 22". A password need to be provided.
+
+
+# Secure Copy (scp) to log into and transfer files from your Window's, Mac or Linux laptop to "mastiff.cs.rpi.edu" (the class development server);
+
+Use "scp" for login and transfer files between machines(not necessarily between remote and local ones). The syntax is "scp [-r] <username>@<source_host>:<path to file/folder> <username>@<target_host>:<path to file/folder>", where "-r" is for recursively when copying files from a folder. 
+
+A special occasion is when copying to the current working directory, simply use "." for the last argument.
+
+In this case, suppose I want to copy "test.txt" under the folder "~/Document/" to the same path on host "mastiff.cs.rpi.edu". 
+Open a terminal and enter "scp ./Document/test.txt <account>@mastiff.cs.rpi.edu:~/Document ".
+
+
+# GCC compiler and Unix editors tools like Emacs and/or Vi
+
+gcc [-Wall; -Werror; -g; -D <DEBUG FLAG>, ...]  -o <executable output> <source code file>
+
+-Wall, treat all warnings as errors;
+-Werror, with all errors;
+-g, use gdb; 
+-D <DEBUG FLAG>, debug mode; 
+...
+
+unix editor tools:
+
+Emacs:
+
+>> emacs <filename>
+For useful commands, type "ESC help-with-tutorial" immediately after startup.
+
+Vi's useful commands -- 
+>> vi <filename>
+i insert
+:q quit
+:q! quit no save
+:w write
+/str find str
+...
+
+
+# any C system calls/C library functions (like "printf") you might need to use.
+
+Refer to the man pages for detailed usage of these functions:
+C library functions -- 
+Standard I/O, scan and print 
+printf(), of the syntax "printf("<format>", <content>)"
+fopen(),  open a file and associate a stream with it
+fread(loc, size, n, stream), read n items of data, each size bytes long, from stream and store them at loc. 
+scanf(), reads input from stdin 
+fscanf), reads from a file stream
+fgetc(), get one char at a time from a file stream
+...
+
+
+dynamic memory allocation
+malloc(), calloc(), realloc(), free(), ...
+
+string 
+strlen(), get the length of the string
+strcpy(), copy one string to another
+strspn(), get length of a substring
+strtok(), break a string into tokens
+
+
+maths operation 
+sin(), cos(), sqrt(), exp(), abs(), pow(), log(), ...
+
+and many others; 
+
+C system calls --
+
+fork()，creates a child process of the calling process (i.e. the calling process as the parent process) as a exact duplicate of the latter. They run in separate memory spaces. When a abort signal is sent to the parent process its n-child processes die, release the IDs and the resources.
+
+exec(), the family of exec() performs an overlay of the current process, let the new program take its PID and run under the same context.
+
+signal(), attach the signal type to the signal handler (system built-in or user defined). During the process, when a signal is delivered, then the handler is called with the signal argument thus the process interrupted and give various responses as desired.
+
+kill(pid_t pid, int signal), send a signal to the process with pid, return 0 if sent successfully and process terminated.
+
+
+
+
+
+

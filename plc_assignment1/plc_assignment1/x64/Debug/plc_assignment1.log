@@ -1,0 +1,11 @@
+﻿  source.c
+c:\users\mark\documents\courses\parallel_computing\assignment_projects\plc_assignment1\plc_assignment1\source.c(315): warning C4047: 'function': 'const char *' differs in levels of indirection from 'char'
+c:\users\mark\documents\courses\parallel_computing\assignment_projects\plc_assignment1\plc_assignment1\source.c(315): warning C4024: 'strtol': different types for formal and actual parameter 1
+c:\users\mark\documents\courses\parallel_computing\assignment_projects\plc_assignment1\plc_assignment1\source.c(316): warning C4047: 'function': 'const char *' differs in levels of indirection from 'char'
+c:\users\mark\documents\courses\parallel_computing\assignment_projects\plc_assignment1\plc_assignment1\source.c(316): warning C4024: 'strtol': different types for formal and actual parameter 1
+c:\users\mark\documents\courses\parallel_computing\assignment_projects\plc_assignment1\plc_assignment1\source.c(318): warning C4047: 'function': 'const char *' differs in levels of indirection from 'char'
+c:\users\mark\documents\courses\parallel_computing\assignment_projects\plc_assignment1\plc_assignment1\source.c(318): warning C4024: 'atoi': different types for formal and actual parameter 1
+c:\users\mark\documents\courses\parallel_computing\assignment_projects\plc_assignment1\plc_assignment1\source.c(319): warning C4047: 'function': 'const char *' differs in levels of indirection from 'char'
+c:\users\mark\documents\courses\parallel_computing\assignment_projects\plc_assignment1\plc_assignment1\source.c(319): warning C4024: 'atoi': different types for formal and actual parameter 1
+c:\users\mark\documents\courses\parallel_computing\assignment_projects\plc_assignment1\plc_assignment1\source.c(291): error C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\stdio.h(1274): note: see declaration of 'scanf'
