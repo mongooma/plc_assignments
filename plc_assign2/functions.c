@@ -137,9 +137,7 @@ int convert_bit_2_hex(int * sumi, int bits){
 int cla(int use_barrier, int my_mpi_rank, int my_mpi_size, int alloc, int * bin1, int *bin2, int *sumi){
 	/* bin1 and bin2 are local bin arrays for each rank, i.e. bin_rank_1, bin_rank_2*/	
 	
-	const int input_size = alloc; 
-	const int digits = (input_size+1);
-	const int bits = digits*4; /* every hex character is 4 digit binary */
+	const int bits = alloc; /* every hex character is 4 digit binary */
 	const int ngroups = bits/block_size; 
 	const int nsections = ngroups/block_size; 
 	const int nsupersections = nsections/block_size;
@@ -161,6 +159,10 @@ int cla(int use_barrier, int my_mpi_rank, int my_mpi_size, int alloc, int * bin1
 	int * ssgl = calloc(nsupersections, sizeof(int));
 	int * sspl = calloc(nsupersections, sizeof(int));
 	int * sscl = calloc(nsupersections, sizeof(int));
+
+	#ifdef DEBUG
+		printf("cla: here0! \n"); /* three reached here */
+	#endif 
 
 
 	/* all ranks except Rank 0, should post an MPI Irecv message before the cla 
@@ -254,6 +256,7 @@ int g(int bits, int *gi, int *bin1, int * bin2){  /*generates; 1 1*/
 
 		gi[i] = bin1[i] & bin2[i];
 	}
+
 	return 0;
 }
 
@@ -373,7 +376,7 @@ int ssc(int * sscl, int * ssgl, int * sspl, int my_mpi_size, int my_mpi_rank, in
 
 	for(int i = 0; i < my_mpi_size; i++){
 
-		if (my_mpi_rank == 0){
+		if ((my_mpi_rank == 0) || (my_mpi_size == 1)){
 
 			buf = c_minus_1;
 			for (int l = 0; l < nsupersections; l++) {
@@ -381,7 +384,10 @@ int ssc(int * sscl, int * ssgl, int * sspl, int my_mpi_size, int my_mpi_rank, in
 					if (l == 0) { sscl[l] = ssgl[l] | (sspl[l] & buf );}
 							else{ sscl[l] = ssgl[l] | (sspl[l] & sscl[l-1]);}
 			}
-			MPI_Isend(&(sscl[nsupersections-1]), 1, MPI_INT, 1, 0, MPI_COMM_WORLD, &request); 
+
+			if(my_mpi_size != 1){
+				MPI_Isend(&(sscl[nsupersections-1]), 1, MPI_INT, 1, 0, MPI_COMM_WORLD, &request); 
+			}
 
 		} else if( my_mpi_rank == i){
 			/* int MPI_Irecv(void *buf, int count, MPI_Datatype datatype,

@@ -14,7 +14,7 @@
 */
 
 // Compile Code: mpicc -g -Wall main.c 
-// Example Run Code: mpirun -np 4 ./a.out input.txt output.txt
+// Example Run Code: mpirun -np 4 ./a.out input.txt
 
 
 // Both input and output files will 524490 bytes in size. The two additional
@@ -32,7 +32,14 @@
 /* 0. represent the 1,048,576 bit input numbers as 262,144 hex digits. and 
 	and write to some file */
 
-int main(int argc, char** argv){
+int main(int argc, char ** argv){
+	/*
+	if( argc != 2 ){
+		printf("Not sufficient arguments, only %d found. \n", argc);
+		exit(-1);
+	}
+	*/
+
 
 	// Add 1 to array size because strings must be null terminated
 	char * hex_input_a = calloc(HEX_INPUT_SIZE+1, sizeof(char));
@@ -42,19 +49,11 @@ int main(int argc, char** argv){
 	int * bin1 = calloc((HEX_INPUT_SIZE+1) * 4, sizeof(int)); /* keep the fashion of assign 1, 0000 for the */
 	int * bin2 = calloc((HEX_INPUT_SIZE+1) * 4, sizeof(int));
 
-
-
-	if( argc != 3 ){
-		printf("Not sufficient arguments, only %d found. \n", argc);
-		exit(-1);
-	}
-
 	int my_mpi_size = -1; // total no. of ranks
 	int my_mpi_rank = -1; // the current rank of the process
 
-	double start_time = MPI_Wtime(); /* a time tick fashion*/
-
 	MPI_Init( &argc, &argv);
+
 	MPI_Comm_size(MPI_COMM_WORLD, &my_mpi_size);
 	MPI_Comm_rank(MPI_COMM_WORLD, &my_mpi_rank);
 
@@ -88,9 +87,19 @@ int main(int argc, char** argv){
 
 	}
 
+	#ifdef DEBUG
+		printf("main: here1! \n"); /* three reached here */
+	#endif 
 
 	/*execute algorithm -> see cla() */
+	double start_time = MPI_Wtime(); /* a time tick fashion*/
 	cla(use_barrier, my_mpi_rank, my_mpi_size, allocation, bin_rank_1, bin_rank_2, sumi); 
+	double end_time = MPI_Wtime();
+
+	#ifdef DEBUG
+		printf("main: here2! \n"); /* three reached here */
+	#endif 
+
 
 	/* for synchronization */
 	if(use_barrier){MPI_Barrier(MPI_COMM_WORLD); /* make it optional for performance study*/}
@@ -110,14 +119,11 @@ int main(int argc, char** argv){
 
 	}
 
-	double end_time = MPI_Wtime();
-
 	MPI_Finalize();
 
 
 	printf("time in seconds: %f, (use_barrier: %d, ranks: %s)", 
 								(end_time - start_time), use_barrier, argv[0] );
-
 
 	free(hex_input_a);
 	free(hex_input_b);

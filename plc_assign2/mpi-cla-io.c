@@ -57,8 +57,8 @@ int main(int argc, char** argv)
     }
   
   MPI_Barrier(MPI_COMM_WORLD);
-
-  printf("Rank %d: Hello World \n", my_mpi_rank);
-
+  
   MPI_Finalize();
+
+  return 0;
 }
