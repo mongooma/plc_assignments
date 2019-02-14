@@ -10,7 +10,8 @@
 
 #define block_size 32 /* not a variable in this assignment */
 #define c_minus_1 0 /*primary value to set off the calculation chain*/
-const char lookup[16][5] = { "0000",
+
+char lookup[16][5] = { "0000",
 						"0001",
 						"0010",
 						"0011",
@@ -27,7 +28,10 @@ const char lookup[16][5] = { "0000",
 						"1110",
 						"1111" };
 
+
 /*notation: significance order: b<--|<--a*/
+
+
 
 
 void readInData(const char * filename,  
@@ -40,7 +44,7 @@ void readInData(const char * filename,
 	#endif
 
 	if( (my_input_file = fopen( filename, "r")) == NULL ){
-		perror("Failed to open input data file: %s \n", argv[1]);
+		printf("Failed to open input data file: %s \n", filename);
 		exit(-1);
 	}
 
@@ -53,7 +57,7 @@ void readInData(const char * filename,
 
 }
 
-int convert_hex_2_bit(char * hex_input_a, char * hex_input_b, int * bin1, int bin2, int input_size){
+int convert_hex_2_bit(char * hex_input_a, char * hex_input_b, int * bin1, int * bin2, int input_size){
 	/* convert a whole hex array and store into two bins with whole length*/
 	/* implement a look-up table instead */
 	
@@ -61,12 +65,12 @@ int convert_hex_2_bit(char * hex_input_a, char * hex_input_b, int * bin1, int bi
 	tmp_[1] = '\0';
 
 	/* hex1 and hex2 of length input_size + 1*/
-	for (i = 0; i < input_size + 1; i++) {
+	for (int i = 0; i < input_size + 1; i++) {
 		tmp_[0] = hex_input_a[i];
 		tmp1 = lookup[strtol(tmp_, 0, 16)];
 		tmp_[0] = hex_input_b[i];
 		tmp2 = lookup[strtol(tmp_, 0, 16)];
-		for (j = 0; j < 4; j++) {
+		for (int j = 0; j < 4; j++) {
 			tmp_[0] = tmp1[j];
 			bin1[i * 4 + j] = atoi(tmp_); /* atoi will return exact as it looks*/
 			tmp_[0] = tmp2[j];
@@ -74,11 +78,13 @@ int convert_hex_2_bit(char * hex_input_a, char * hex_input_b, int * bin1, int bi
 		}
 	}
 
+	return 0;
+
 }
 
 int revert_binary(int * bin1, int * bin2, int bits){
 	/* revert the binary string to set the last digit as the MSB*/
-	for (i = 0; i < (bits / 2); i++) {
+	for (int i = 0; i < (bits / 2); i++) {
 
 		int tmp = bin1[i];
 		bin1[i] = bin1[(bits - 1) - i];
@@ -88,25 +94,29 @@ int revert_binary(int * bin1, int * bin2, int bits){
 		bin2[(bits - 1) - i] = tmp;
 	}
 
+	return 0; 
+
 }
 
 
 int revert_hex_sum(int * sumi, int bits){
 
-	for (i = 0; i < bits / 2; i++) {
+	for (int i = 0; i < bits / 2; i++) {
 		int tmp = sumi[i];
 		sumi[i] = sumi[(bits - 1) - i];
 		sumi[(bits - 1) - i] = tmp;
 	}
 
+	return 0; 
+
 }
 
-int convert_bit_2_hex(int bits, int * sumi){
+int convert_bit_2_hex(int * sumi, int bits){
 
-	FILE f = fopen("output.txt", 'w'); /* use fprintf for debugging output*/
-	for (i = 0; i < bits; i += 4) {
+	FILE *f = fopen("output.txt", "w"); /* use fprintf for debugging output*/
+	for (int i = 0; i < bits; i += 4) {
 		int tmp = 0; 
-		for (j = 0; j < 4; j++) {
+		for (int j = 0; j < 4; j++) {
 			tmp += (sumi[i + j] % 2);
 			if (j == 3) break;
 			tmp = tmp * 2;
@@ -115,14 +125,16 @@ int convert_bit_2_hex(int bits, int * sumi){
 	}
 	fprintf(f, "\n");
 
-	fclose();
+	fclose(f);
+
+	return 0; 
 }
 
 
 /* Carry-Lookahead Adder */
 /* master */
 /* cla executed within one rank */
-int cla(bool use_barrier, int my_mpi_rank, int my_mpi_size, int alloc, int * bin1, int *bin2, int *sumi){
+int cla(int use_barrier, int my_mpi_rank, int my_mpi_size, int alloc, int * bin1, int *bin2, int *sumi){
 	/* bin1 and bin2 are local bin arrays for each rank, i.e. bin_rank_1, bin_rank_2*/	
 	
 	const int input_size = alloc; 
@@ -132,111 +144,100 @@ int cla(bool use_barrier, int my_mpi_rank, int my_mpi_size, int alloc, int * bin
 	const int nsections = ngroups/block_size; 
 	const int nsupersections = nsections/block_size;
 
+
 	/* local definitions of the various arrays used */
-	int gi[bits] = {0}; 
-	int pi[bits] = {0}; 
-	int ci[bits] = {0}; /* what's this kind of initialization? */
+	int * gi = calloc(bits, sizeof(int)); 
+	int * pi = calloc(bits, sizeof(int));  
+	int * ci = calloc(bits, sizeof(int)); 
 
-	int ggj[ngroups] = { 0 };
-	int gpj[ngroups] = { 0 }; 
-	int gcj[ngroups] = { 0 };
+	int * ggj = calloc(ngroups, sizeof(int));
+	int * gpj = calloc(ngroups, sizeof(int));
+	int * gcj = calloc(ngroups, sizeof(int));
 
-	int sgk[nsections] = { 0 }; 
-	int spk[nsections] = { 0 }; 
-	int sck[nsections] = { 0 };
-
-	int ssgl[nsupersections] = { 0 }; 
-	int sspl[nsupersections] = { 0 }; 
-	int sscl[nsupersections] = { 0 };
+	int * sgk = calloc(nsections, sizeof(int));
+	int * spk = calloc(nsections, sizeof(int));
+	int * sck = calloc(nsections, sizeof(int));
+	
+	int * ssgl = calloc(nsupersections, sizeof(int));
+	int * sspl = calloc(nsupersections, sizeof(int));
+	int * sscl = calloc(nsupersections, sizeof(int));
 
 
 	/* all ranks except Rank 0, should post an MPI Irecv message before the cla 
 	calculations start */ 
 	/* what inputs are they waiting for ?*/
 	/* is this the c-minus for the left most group/section/nsection ?*/
-
-	MPI_Request status;
-	int c_minus_1 = 0;
-
-	if(my_mpi_rank != 0){
-
-		/*  int MPI_Irecv(void *buf, int count, MPI_Datatype datatype,
-               int source, int tag, MPI_Comm comm, MPI_Request *request)*/
-		MPI_Irecv(/*buf ?*/, 1, /*dtype*/, /*source*/, /*tag*/, MPI_COMM_WORLD, &status);
-		/* call MPI_Wait, etc to check the status */
-	}	
 	
-
 	/* perform cla for each rank*/
 
 	/* g */
 	/* p */
-	g(bits);
+	g(bits, gi, bin1, bin2);
 
-	if(use_barrier){MPI_Barrier(); /* make it optional for performance study*/}
+	if(use_barrier){MPI_Barrier(MPI_COMM_WORLD); /* make it optional for performance study*/}
 
-	p(bits);
+	p(bits, pi, bin1, bin2);
 
-	if(use_barrier){MPI_Barrier(); /* make it optional for performance study*/}	
+	if(use_barrier){MPI_Barrier(MPI_COMM_WORLD); /* make it optional for performance study*/}	
 
 	/* between each algorithm step (level) perform an MPI Barrier collective operation to 
 	keep all ranks in step with each other. */
 
 	/* gg */
 	/* gp */
-	gg(ngroups);
+	gg(ngroups, ggj, gi, pi);
 	
-	if(use_barrier){MPI_Barrier(); /* make it optional for performance study*/}
+	if(use_barrier){MPI_Barrier(MPI_COMM_WORLD); /* make it optional for performance study*/}
 	
-	gp(ngroups);
+	gp(ngroups, gpj, pi);
 
-	if(use_barrier){MPI_Barrier(); /* make it optional for performance study*/}
+	if(use_barrier){MPI_Barrier(MPI_COMM_WORLD); /* make it optional for performance study*/}
 
 	/* sg */
 	/* sp */
-	sg(nsections);
+	sg(nsections, sgk, ggj, gpj);
 
-	if(use_barrier){MPI_Barrier(); /* make it optional for performance study*/}
+	if(use_barrier){MPI_Barrier(MPI_COMM_WORLD); /* make it optional for performance study*/}
 
-	sp(nsections);
+	sp(nsections, spk, gpj);
 
-	if(use_barrier){MPI_Barrier(); /* make it optional for performance study*/}
+	if(use_barrier){MPI_Barrier(MPI_COMM_WORLD); /* make it optional for performance study*/}
 
 	/* ssg */
 	/* ssp */
-	ssg(nsupersections);
+	ssg(nsupersections, ssgl, sgk, spk);
 
-	if(use_barrier){MPI_Barrier(); /* make it optional for performance study*/}
+	if(use_barrier){MPI_Barrier(MPI_COMM_WORLD); /* make it optional for performance study*/}
 
-	ssp(supersection);
+	ssp(nsupersections, sspl, spk);
 
-	if(use_barrier){MPI_Barrier(); /* make it optional for performance study*/}
+	if(use_barrier){MPI_Barrier(MPI_COMM_WORLD); /* make it optional for performance study*/}
 
 	/* ssc */
-	ssc(my_mpi_size, my_mpi_rank, nsupersections);
+	ssc(sscl, ssgl, sspl, my_mpi_size, my_mpi_rank, nsupersections);
 
-	if(use_barrier){MPI_Barrier(); /* make it optional for performance study*/}
+	if(use_barrier){MPI_Barrier(MPI_COMM_WORLD); /* make it optional for performance study*/}
 
 	/* sc */
-	sc(nsections, my_mpi_rank);
+	sc(sscl, sck, sgk, spk, nsections, my_mpi_rank);
 
-	if(use_barrier){MPI_Barrier(); /* make it optional for performance study*/}
+	if(use_barrier){MPI_Barrier(MPI_COMM_WORLD); /* make it optional for performance study*/}
 
 	/* gc */
 
-	gc(ngroups, my_mpi_rank);
+	gc(sck, gcj, ggj, gpj, ngroups, my_mpi_rank);
 
-	if(use_barrier){MPI_Barrier(); /* make it optional for performance study*/}
+	if(use_barrier){MPI_Barrier(MPI_COMM_WORLD); /* make it optional for performance study*/}
 
 	/* c */
 
-	c(bits, my_mpi_rank);
+	c(gcj, ci, gi, pi, bits, my_mpi_rank);
 
-	if(use_barrier){MPI_Barrier(); /* make it optional for performance study*/}
+	if(use_barrier){MPI_Barrier(MPI_COMM_WORLD); /* make it optional for performance study*/}
 
-	sum_cla(bits);
+	sum_cla(sumi, bin1, bin2, ci, bits);
 
-	if(use_barrier){MPI_Barrier(); /* make it optional for performance study*/}
+	if(use_barrier){MPI_Barrier(MPI_COMM_WORLD); /* make it optional for performance study*/}
 
 	return 0;
 
@@ -247,9 +248,9 @@ int cla(bool use_barrier, int my_mpi_rank, int my_mpi_size, int alloc, int * bin
 
 
 /*1st level - bits 4096 */
-int g(int bits){  /*generates; 1 1*/
+int g(int bits, int *gi, int *bin1, int * bin2){  /*generates; 1 1*/
 	
-	for (i = 0; i < bits; i++) { 
+	for (int i = 0; i < bits; i++) { 
 
 		gi[i] = bin1[i] & bin2[i];
 	}
@@ -257,8 +258,8 @@ int g(int bits){  /*generates; 1 1*/
 }
 
 
-int p(int bits) { /*propagates: 1 0, 0 1, 1 1*/
-	for (i = 0; i < bits; i++) {
+int p(int bits, int *pi, int *bin1, int * bin2) { /*propagates: 1 0, 0 1, 1 1*/
+	for (int i = 0; i < bits; i++) {
 
 		pi[i] = bin1[i] | bin2[i];
 	}
@@ -266,9 +267,9 @@ int p(int bits) { /*propagates: 1 0, 0 1, 1 1*/
 }
 
 /*2nd level - group 512*/
-int gg(int ngroups) {
+int gg(int ngroups, int *ggj, int *gi, int * pi) {
 
-	for (j = 0; j < ngroups; j++) {
+	for (int j = 0; j < ngroups; j++) {
 		for(int b = 0+1; b < block_size; b++){
 			int tmp = 1;
 			for(int b_minus = 0; b_minus < b; b_minus++){ 
@@ -282,10 +283,10 @@ int gg(int ngroups) {
 
 }
 
-int gp(int ngroups) { /*the logic will be the same for other propagate functions at higher levels:
+int gp(int ngroups, int *gpj, int * pi) { /*the logic will be the same for other propagate functions at higher levels:
 			in order to propagate from previous group, the chain: 1-->2-->3-->4--> must be valid at every point
 		   */
-	for (j = 0; j < ngroups; j++) {
+	for (int j = 0; j < ngroups; j++) {
 		gpj[j] = 1;
 		for (int b = block_size-1; b > -1; b--){
 			gpj[j] &= pi[j * block_size + b];
@@ -297,9 +298,9 @@ int gp(int ngroups) { /*the logic will be the same for other propagate functions
 
 /* 3rd level - sections 64*/
 
-int sg(int nsections) { /*check gg()*/
+int sg(int nsections, int *sgk, int *ggj, int * gpj) { /*check gg()*/
 
-	for (k = 0; k < nsections; k++) {
+	for (int k = 0; k < nsections; k++) {
 		for(int b = 0+1; b < block_size; b++){
 			int tmp = 1;
 			for(int b_minus = 0; b_minus < b; b_minus++){ 
@@ -312,9 +313,9 @@ int sg(int nsections) { /*check gg()*/
 	return 0;
 }
 
-int sp(int nsections) {
+int sp(int nsections, int *spk, int *gpj) {
 
-	for (k = 0; k < nsections; k++) {
+	for (int k = 0; k < nsections; k++) {
 		spk[k] = 1;
 		for (int b = block_size-1; b > -1; b--){
 			spk[k] &= gpj[k * block_size + b];
@@ -326,8 +327,8 @@ int sp(int nsections) {
 
 /* 4th level - supersection 8*/
 
-int ssg(int nsupersections) { /*check gg()*/
-	for (l = 0; l < nsupersections; l++) {
+int ssg(int nsupersections, int *ssgl, int *sgk, int * spk) { /*check gg()*/
+	for (int l = 0; l < nsupersections; l++) {
 		for(int b = 0+1; b < block_size; b++){
 			int tmp = 1;
 			for(int b_minus = 0; b_minus < b; b_minus++){ 
@@ -340,9 +341,9 @@ int ssg(int nsupersections) { /*check gg()*/
 	return 0;
 }
 
-int ssp(int supersection) { 
+int ssp(int nsupersections, int *sspl, int * spk) { 
 
-	for (l = 0; l < supersection; l++) {
+	for (int l = 0; l < nsupersections; l++) {
 		sspl[l] = 1;
 		for (int b = block_size-1; b > -1; b--){
 			sspl[l] &= spk[l * block_size + b];
@@ -355,7 +356,7 @@ int ssp(int supersection) {
 /* reduce: carries computation
 */
 
-int ssc(int my_mpi_size, int my_mpi_rank, int nsupersections) { /*at supersection level*/
+int ssc(int * sscl, int * ssgl, int * sspl, int my_mpi_size, int my_mpi_rank, int nsupersections) { /*at supersection level*/
 	/* use blocking msg passing for now*/
 
 	/* here we communicate between ranks since we need sscl[l-1] from neighbor node*/
@@ -365,6 +366,7 @@ int ssc(int my_mpi_size, int my_mpi_rank, int nsupersections) { /*at supersectio
 		for next step sc_{k-1} correction, k mod block_size = 0*/
 	/* send and recv could be called globally since source is stated*/
 	MPI_Request request;
+
 	int buf;
 
 	MPI_Barrier(MPI_COMM_WORLD); /*To have every process synchronized*/ 
@@ -374,27 +376,27 @@ int ssc(int my_mpi_size, int my_mpi_rank, int nsupersections) { /*at supersectio
 		if (my_mpi_rank == 0){
 
 			buf = c_minus_1;
-			for (l = 0; l < nsupersections; l++) {
+			for (int l = 0; l < nsupersections; l++) {
 
 					if (l == 0) { sscl[l] = ssgl[l] | (sspl[l] & buf );}
-							else{ sscl[l] = ssgl[l] | (sspl[l] & ssc_l[l-1]);}
+							else{ sscl[l] = ssgl[l] | (sspl[l] & sscl[l-1]);}
 			}
-			MPI_Send(&(sscl[nsupersections-1]), 1, MPI_INT, l+1, 0, &request); 
+			MPI_Isend(&(sscl[nsupersections-1]), 1, MPI_INT, 1, 0, MPI_COMM_WORLD, &request); 
 
 		} else if( my_mpi_rank == i){
 			/* int MPI_Irecv(void *buf, int count, MPI_Datatype datatype,
 	           int source, int tag, MPI_Comm comm, MPI_Request *request)*/
-				MPI_Irecv(&buf, 1，MPI_INT, my_mpi_rank-1, 0, MPI_COMM_WORLD, &request);
-				for (l = 0; l < nsupersections; l++) {
+				MPI_Irecv(&buf, 1, MPI_INT, my_mpi_rank-1, 0, MPI_COMM_WORLD, &request);
+				for (int l = 0; l < nsupersections; l++) {
 
 					if (l == 0) { sscl[l] = ssgl[l] | (sspl[l] & buf );}
-							else{ sscl[l] = ssgl[l] | (sspl[l] & ssc_l[l-1]);}
+							else{ sscl[l] = ssgl[l] | (sspl[l] & sscl[l-1]);}
 
 				}
 				if(my_mpi_rank < my_mpi_size){
 				/* int MPI_Isend(const void *buf, int count, MPI_Datatype datatype, int dest,
 	    			int tag, MPI_Comm comm, MPI_Request *request)*/
-					MPI_Isend(&(sscl[nsupersections-1]), 1, MPI_INT, l+1, 0, MPI_COMM_WORLD, &request); 
+					MPI_Isend(&(sscl[nsupersections-1]), 1, MPI_INT, my_mpi_rank+1, 0, MPI_COMM_WORLD, &request); 
 				}
 
 		} else {continue; }
@@ -405,14 +407,15 @@ int ssc(int my_mpi_size, int my_mpi_rank, int nsupersections) { /*at supersectio
 
 }
 
-int sc(int nsections, int my_mpi_rank) { /*section level; for now independently computed at current level*/
+int sc(int *sscl, int * sck, int * sgk, int * spk, int nsections, int my_mpi_rank) { /*section level; for now independently computed at current level*/
 
-	/* replacing each sck−1 when k mod 32 = 0 using correct s2cl−1,l = k div 32 */
-	if ((k % block_size == 0) && (k != 0)){ /*the last one in the section*/
-		sck[k-1] = sscl[k / block_size - 1]; /* integer division, i.e. 10/3 = 3*/
-	}
+	for (int k = 0; k < nsections; k++) {
 
-	for (k = 0; k < nsections; k++) {
+		/* replacing each sck−1 when k mod 32 = 0 using correct s2cl−1,l = k div 32 */
+		if ((k % block_size == 0) && (k != 0)){ /*the last one in the section*/
+			sck[k-1] = sscl[k / block_size - 1]; /* integer division, i.e. 10/3 = 3*/
+		}
+
 		if ((my_mpi_rank == 0) && (k == 0)) {
 			sck[k] = sgk[k] | (spk[k] & c_minus_1);
 		}
@@ -425,12 +428,13 @@ int sc(int nsections, int my_mpi_rank) { /*section level; for now independently 
 	return 0;
 }
 
-int gc(int ngroups, int my_mpi_rank) {  /*group level; for now independently computed at current level*/
-	/* replacing each gcj−1 when j mod 32 = 0 using correct sck−1,k = j/32 */
-	if ((j % block_size == 0) && (j != 0)) { /*the last one in the section*/
-		gcj[j - 1] = sck[j / block_size - 1]; /* integer division, i.e. 10/3 = 3*/
-	}
-	for (j = 0; j < ngroups; j++) {
+int gc(int * sck, int * gcj, int * ggj, int * gpj, int ngroups, int my_mpi_rank) {  /*group level; for now independently computed at current level*/
+	for (int j = 0; j < ngroups; j++) {
+		/* replacing each gcj−1 when j mod 32 = 0 using correct sck−1,k = j/32 */
+		if ((j % block_size == 0) && (j != 0)) { /*the last one in the section*/
+			gcj[j - 1] = sck[j / block_size - 1]; /* integer division, i.e. 10/3 = 3*/
+		}
+
 		if ((my_mpi_rank == 0) && (j == 0)) {
 			gcj[j] = ggj[j] | (gpj[j] & c_minus_1);
 		}
@@ -443,13 +447,14 @@ int gc(int ngroups, int my_mpi_rank) {  /*group level; for now independently com
 	return 0;
 }
 
-int c(int bits, int my_mpi_rank){ /*lowest level; for now independently computed at current level*/
-	/* ci−1 = gcj−1 when i mod 32 = 0 and j = i/32 */
-	if ((i % block_size == 0) && (i != 0)) { /*the last one in the section*/
-		ci[i - 1] = gcj[i / block_size - 1]; /* integer division, i.e. 10/3 = 3*/
-	}
+int c(int * gcj, int * ci, int * gi, int * pi, int bits, int my_mpi_rank){ /*lowest level; for now independently computed at current level*/
 
-	for (i = 0; i < bits; i++) {
+	for (int i = 0; i < bits; i++) {
+		/* ci−1 = gcj−1 when i mod 32 = 0 and j = i/32 */
+		if ((i % block_size == 0) && (i != 0)) { /*the last one in the section*/
+			ci[i - 1] = gcj[i / block_size - 1]; /* integer division, i.e. 10/3 = 3*/
+		}
+
 		if ((my_mpi_rank == 0) && (i == 0)) {
 			ci[i] = gi[i] | (pi[i] & c_minus_1);
 		}
@@ -466,8 +471,8 @@ int c(int bits, int my_mpi_rank){ /*lowest level; for now independently computed
  sum calculation
 */
 
-int sum_cla(int bits) { /*getting all the carries; do sum - (a XOR b) XOR c */
-	for (i = 0; i < bits; i++) {
+int sum_cla(int * sumi, int * bin1, int * bin2, int * ci, int bits) { /*getting all the carries; do sum - (a XOR b) XOR c */
+	for (int i = 0; i < bits; i++) {
 		if (i == 0) {
 			sumi[i] = (bin1[i] ^ bin2[i]) ^ c_minus_1;
 		}

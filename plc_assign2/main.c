@@ -13,8 +13,8 @@
 
 */
 
-// Compile Code: mpicc -g -Wall mpi-cla-io.c -o mpi-cla-io
-// Example Run Code: mpirun -np 4 ./mpi-cla-io test_input_1.txt test_output_1.txt
+// Compile Code: mpicc -g -Wall main.c 
+// Example Run Code: mpirun -np 4 ./a.out input.txt output.txt
 
 
 // Both input and output files will 524490 bytes in size. The two additional
@@ -29,24 +29,23 @@
  mastiff.cs.rpi.edu. 
 */
 
-FILE *my_input_file=NULL;
-
-// Add 1 to array size because strings must be null terminated
-char hex_input_a[HEX_INPUT_SIZE+1]={0};
-char hex_input_b[HEX_INPUT_SIZE+1]={0};
-
-//Integer array of inputs in binary form 
-bin1 = calloc((HEX_INPUT_SIZE+1) * 4, sizeof(int)); /* keep the fashion of assign 1, 0000 for the */
-bin2 = calloc((HEX_INPUT_SIZE+1) * 4, sizeof(int));
-
-
 /* 0. represent the 1,048,576 bit input numbers as 262,144 hex digits. and 
 	and write to some file */
 
 int main(int argc, char** argv){
 
+	// Add 1 to array size because strings must be null terminated
+	char * hex_input_a = calloc(HEX_INPUT_SIZE+1, sizeof(char));
+	char * hex_input_b = calloc(HEX_INPUT_SIZE+1, sizeof(char));
+
+	//Integer array of inputs in binary form 4;
+	int * bin1 = calloc((HEX_INPUT_SIZE+1) * 4, sizeof(int)); /* keep the fashion of assign 1, 0000 for the */
+	int * bin2 = calloc((HEX_INPUT_SIZE+1) * 4, sizeof(int));
+
+
+
 	if( argc != 3 ){
-		perror("Not sufficient arguments, only %d found \n", argc);
+		printf("Not sufficient arguments, only %d found. \n", argc);
 		exit(-1);
 	}
 
@@ -91,10 +90,10 @@ int main(int argc, char** argv){
 
 
 	/*execute algorithm -> see cla() */
-	cla(use_barrier, my_mpi_rank, my_mpi_size, allocation, bin_rank_1, bin_rank_2); 
+	cla(use_barrier, my_mpi_rank, my_mpi_size, allocation, bin_rank_1, bin_rank_2, sumi); 
 
 	/* for synchronization */
-	if(use_barrier){MPI_Barrier(); /* make it optional for performance study*/}
+	if(use_barrier){MPI_Barrier(MPI_COMM_WORLD); /* make it optional for performance study*/}
 
 
 	/* Have each rank send their part of the ﬁnal sumi solution to Rank 0. */
@@ -116,8 +115,8 @@ int main(int argc, char** argv){
 	MPI_Finalize();
 
 
-	printf("time in seconds: %d, (use_barrier: %d, ranks: %d)", 
-								end_time, use_barrier, argv[0]);
+	printf("time in seconds: %f, (use_barrier: %d, ranks: %s)", 
+								(end_time - start_time), use_barrier, argv[0] );
 
 
 	free(hex_input_a);
