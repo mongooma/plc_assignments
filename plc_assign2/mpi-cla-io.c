@@ -43,7 +43,7 @@ int main(int argc, char** argv)
 	   }
       if( (my_output_file = fopen( argv[2], "w")) == NULL )
 	   {
-	       printf("Failed to open input data file: %s \n", argv[2]);
+	       printf("Failed to open output data file: %s \n", argv[2]);
 	   }
 
 

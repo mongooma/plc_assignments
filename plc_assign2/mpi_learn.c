@@ -65,7 +65,7 @@ int add(int my_mpi_rank, int * recv_arr){
 /* mpicc -g -Wall mpi_learn.c */
 /* mpiexec -np 4 ./a.out *//* using 4 ranks*/
 
-int main(int argc, char ** argv){
+int main_1(int argc, char ** argv){
 
 	int my_mpi_size = -1;
 	int my_mpi_rank = -1; /* somehow it's not hardcoded? */
@@ -110,7 +110,7 @@ int main(int argc, char ** argv){
             MPI_Comm comm) */
 	int * arrs = calloc(4, sizeof(int));
 
-	MPI_Gather(recv_arr, 1, MPI_INT, arrs, 1, MPI_INT, 0, MPI_COMM_WORLD);
+	MPI_Gather(recv_arr, 1, MPI_INT, arrs, 1, MPI_INT, 0, MPI_COMM_WORLD); 
 
 	MPI_Barrier(MPI_COMM_WORLD); /*  Synchronization between MPI processes in a group */
 	/* Use barrier to get the right order of output */
@@ -120,6 +120,50 @@ int main(int argc, char ** argv){
 	}
 
   	MPI_Finalize();
+
+  	return 0;
+
+
+
+
+}
+
+int main(int argc, char ** argv){
+
+	int my_mpi_size = -1;
+	int my_mpi_rank = -1; /* somehow it's not hardcoded? */
+	int * arr = calloc(4, sizeof(int));
+	arr[0] = -1;
+
+
+	MPI_Init( &argc, &argv);
+	/*  Open MPI accepts the C/C++ argc and
+       argv arguments to main, but neither modifies, interprets, nor distributes them*/
+  	
+  	MPI_Comm_size(MPI_COMM_WORLD, &my_mpi_size);
+  	/*  Returns the size of the group associated with a communicator. */
+
+  	MPI_Comm_rank(MPI_COMM_WORLD, &my_mpi_rank);
+  	/* Determines the rank of the calling process in the communicator.*/
+
+  	
+  	/*
+  	int MPI_Scatter(const void *sendbuf, int sendcount, MPI_Datatype sendtype,
+            void *recvbuf, int recvcount, MPI_Datatype recvtype, int root,
+            MPI_Comm comm)
+	*/
+
+  	
+  	arr[0] = my_mpi_rank; // not using MPI_Scatter; each process has access with public data
+
+  	printf("We are in rank %d, arr[0] is %d. \n", my_mpi_rank, arr[0]);
+
+
+	MPI_Barrier(MPI_COMM_WORLD); /*  Synchronization between MPI processes in a group */
+	/* Use barrier to get the right order of output */
+  	MPI_Finalize();
+
+  	free(arr);
 
 
 
