@@ -42,12 +42,12 @@ int main(int argc, char ** argv){
 	int use_barrier = atoi(argv[argc-1]);
 	//printf("Use use_barrier: %d", use_barrier);
 
-	char * hex_input_a = calloc(HEX_INPUT_SIZE+1, sizeof(char));
+	char * hex_input_a = calloc(HEX_INPUT_SIZE+1, sizeof(char)); //add 1 for '\0'
 	char * hex_input_b = calloc(HEX_INPUT_SIZE+1, sizeof(char));
 
 	//Integer array of inputs in binary form 4;
-	int * bin1 = calloc((HEX_INPUT_SIZE+1) * 4, sizeof(int)); /* keep the fashion of assign 1, 0000 for the */
-	int * bin2 = calloc((HEX_INPUT_SIZE+1) * 4, sizeof(int));
+	int * bin1 = calloc((HEX_INPUT_SIZE) * 4, sizeof(int)); /* keep the fashion of assign 1, 0000 for the */
+	int * bin2 = calloc((HEX_INPUT_SIZE) * 4, sizeof(int));
 
 
 	int my_mpi_size = -1; // total no. of ranks
@@ -58,11 +58,11 @@ int main(int argc, char ** argv){
 	MPI_Comm_size(MPI_COMM_WORLD, &my_mpi_size);
 	MPI_Comm_rank(MPI_COMM_WORLD, &my_mpi_rank);
 
-	int allocation = ((HEX_INPUT_SIZE + 1) * 4) / my_mpi_size;
+	int allocation = (HEX_INPUT_SIZE * 4) / my_mpi_size;
 	int * bin_rank_1 = calloc(allocation, sizeof(int));
 	int * bin_rank_2 = calloc(allocation, sizeof(int));
 	int * sumi = calloc(allocation, sizeof(int));
-	int * sumi_all = calloc((HEX_INPUT_SIZE+1) * 4 , sizeof(int));
+	int * sumi_all = calloc(HEX_INPUT_SIZE * 4 , sizeof(int));
 
 	/*1. MPI rank 0 read in bit number, */
 
@@ -74,10 +74,17 @@ int main(int argc, char ** argv){
 
 		convert_hex_2_bit(hex_input_a, hex_input_b, bin1, bin2, HEX_INPUT_SIZE); /* not debugged */
 
-		revert_binary(bin1, bin2, (HEX_INPUT_SIZE + 1) * 4);	
+		revert_binary(bin1, bin2, HEX_INPUT_SIZE * 4);	
 
 	}
 
+	#ifdef DEBUG
+	if(my_mpi_rank == 3){
+		for(int i=0; i < 4; i ++){
+			printf("bin1[%d]: %d \n", i, sumi[i]);
+		}
+	}
+	#endif
 
 	/*3. MPI Rank 0 distribute the input binary arrays to each rank in the correct order 
 	where (for a 32 ranks conﬁguration) MPI rank 1 has bits 32,768 through 65,535 
@@ -131,12 +138,21 @@ int main(int argc, char ** argv){
 	/*  MPI_Gather(const void *sendbuf, int sendcount, MPI_Datatype sendtype,
             void *recvbuf, int recvcount, MPI_Datatype recvtype, int root,
             MPI_Comm comm) */	
+	
+	#ifdef DEBUG
+	if(my_mpi_rank == 3){
+		for(int i=0; i < 4; i ++){
+			printf("sumi[%d]: %d \n", i, sumi[i]);
+		}
+	}
+	#endif
+
 	MPI_Gather(sumi, allocation, MPI_INT, sumi_all, allocation, MPI_INT, 0, MPI_COMM_WORLD); 
 
 	/*  Rank 0 will then re-reverse the sum and output the ﬁnal result. */
 	if( my_mpi_rank == 0){
-		revert_hex_sum(sumi_all, (HEX_INPUT_SIZE + 1) * 4);
-		convert_bit_2_hex(sumi_all, (HEX_INPUT_SIZE + 1) * 4);
+		revert_hex_sum(sumi_all, HEX_INPUT_SIZE * 4);
+		convert_bit_2_hex(sumi_all, HEX_INPUT_SIZE * 4);
 
 	}
 

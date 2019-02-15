@@ -65,7 +65,7 @@ int convert_hex_2_bit(char * hex_input_a, char * hex_input_b, int * bin1, int * 
 	tmp_[1] = '\0';
 
 	/* hex1 and hex2 of length input_size + 1*/
-	for (int i = 0; i < input_size + 1; i++) {
+	for (int i = 0; i < input_size; i++) {
 		tmp_[0] = hex_input_a[i];
 		tmp1 = lookup[strtol(tmp_, 0, 16)];
 		tmp_[0] = hex_input_b[i];
