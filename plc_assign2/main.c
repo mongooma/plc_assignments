@@ -5,7 +5,6 @@
 #include "functions.h"
 
 #define HEX_INPUT_SIZE 262144
-#define use_barrier 1
 
 /* variables for performance report:
 	ranks: 2, 4, 8, 16, 32
@@ -40,6 +39,9 @@ int main(int argc, char ** argv){
 	}
 	*/
 	// Add 1 to array size because strings must be null terminated
+	int use_barrier = atoi(argv[argc-1]);
+	//printf("Use use_barrier: %d", use_barrier);
+
 	char * hex_input_a = calloc(HEX_INPUT_SIZE+1, sizeof(char));
 	char * hex_input_b = calloc(HEX_INPUT_SIZE+1, sizeof(char));
 
