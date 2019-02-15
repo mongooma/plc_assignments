@@ -14,7 +14,7 @@ int add(int my_mpi_rank, int * recv_arr){
 
 	int buf = 0 ;
 	//MPI_Request request;
-	MPI_Status status;
+	MPI_Request request;
 
 	// the following will not work, need to be explicitly written in order
 	// if(my_mpi_rank == 0){
@@ -38,23 +38,48 @@ int add(int my_mpi_rank, int * recv_arr){
 	// }
 
 	// method 1: use MPI_Send and MPI_Recv for blocking operation
-	for(int i = 0; i < 4; i ++){
+	// for(int i = 0; i < 4; i ++){
 
-		if((my_mpi_rank == i) && (i == 0)){MPI_Send(recv_arr, 1, MPI_INT, my_mpi_rank + 1, 0, MPI_COMM_WORLD);}
+	// 	if((my_mpi_rank == i) && (i == 0)){MPI_Send(recv_arr, 1, MPI_INT, my_mpi_rank + 1, 0, MPI_COMM_WORLD);}
 		
-		if((my_mpi_rank == i) && (i != 0)){
-			MPI_Recv(&buf, 1, MPI_INT, my_mpi_rank - 1, 0, MPI_COMM_WORLD, &status); 
-			recv_arr[0] = buf + recv_arr[0];
+	// 	if((my_mpi_rank == i) && (i != 0)){
+	// 		MPI_Recv(&buf, 1, MPI_INT, my_mpi_rank - 1, 0, MPI_COMM_WORLD, &status); 
+	// 		recv_arr[0] = buf + recv_arr[0];
 			
-			if(i !=3 ){
-				MPI_Send(recv_arr, 1, MPI_INT, my_mpi_rank + 1, 0, MPI_COMM_WORLD);
-			}
-		}
+	// 		if(i !=3 ){
+	// 			MPI_Send(recv_arr, 1, MPI_INT, my_mpi_rank + 1, 0, MPI_COMM_WORLD);
+	// 		}
+	// 	}
 
 	
-	}
+	// }
 
 	// method 2: use MPI_Isend and MPI_Irecv for non-blocking operation (return immediately)
+
+
+	for(int i = 0; i < 4; i ++){
+
+		if((my_mpi_rank == i) && (i == 0)){
+			MPI_Isend(recv_arr, 1, MPI_INT, my_mpi_rank + 1, 0, MPI_COMM_WORLD, &request);
+		}
+
+		MPI_Barrier(MPI_COMM_WORLD); /* don't put barrier in any if scope to cause blocking*/
+		
+		if((my_mpi_rank == i) && (i != 0)){
+			MPI_Irecv(&buf, 1, MPI_INT, my_mpi_rank - 1, 0, MPI_COMM_WORLD, &request); 
+			recv_arr[0] = buf + recv_arr[0];
+		}
+
+		MPI_Barrier(MPI_COMM_WORLD);
+			
+		if((my_mpi_rank == i) && (i < 3)){
+			MPI_Isend(recv_arr, 1, MPI_INT, my_mpi_rank + 1, 0, MPI_COMM_WORLD, &request);
+		}
+
+		MPI_Barrier(MPI_COMM_WORLD);
+
+	}
+
 
 	return 0;
 
@@ -65,7 +90,7 @@ int add(int my_mpi_rank, int * recv_arr){
 /* mpicc -g -Wall mpi_learn.c */
 /* mpiexec -np 4 ./a.out *//* using 4 ranks*/
 
-int main_1(int argc, char ** argv){
+int main(int argc, char ** argv){
 
 	int my_mpi_size = -1;
 	int my_mpi_rank = -1; /* somehow it's not hardcoded? */
@@ -94,12 +119,7 @@ int main_1(int argc, char ** argv){
 
   	MPI_Barrier(MPI_COMM_WORLD); /*  Synchronization between MPI processes in a group */
 
-
-
   	add(my_mpi_rank, recv_arr);
-
-
-  	MPI_Barrier(MPI_COMM_WORLD); /*  Synchronization between MPI processes in a group */
 
   	if(my_mpi_rank == 3){
 	  	printf("The sum is: %d. \n", recv_arr[0]);
@@ -128,7 +148,7 @@ int main_1(int argc, char ** argv){
 
 }
 
-int main(int argc, char ** argv){
+int main_1(int argc, char ** argv){
 
 	int my_mpi_size = -1;
 	int my_mpi_rank = -1; /* somehow it's not hardcoded? */
