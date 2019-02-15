@@ -39,8 +39,6 @@ int main(int argc, char ** argv){
 		exit(-1);
 	}
 	*/
-
-
 	// Add 1 to array size because strings must be null terminated
 	char * hex_input_a = calloc(HEX_INPUT_SIZE+1, sizeof(char));
 	char * hex_input_b = calloc(HEX_INPUT_SIZE+1, sizeof(char));
@@ -48,6 +46,7 @@ int main(int argc, char ** argv){
 	//Integer array of inputs in binary form 4;
 	int * bin1 = calloc((HEX_INPUT_SIZE+1) * 4, sizeof(int)); /* keep the fashion of assign 1, 0000 for the */
 	int * bin2 = calloc((HEX_INPUT_SIZE+1) * 4, sizeof(int));
+
 
 	int my_mpi_size = -1; // total no. of ranks
 	int my_mpi_rank = -1; // the current rank of the process
@@ -75,17 +74,32 @@ int main(int argc, char ** argv){
 
 		revert_binary(bin1, bin2, (HEX_INPUT_SIZE + 1) * 4);	
 
-		/*3. MPI Rank 0 distribute the input binary arrays to each rank in the correct order 
-		where (for a 32 ranks conﬁguration) MPI rank 1 has bits 32,768 through 65,535 
-		and MPI rank 2 has bits 65536 through 98304 and so on. */
-
-		/* int MPI_Scatter(const void *sendbuf, int sendcount, MPI_Datatype sendtype,
-            void *recvbuf, int recvcount, MPI_Datatype recvtype, int root,
-            MPI_Comm comm)*/
-		MPI_Scatter(bin1, allocation, MPI_INT, bin_rank_1, allocation, MPI_INT, 0, MPI_COMM_WORLD);
-		//MPI_Scatter(bin2, allocation, MPI_INT, bin_rank_2, allocation, MPI_INT, 0, MPI_COMM_WORLD);
-
 	}
+
+
+	/*3. MPI Rank 0 distribute the input binary arrays to each rank in the correct order 
+	where (for a 32 ranks conﬁguration) MPI rank 1 has bits 32,768 through 65,535 
+	and MPI rank 2 has bits 65536 through 98304 and so on. */
+
+	/* int MPI_Scatter(const void *sendbuf, int sendcount, MPI_Datatype sendtype,
+        void *recvbuf, int recvcount, MPI_Datatype recvtype, int root,
+        MPI_Comm comm)*/
+	#ifdef DEBUG
+		printf("rank %d, main: here00! \n", my_mpi_rank); /* three reached here */
+	#endif 
+	MPI_Scatter(bin1, allocation, MPI_INT, bin_rank_1, allocation, MPI_INT, 0, MPI_COMM_WORLD);
+	#ifdef DEBUG
+		printf("rank %d, main: here00! \n", my_mpi_rank); /* three reached here */
+	#endif 
+	MPI_Scatter(bin2, allocation, MPI_INT, bin_rank_2, allocation, MPI_INT, 0, MPI_COMM_WORLD);
+	#ifdef DEBUG
+		printf("rank %d, main: here01! \n", my_mpi_rank); /* three reached here */
+	#endif 
+
+	free(hex_input_a);
+	free(hex_input_b);
+	free(bin1);
+	free(bin2);
 
 
 	#ifdef DEBUG
@@ -127,13 +141,11 @@ int main(int argc, char ** argv){
 	MPI_Finalize();
 
 
-	printf("time in seconds: %f, (use_barrier: %d, ranks: %s)", 
+	if(my_mpi_rank == 0){
+		printf("time in seconds: %f, (use_barrier: %d, ranks: %s)\n", 
 								(end_time - start_time), use_barrier, argv[0] );
+	}
 
-	free(hex_input_a);
-	free(hex_input_b);
-	free(bin1);
-	free(bin2);
 	free(bin_rank_1);
 	free(bin_rank_2);
 	free(sumi);

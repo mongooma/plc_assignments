@@ -121,7 +121,10 @@ int main(int argc, char ** argv){
 
   	int arr[4] = {1, 2, 3, 4}; /* going to be distributed in the same order 1, 2, 3, 4*/
   	int * recv_arr = calloc(1, sizeof(int));
+  	//if(my_mpi_rank == 0){ //something wrong if set this line? 
   	MPI_Scatter(arr, 1, MPI_INT, recv_arr, 1, MPI_INT, 0, MPI_COMM_WORLD);
+  	//}
+
   	printf("We are in rank %d, get %d from rank 0. \n", my_mpi_rank, recv_arr[0]);
 
   	MPI_Barrier(MPI_COMM_WORLD); /*  Synchronization between MPI processes in a group */
