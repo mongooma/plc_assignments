@@ -368,15 +368,19 @@ int ssc(int * sscl, int * ssgl, int * sspl, int my_mpi_size, int my_mpi_rank, in
 	/* so that all processes share the information of ssc_{l-1}, l= k/block_size  
 		for next step sc_{k-1} correction, k mod block_size = 0*/
 	/* send and recv could be called globally since source is stated*/
+	
 	MPI_Request request;
 
 	int buf;
 
-	MPI_Barrier(MPI_COMM_WORLD); /*To have every process synchronized*/ 
+	#ifdef DEBUG
+		printf("rank %d, ssc: here0.\n", my_mpi_rank);
+	#endif
+
 
 	for(int i = 0; i < my_mpi_size; i++){
 
-		if ((my_mpi_rank == 0) || (my_mpi_size == 1)){
+		if ((my_mpi_rank == i) && ((i == 0) || (my_mpi_size == 1)) ){
 
 			buf = c_minus_1;
 			for (int l = 0; l < nsupersections; l++) {
@@ -386,26 +390,49 @@ int ssc(int * sscl, int * ssgl, int * sspl, int my_mpi_size, int my_mpi_rank, in
 			}
 
 			if(my_mpi_size != 1){
-				MPI_Isend(&(sscl[nsupersections-1]), 1, MPI_INT, 1, 0, MPI_COMM_WORLD, &request); 
+				MPI_Isend(&(sscl[nsupersections-1]), 1, MPI_INT, my_mpi_rank + 1, 0, MPI_COMM_WORLD, &request); 
+			}else{ return 0;}
+
+		} 
+		
+		MPI_Barrier(MPI_COMM_WORLD); /*To have every process synchronized*/ 
+
+		#ifdef DEBUG
+			printf("rank %d, ssc: here1.\n", my_mpi_rank);
+		#endif
+
+		if( (my_mpi_rank == i) && ( i > 0) ){
+			/* int MPI_Irecv(void *buf, int count, MPI_Datatype datatype,
+           int source, int tag, MPI_Comm comm, MPI_Request *request)*/
+			MPI_Irecv(&buf, 1, MPI_INT, my_mpi_rank - 1, 0, MPI_COMM_WORLD, &request);
+
+			for (int l = 0; l < nsupersections; l++) {
+
+				if (l == 0) { sscl[l] = ssgl[l] | (sspl[l] & buf );}
+						else{ sscl[l] = ssgl[l] | (sspl[l] & sscl[l-1]);}
+
 			}
 
-		} else if( my_mpi_rank == i){
-			/* int MPI_Irecv(void *buf, int count, MPI_Datatype datatype,
-	           int source, int tag, MPI_Comm comm, MPI_Request *request)*/
-				MPI_Irecv(&buf, 1, MPI_INT, my_mpi_rank-1, 0, MPI_COMM_WORLD, &request);
-				for (int l = 0; l < nsupersections; l++) {
+		}
 
-					if (l == 0) { sscl[l] = ssgl[l] | (sspl[l] & buf );}
-							else{ sscl[l] = ssgl[l] | (sspl[l] & sscl[l-1]);}
+		MPI_Barrier(MPI_COMM_WORLD); /*To have every process synchronized*/ 
 
-				}
-				if(my_mpi_rank < my_mpi_size){
-				/* int MPI_Isend(const void *buf, int count, MPI_Datatype datatype, int dest,
-	    			int tag, MPI_Comm comm, MPI_Request *request)*/
-					MPI_Isend(&(sscl[nsupersections-1]), 1, MPI_INT, my_mpi_rank+1, 0, MPI_COMM_WORLD, &request); 
-				}
+		#ifdef DEBUG
+			printf("rank %d, ssc: here2.\n", my_mpi_rank);
+		#endif
 
-		} else {continue; }
+		
+		if((my_mpi_rank == i) && (i < my_mpi_size-1)){
+			/* int MPI_Isend(const void *buf, int count, MPI_Datatype datatype, int dest,
+			int tag, MPI_Comm comm, MPI_Request *request)*/
+			MPI_Isend(&(sscl[nsupersections-1]), 1, MPI_INT, my_mpi_rank+1, 0, MPI_COMM_WORLD, &request); 
+		}
+
+		MPI_Barrier(MPI_COMM_WORLD); /*To have every process synchronized*/ 
+
+		#ifdef DEBUG
+			printf("rank %d, ssc: here3.\n", my_mpi_rank);
+		#endif
 
 	}
 

@@ -5,6 +5,12 @@
 #include "functions.h"
 
 
+/* public cloud:
+	
+
+*/
+
+
 int add(int my_mpi_rank, int * recv_arr){
 	/* use some send and recv here*/
 
@@ -63,6 +69,7 @@ int add(int my_mpi_rank, int * recv_arr){
 			MPI_Isend(recv_arr, 1, MPI_INT, my_mpi_rank + 1, 0, MPI_COMM_WORLD, &request);
 		}
 
+		/* use barrier to have every ranks on the same level */
 		MPI_Barrier(MPI_COMM_WORLD); /* don't put barrier in any if scope to cause blocking*/
 		
 		if((my_mpi_rank == i) && (i != 0)){

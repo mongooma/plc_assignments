@@ -83,13 +83,18 @@ int main(int argc, char ** argv){
             void *recvbuf, int recvcount, MPI_Datatype recvtype, int root,
             MPI_Comm comm)*/
 		MPI_Scatter(bin1, allocation, MPI_INT, bin_rank_1, allocation, MPI_INT, 0, MPI_COMM_WORLD);
-		MPI_Scatter(bin2, allocation, MPI_INT, bin_rank_2, allocation, MPI_INT, 0, MPI_COMM_WORLD);
+		//MPI_Scatter(bin2, allocation, MPI_INT, bin_rank_2, allocation, MPI_INT, 0, MPI_COMM_WORLD);
 
 	}
 
+
 	#ifdef DEBUG
-		printf("main: here1! \n"); /* three reached here */
+		printf("rank %d, main: here1! \n", my_mpi_rank); /* three reached here */
 	#endif 
+
+	MPI_Barrier(MPI_COMM_WORLD); /* make it optional for performance study*/
+
+
 
 	/*execute algorithm -> see cla() */
 	double start_time = MPI_Wtime(); /* a time tick fashion*/
@@ -97,12 +102,12 @@ int main(int argc, char ** argv){
 	double end_time = MPI_Wtime();
 
 	#ifdef DEBUG
-		printf("main: here2! \n"); /* three reached here */
+		printf("rank %d, main: here2! \n", my_mpi_rank); /* three reached here */
 	#endif 
 
 
 	/* for synchronization */
-	if(use_barrier){MPI_Barrier(MPI_COMM_WORLD); /* make it optional for performance study*/}
+	MPI_Barrier(MPI_COMM_WORLD); /* make it optional for performance study*/
 
 
 	/* Have each rank send their part of the ﬁnal sumi solution to Rank 0. */
