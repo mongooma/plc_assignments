@@ -1,0 +1,56 @@
+rank 2, test 1, time in seconds: 0.106693, (use_barrier: 1, ranks: ./a.out)
+rank 2, test 2, time in seconds: 0.106406, (use_barrier: 1, ranks: ./a.out)
+rank 2, test 3, time in seconds: 0.107829, (use_barrier: 1, ranks: ./a.out)
+rank 2, test 4, time in seconds: 0.106055, (use_barrier: 1, ranks: ./a.out)
+rank 2, test 5, time in seconds: 0.107620, (use_barrier: 1, ranks: ./a.out)
+rank 2, test 6, time in seconds: 0.105013, (use_barrier: 1, ranks: ./a.out)
+rank 2, test 7, time in seconds: 0.106517, (use_barrier: 1, ranks: ./a.out)
+rank 4, test 1, time in seconds: 0.055700, (use_barrier: 1, ranks: ./a.out)
+rank 4, test 2, time in seconds: 0.055426, (use_barrier: 1, ranks: ./a.out)
+rank 4, test 3, time in seconds: 0.055398, (use_barrier: 1, ranks: ./a.out)
+rank 4, test 4, time in seconds: 0.057428, (use_barrier: 1, ranks: ./a.out)
+rank 4, test 5, time in seconds: 0.056479, (use_barrier: 1, ranks: ./a.out)
+rank 4, test 6, time in seconds: 0.057243, (use_barrier: 1, ranks: ./a.out)
+rank 4, test 7, time in seconds: 0.056236, (use_barrier: 1, ranks: ./a.out)
+rank 8, test 1, time in seconds: 0.027993, (use_barrier: 1, ranks: ./a.out)
+rank 8, test 2, time in seconds: 0.028147, (use_barrier: 1, ranks: ./a.out)
+rank 8, test 3, time in seconds: 0.028398, (use_barrier: 1, ranks: ./a.out)
+rank 8, test 4, time in seconds: 0.028463, (use_barrier: 1, ranks: ./a.out)
+rank 8, test 5, [mpiexec@mastiff] Sending Ctrl-C to processes as requested
+[mpiexec@mastiff] Press Ctrl-C again to force abort
+rank 8, test 6, time in seconds: 0.029476, (use_barrier: 1, ranks: ./a.out)
+rank 8, test 7, [mpiexec@mastiff] Sending Ctrl-C to processes as requested
+[mpiexec@mastiff] Press Ctrl-C again to force abort
+rank 16, test 1, [mpiexec@mastiff] Sending Ctrl-C to processes as requested
+[mpiexec@mastiff] Press Ctrl-C again to force abort
+rank 16, test 2, [mpiexec@mastiff] Sending Ctrl-C to processes as requested
+[mpiexec@mastiff] Press Ctrl-C again to force abort
+rank 16, test 3, [mpiexec@mastiff] Sending Ctrl-C to processes as requested
+[mpiexec@mastiff] Press Ctrl-C again to force abort
+rank 16, test 4, time in seconds: 0.032592, (use_barrier: 1, ranks: ./a.out)
+rank 16, test 5, time in seconds: 0.097846, (use_barrier: 1, ranks: ./a.out)
+rank 16, test 6, [mpiexec@mastiff] Sending Ctrl-C to processes as requested
+[mpiexec@mastiff] Press Ctrl-C again to force abort
+rank 16, test 7, [mpiexec@mastiff] Sending Ctrl-C to processes as requested
+[mpiexec@mastiff] Press Ctrl-C again to force abort
+rank 32, test 1, [mpiexec@mastiff] Sending Ctrl-C to processes as requested
+[mpiexec@mastiff] Press Ctrl-C again to force abort
+rank 32, test 2, [mpiexec@mastiff] Sending Ctrl-C to processes as requested
+[mpiexec@mastiff] Press Ctrl-C again to force abort
+rank 32, test 3, [mpiexec@mastiff] Sending Ctrl-C to processes as requested
+[mpiexec@mastiff] Press Ctrl-C again to force abort
+rank 32, test 4, [mpiexec@mastiff] Sending Ctrl-C to processes as requested
+[mpiexec@mastiff] Press Ctrl-C again to force abort
+rank 32, test 5, [mpiexec@mastiff] Sending Ctrl-C to processes as requested
+[mpiexec@mastiff] Press Ctrl-C again to force abort
+rank 32, test 6, [mpiexec@mastiff] Sending Ctrl-C to processes as requested
+[mpiexec@mastiff] Press Ctrl-C again to force abort
+rank 32, test 7, [mpiexec@mastiff] Sending Ctrl-C to processes as requested
+[mpiexec@mastiff] Press Ctrl-C again to force abort
+rank 2, test 1, [mpiexec@mastiff] Sending Ctrl-C to processes as requested
+[mpiexec@mastiff] Press Ctrl-C again to force abort
+rank 2, test 2, [mpiexec@mastiff] Sending Ctrl-C to processes as requested
+[mpiexec@mastiff] Press Ctrl-C again to force abort
+Ctrl-C caught... cleaning up processes
+Ctrl-C caught... cleaning up processes
+rank 2, test 3, 
