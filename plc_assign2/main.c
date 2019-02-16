@@ -39,6 +39,8 @@ int main(int argc, char ** argv){
 	}
 	*/
 	// Add 1 to array size because strings must be null terminated
+	double start_time, end_time;
+
 	int use_barrier = atoi(argv[argc-1]);
 	//printf("Use use_barrier: %d", use_barrier);
 
@@ -70,14 +72,13 @@ int main(int argc, char ** argv){
 
 		readInData(argv[1], hex_input_a, hex_input_b); /* not debugged */
 
-		/*2. MPI rank 0 convert hex to binary number, revert,  */
+		start_time = MPI_Wtime(); /* a time tick fashion*/
 
-		double start_time = MPI_Wtime(); /* a time tick fashion*/
+		/*2. MPI rank 0 convert hex to binary number, revert,  */
 
 		convert_hex_2_bit(hex_input_a, hex_input_b, bin1, bin2, HEX_INPUT_SIZE); /* not debugged */
 
 		revert_binary(bin1, bin2, HEX_INPUT_SIZE * 4);	
-
 
 	}
 
@@ -156,7 +157,7 @@ int main(int argc, char ** argv){
 	if( my_mpi_rank == 0){
 		revert_hex_sum(sumi_all, HEX_INPUT_SIZE * 4);
 		convert_bit_2_hex(sumi_all, HEX_INPUT_SIZE * 4);
-		double end_time = MPI_Wtime();
+		end_time = MPI_Wtime();
 	}
 
 
