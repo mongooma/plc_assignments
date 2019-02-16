@@ -1,0 +1,1619 @@
+timestamp: Fri Feb 15 21:55:15 EST 2019
+rank 1, test 1, use_barrier 0 time in seconds: 0.154014 
+rank 1, test 1, use_barrier 1 time in seconds: 0.158061 
+rank 1, test 2, use_barrier 0 time in seconds: 0.143249 
+rank 1, test 2, use_barrier 1 time in seconds: 0.141050 
+rank 1, test 3, use_barrier 0 time in seconds: 0.137625 
+rank 1, test 3, use_barrier 1 time in seconds: 0.139213 
+rank 1, test 4, use_barrier 0 time in seconds: 0.146964 
+rank 1, test 4, use_barrier 1 time in seconds: 0.143634 
+rank 1, test 5, use_barrier 0 time in seconds: 0.141110 
+rank 1, test 5, use_barrier 1 time in seconds: 0.141838 
+rank 1, test 6, use_barrier 0 time in seconds: 0.153272 
+rank 1, test 6, use_barrier 1 time in seconds: 0.159888 
+rank 1, test 7, use_barrier 0 time in seconds: 0.159615 
+rank 1, test 7, use_barrier 1 time in seconds: 0.154221 
+rank 2, test 1, use_barrier 0 time in seconds: 0.163490 
+time in seconds: 0.169052 
+rank 2, test 1, use_barrier 1 time in seconds: 0.152220 
+time in seconds: 0.153480 
+rank 2, test 2, use_barrier 0 time in seconds: 0.138493 
+time in seconds: 0.141185 
+rank 2, test 2, use_barrier 1 time in seconds: 0.137745 
+time in seconds: 0.146292 
+rank 2, test 3, use_barrier 0 time in seconds: 0.138906 
+time in seconds: 0.141312 
+rank 2, test 3, use_barrier 1 time in seconds: 0.148244 
+time in seconds: 0.154687 
+rank 2, test 4, use_barrier 0 time in seconds: 0.142847 
+time in seconds: 0.143801 
+rank 2, test 4, use_barrier 1 time in seconds: 0.146653 
+time in seconds: 0.145296 
+rank 2, test 5, use_barrier 0 time in seconds: 0.140076 
+time in seconds: 0.143360 
+rank 2, test 5, use_barrier 1 time in seconds: 0.147374 
+time in seconds: 0.152541 
+rank 2, test 6, use_barrier 0 time in seconds: 0.152218 
+time in seconds: 0.154386 
+rank 2, test 6, use_barrier 1 time in seconds: 0.164570 
+time in seconds: 0.168643 
+rank 2, test 7, use_barrier 0 time in seconds: 0.152098 
+time in seconds: 0.155011 
+rank 2, test 7, use_barrier 1 time in seconds: 0.155514 
+time in seconds: 0.160597 
+rank 4, test 1, use_barrier 0 time in seconds: 0.164399 
+time in seconds: 0.162121 
+time in seconds: 0.168234 
+time in seconds: 0.168464 
+rank 4, test 1, use_barrier 1 time in seconds: 0.157176 
+time in seconds: 0.163349 
+time in seconds: 0.168818 
+time in seconds: 0.168575 
+rank 4, test 2, use_barrier 0 time in seconds: 0.141555 
+time in seconds: 0.143622 
+time in seconds: 0.140395 
+time in seconds: 0.150465 
+rank 4, test 2, use_barrier 1 time in seconds: 0.140297 
+time in seconds: 0.164153 
+time in seconds: 0.180082 
+time in seconds: 0.188341 
+rank 4, test 3, use_barrier 0 time in seconds: 0.139850 
+time in seconds: 0.138095 
+time in seconds: 0.141735 
+time in seconds: 0.142724 
+rank 4, test 3, use_barrier 1 time in seconds: 0.141847 
+time in seconds: 0.169741 
+time in seconds: 0.172031 
+time in seconds: 0.171693 
+rank 4, test 4, use_barrier 0 time in seconds: 0.145470 
+time in seconds: 0.147618 
+time in seconds: 0.155834 
+time in seconds: 0.158655 
+rank 4, test 4, use_barrier 1 time in seconds: 0.144129 
+time in seconds: 0.147360 
+time in seconds: 0.149642 
+time in seconds: 0.154626 
+rank 4, test 5, use_barrier 0 time in seconds: 0.139983 
+time in seconds: 0.145572 
+time in seconds: 0.146716 
+time in seconds: 0.154375 
+rank 4, test 5, use_barrier 1 time in seconds: 0.139812 
+time in seconds: 0.143749 
+time in seconds: 0.148823 
+time in seconds: 0.149189 
+rank 4, test 6, use_barrier 0 time in seconds: 0.150022 
+time in seconds: 0.151713 
+time in seconds: 0.157450 
+time in seconds: 0.157681 
+rank 4, test 6, use_barrier 1 time in seconds: 0.167082 
+time in seconds: 0.167259 
+time in seconds: 0.181213 
+time in seconds: 0.183832 
+rank 4, test 7, use_barrier 0 time in seconds: 0.156304 
+time in seconds: 0.154070 
+time in seconds: 0.154441 
+time in seconds: 0.157173 
+rank 4, test 7, use_barrier 1 time in seconds: 0.151488 
+time in seconds: 0.189332 
+time in seconds: 0.189671 
+time in seconds: 0.191040 
+rank 8, test 1, use_barrier 0 time in seconds: 0.158254 
+time in seconds: 0.159181 
+time in seconds: 0.163179 
+time in seconds: 0.160652 
+time in seconds: 0.160496 
+time in seconds: 0.169164 
+time in seconds: 0.164927 
+time in seconds: 0.177791 
+rank 8, test 1, use_barrier 1 time in seconds: 0.164128 
+time in seconds: 0.161048 
+time in seconds: 0.168289 
+time in seconds: 0.162374 
+time in seconds: 0.163978 
+time in seconds: 0.184994 
+time in seconds: 0.186095 
+time in seconds: 0.192834 
+rank 8, test 2, use_barrier 0 time in seconds: 0.141095 
+time in seconds: 0.140876 
+time in seconds: 0.173989 
+time in seconds: 0.176015 
+time in seconds: 0.176320 
+time in seconds: 0.176440 
+time in seconds: 0.184081 
+time in seconds: 0.179287 
+rank 8, test 2, use_barrier 1 time in seconds: 0.144692 
+time in seconds: 0.143284 
+time in seconds: 0.173631 
+time in seconds: 0.177924 
+time in seconds: 0.176264 
+time in seconds: 0.174952 
+time in seconds: 0.191955 
+time in seconds: 0.200744 
+rank 8, test 3, use_barrier 0 time in seconds: 0.143122 
+time in seconds: 0.145728 
+time in seconds: 0.149905 
+time in seconds: 0.142500 
+time in seconds: 0.168080 
+time in seconds: 0.170131 
+time in seconds: 0.169861 
+time in seconds: 0.172781 
+rank 8, test 3, use_barrier 1 time in seconds: 0.146546 
+time in seconds: 0.146814 
+time in seconds: 0.148615 
+time in seconds: 0.140193 
+time in seconds: 0.140799 
+time in seconds: 0.154118 
+time in seconds: 0.176244 
+time in seconds: 0.180366 
+rank 8, test 4, use_barrier 0 time in seconds: 0.146084 
+time in seconds: 0.144454 
+time in seconds: 0.153185 
+time in seconds: 0.153296 
+time in seconds: 0.155535 
+time in seconds: 0.157749 
+time in seconds: 0.154615 
+time in seconds: 0.160184 
+rank 8, test 4, use_barrier 1 time in seconds: 0.145599 
+time in seconds: 0.151368 
+time in seconds: 0.172166 
+time in seconds: 0.171726 
+time in seconds: 0.172456 
+time in seconds: 0.170127 
+time in seconds: 0.175019 
+time in seconds: 0.174840 
+rank 8, test 5, use_barrier 0 time in seconds: 0.139882 
+time in seconds: 0.144610 
+time in seconds: 0.147665 
+time in seconds: 0.142122 
+time in seconds: 0.148810 
+time in seconds: 0.152214 
+time in seconds: 0.154447 
+time in seconds: 0.154342 
+rank 8, test 5, use_barrier 1 time in seconds: 0.143562 
+time in seconds: 0.150246 
+time in seconds: 0.151826 
+time in seconds: 0.152570 
+time in seconds: 0.153736 
+time in seconds: 0.153829 
+time in seconds: 0.150506 
+time in seconds: 0.150043 
+rank 8, test 6, use_barrier 0 time in seconds: 0.186232 
+time in seconds: 0.185678 
+time in seconds: 0.187136 
+time in seconds: 0.190756 
+time in seconds: 0.191528 
+time in seconds: 0.190016 
+time in seconds: 0.199886 
+time in seconds: 0.209805 
+rank 8, test 6, use_barrier 1 time in seconds: 0.151274 
+time in seconds: 0.156650 
+time in seconds: 0.162218 
+time in seconds: 0.169102 
+time in seconds: 0.153062 
+time in seconds: 0.164938 
+time in seconds: 0.161442 
+time in seconds: 0.158354 
+rank 8, test 7, use_barrier 0 time in seconds: 0.152785 
+time in seconds: 0.156427 
+time in seconds: 0.155833 
+time in seconds: 0.164832 
+time in seconds: 0.161100 
+time in seconds: 0.169467 
+time in seconds: 0.167771 
+time in seconds: 0.164787 
+rank 8, test 7, use_barrier 1 time in seconds: 0.161363 
+time in seconds: 0.165091 
+time in seconds: 0.165666 
+time in seconds: 0.166797 
+time in seconds: 0.180007 
+time in seconds: 0.189680 
+time in seconds: 0.194600 
+time in seconds: 0.198022 
+rank 16, test 1, use_barrier 0 time in seconds: 0.162227 
+time in seconds: 0.165896 
+time in seconds: 0.181640 
+time in seconds: 0.185380 
+time in seconds: 0.186301 
+time in seconds: 0.191080 
+time in seconds: 0.188113 
+time in seconds: 0.188412 
+time in seconds: 0.195943 
+time in seconds: 0.198206 
+time in seconds: 0.202842 
+time in seconds: 0.201485 
+time in seconds: 0.205091 
+time in seconds: 0.210113 
+time in seconds: 0.225532 
+time in seconds: 0.257445 
+rank 16, test 1, use_barrier 1 time in seconds: 0.163651 
+time in seconds: 0.164290 
+time in seconds: 0.166372 
+time in seconds: 0.167277 
+time in seconds: 0.167092 
+time in seconds: 0.166623 
+time in seconds: 0.169946 
+time in seconds: 0.163320 
+time in seconds: 0.190541 
+time in seconds: 0.191619 
+time in seconds: 0.199084 
+time in seconds: 0.200692 
+time in seconds: 0.201763 
+time in seconds: 0.213214 
+time in seconds: 0.217080 
+time in seconds: 0.220352 
+rank 16, test 2, use_barrier 0 time in seconds: 0.149396 
+time in seconds: 0.140722 
+time in seconds: 0.153531 
+time in seconds: 0.148899 
+time in seconds: 0.167685 
+time in seconds: 0.177262 
+time in seconds: 0.178447 
+time in seconds: 0.179744 
+time in seconds: 0.183480 
+time in seconds: 0.168955 
+time in seconds: 0.172430 
+time in seconds: 0.189665 
+time in seconds: 0.215369 
+time in seconds: 0.222640 
+time in seconds: 0.237555 
+time in seconds: 0.260461 
+rank 16, test 2, use_barrier 1 time in seconds: 0.139121 
+time in seconds: 0.160826 
+time in seconds: 0.163161 
+time in seconds: 0.166963 
+time in seconds: 0.177924 
+time in seconds: 0.178732 
+time in seconds: 0.174648 
+time in seconds: 0.168364 
+time in seconds: 0.173409 
+time in seconds: 0.169562 
+time in seconds: 0.171747 
+time in seconds: 0.170406 
+time in seconds: 0.184733 
+time in seconds: 0.203316 
+time in seconds: 0.186988 
+time in seconds: 0.208611 
+rank 16, test 3, use_barrier 0 time in seconds: 0.144934 
+time in seconds: 0.141850 
+time in seconds: 0.172152 
+time in seconds: 0.168606 
+time in seconds: 0.186901 
+time in seconds: 0.179419 
+time in seconds: 0.170305 
+time in seconds: 0.181049 
+time in seconds: 0.189000 
+time in seconds: 0.190942 
+time in seconds: 0.190754 
+time in seconds: 0.210874 
+time in seconds: 0.225165 
+time in seconds: 0.230433 
+time in seconds: 0.224876 
+time in seconds: 0.254059 
+rank 16, test 3, use_barrier 1 time in seconds: 0.142339 
+time in seconds: 0.141083 
+time in seconds: 0.144375 
+time in seconds: 0.170666 
+time in seconds: 0.172896 
+time in seconds: 0.172167 
+time in seconds: 0.170495 
+time in seconds: 0.173107 
+time in seconds: 0.171352 
+time in seconds: 0.175688 
+time in seconds: 0.173624 
+time in seconds: 0.191569 
+time in seconds: 0.180793 
+time in seconds: 0.185029 
+time in seconds: 0.213911 
+time in seconds: 0.239843 
+rank 16, test 4, use_barrier 0 time in seconds: 0.143961 
+time in seconds: 0.153691 
+time in seconds: 0.151821 
+time in seconds: 0.157342 
+time in seconds: 0.180414 
+time in seconds: 0.179473 
+time in seconds: 0.177400 
+time in seconds: 0.185201 
+time in seconds: 0.181673 
+time in seconds: 0.189140 
+time in seconds: 0.184597 
+time in seconds: 0.190825 
+time in seconds: 0.192037 
+time in seconds: 0.198184 
+time in seconds: 0.213046 
+time in seconds: 0.244550 
+rank 16, test 4, use_barrier 1 time in seconds: 0.151839 
+time in seconds: 0.155914 
+time in seconds: 0.158008 
+time in seconds: 0.158953 
+time in seconds: 0.170197 
+time in seconds: 0.170885 
+time in seconds: 0.181449 
+time in seconds: 0.179579 
+time in seconds: 0.182805 
+time in seconds: 0.174356 
+time in seconds: 0.182198 
+time in seconds: 0.180306 
+time in seconds: 0.174861 
+time in seconds: 0.180755 
+time in seconds: 0.180615 
+time in seconds: 0.181352 
+rank 16, test 5, use_barrier 0 time in seconds: 0.145947 
+time in seconds: 0.147086 
+time in seconds: 0.146844 
+time in seconds: 0.150470 
+time in seconds: 0.150922 
+time in seconds: 0.153945 
+time in seconds: 0.167672 
+time in seconds: 0.178285 
+time in seconds: 0.173419 
+time in seconds: 0.219095 
+time in seconds: 0.213203 
+time in seconds: 0.233661 
+time in seconds: 0.254575 
+time in seconds: 0.263519 
+time in seconds: 0.268774 
+time in seconds: 0.273087 
+rank 16, test 5, use_barrier 1 [mpiexec@mastiff] Sending Ctrl-C to processes as requested
+[mpiexec@mastiff] Press Ctrl-C again to force abort
+rank 16, test 6, use_barrier 0 time in seconds: 0.165013 
+time in seconds: 0.163080 
+time in seconds: 0.168174 
+time in seconds: 0.180746 
+time in seconds: 0.187715 
+time in seconds: 0.188638 
+time in seconds: 0.190783 
+time in seconds: 0.188301 
+time in seconds: 0.190814 
+time in seconds: 0.187733 
+time in seconds: 0.195752 
+time in seconds: 0.193024 
+time in seconds: 0.196490 
+time in seconds: 0.198745 
+time in seconds: 0.205118 
+time in seconds: 0.206624 
+rank 16, test 6, use_barrier 1 time in seconds: 0.165626 
+time in seconds: 0.170330 
+time in seconds: 0.170529 
+time in seconds: 0.164412 
+time in seconds: 0.167757 
+time in seconds: 0.168968 
+time in seconds: 0.187407 
+time in seconds: 0.186866 
+time in seconds: 0.188021 
+time in seconds: 0.190437 
+time in seconds: 0.191819 
+time in seconds: 0.195852 
+time in seconds: 0.192168 
+time in seconds: 0.193026 
+time in seconds: 0.201464 
+time in seconds: 0.203241 
+rank 16, test 7, use_barrier 0 time in seconds: 0.163974 
+time in seconds: 0.165964 
+time in seconds: 0.173477 
+time in seconds: 0.176277 
+time in seconds: 0.186171 
+time in seconds: 0.186160 
+time in seconds: 0.187211 
+time in seconds: 0.193008 
+time in seconds: 0.192540 
+time in seconds: 0.189355 
+time in seconds: 0.193221 
+time in seconds: 0.186726 
+time in seconds: 0.203397 
+time in seconds: 0.201049 
+time in seconds: 0.211926 
+time in seconds: 0.210441 
+rank 16, test 7, use_barrier 1 time in seconds: 0.162346 
+time in seconds: 0.164090 
+time in seconds: 0.166369 
+time in seconds: 0.167639 
+time in seconds: 0.170347 
+time in seconds: 0.173997 
+time in seconds: 0.188033 
+time in seconds: 0.200322 
+time in seconds: 0.199581 
+time in seconds: 0.201570 
+time in seconds: 0.207056 
+time in seconds: 0.207288 
+time in seconds: 0.211059 
+time in seconds: 0.206161 
+time in seconds: 0.212772 
+time in seconds: 0.252479 
+rank 32, test 1, use_barrier 0 time in seconds: 0.189369 
+time in seconds: 0.190230 
+time in seconds: 0.190980 
+time in seconds: 0.195132 
+time in seconds: 0.194559 
+time in seconds: 0.196231 
+time in seconds: 0.184275 
+time in seconds: 0.202058 
+time in seconds: 0.193802 
+time in seconds: 0.204477 
+time in seconds: 0.210036 
+time in seconds: 0.201814 
+time in seconds: 0.219537 
+time in seconds: 0.211416 
+time in seconds: 0.217548 
+time in seconds: 0.209751 
+time in seconds: 0.222179 
+time in seconds: 0.221644 
+time in seconds: 0.219896 
+time in seconds: 0.225863 
+time in seconds: 0.224970 
+time in seconds: 0.233820 
+time in seconds: 0.236181 
+time in seconds: 0.265148 
+time in seconds: 0.258649 
+time in seconds: 0.272289 
+rank 32, test 1, use_barrier 1 time in seconds: 0.193736 
+time in seconds: 0.195918 
+time in seconds: 0.193907 
+time in seconds: 0.194003 
+time in seconds: 0.197212 
+time in seconds: 0.191537 
+time in seconds: 0.192080 
+time in seconds: 0.193023 
+time in seconds: 0.201843 
+time in seconds: 0.199510 
+time in seconds: 0.196897 
+time in seconds: 0.212605 
+time in seconds: 0.222228 
+time in seconds: 0.223002 
+time in seconds: 0.228064 
+time in seconds: 0.228573 
+time in seconds: 0.233514 
+time in seconds: 0.231867 
+time in seconds: 0.224162 
+time in seconds: 0.218279 
+time in seconds: 0.244603 
+time in seconds: 0.244071 
+time in seconds: 0.233897 
+time in seconds: 0.219851 
+time in seconds: 0.238502 
+time in seconds: 0.251612 
+time in seconds: 0.274911 
+time in seconds: 0.278909 
+time in seconds: 0.258774 
+time in seconds: 0.274178 
+time in seconds: 0.266717 
+time in seconds: 0.269604 
+rank 32, test 2, use_barrier 0 time in seconds: 0.168764 
+time in seconds: 0.169173 
+time in seconds: 0.170600 
+time in seconds: 0.169486 
+time in seconds: 0.168489 
+time in seconds: 0.172223 
+time in seconds: 0.169492 
+time in seconds: 0.172213 
+time in seconds: 0.174810 
+time in seconds: 0.181138 
+time in seconds: 0.169828 
+time in seconds: 0.175807 
+time in seconds: 0.175688 
+time in seconds: 0.175884 
+time in seconds: 0.175339 
+time in seconds: 0.185207 
+time in seconds: 0.184049 
+time in seconds: 0.172461 
+time in seconds: 0.188662 
+time in seconds: 0.167989 
+time in seconds: 0.193102 
+time in seconds: 0.207285 
+time in seconds: 0.175204 
+time in seconds: 0.175185 
+time in seconds: 0.205569 
+time in seconds: 0.227189 
+time in seconds: 0.224136 
+time in seconds: 0.243054 
+time in seconds: 0.251368 
+time in seconds: 0.251061 
+time in seconds: 0.260034 
+time in seconds: 0.271290 
+rank 32, test 2, use_barrier 1 time in seconds: 0.172645 
+time in seconds: 0.172248 
+[mpiexec@mastiff] Sending Ctrl-C to processes as requested
+[mpiexec@mastiff] Press Ctrl-C again to force abort
+rank 32, test 3, use_barrier 0 time in seconds: 0.172929 
+time in seconds: 0.171188 
+time in seconds: 0.172447 
+time in seconds: 0.173419 
+time in seconds: 0.174558 
+time in seconds: 0.174589 
+time in seconds: 0.174519 
+time in seconds: 0.180152 
+time in seconds: 0.179112 
+time in seconds: 0.177388 
+time in seconds: 0.189935 
+time in seconds: 0.191290 
+time in seconds: 0.181353 
+time in seconds: 0.192556 
+time in seconds: 0.183349 
+time in seconds: 0.203600 
+time in seconds: 0.187904 
+time in seconds: 0.203648 
+time in seconds: 0.198849 
+time in seconds: 0.195549 
+time in seconds: 0.216313 
+time in seconds: 0.216723 
+time in seconds: 0.207452 
+time in seconds: 0.213288 
+time in seconds: 0.214541 
+time in seconds: 0.237579 
+time in seconds: 0.243336 
+time in seconds: 0.271508 
+time in seconds: 0.255536 
+time in seconds: 0.258485 
+time in seconds: 0.277929 
+time in seconds: 0.282431 
+rank 32, test 3, use_barrier 1 [mpiexec@mastiff] Sending Ctrl-C to processes as requested
+[mpiexec@mastiff] Press Ctrl-C again to force abort
+rank 32, test 4, use_barrier 0 time in seconds: 0.180822 
+time in seconds: 0.182745 
+time in seconds: 0.182447 
+[mpiexec@mastiff] Sending Ctrl-C to processes as requested
+[mpiexec@mastiff] Press Ctrl-C again to force abort
+time in seconds: 0.177257 
+rank 32, test 4, use_barrier 1 time in seconds: 0.177962 
+time in seconds: 0.177859 
+time in seconds: 0.182640 
+time in seconds: 0.180854 
+time in seconds: 0.180658 
+time in seconds: 0.180312 
+time in seconds: 0.181533 
+time in seconds: 0.181847 
+time in seconds: 0.179944 
+time in seconds: 0.184768 
+time in seconds: 0.179271 
+time in seconds: 0.181001 
+time in seconds: 0.181568 
+time in seconds: 0.182139 
+time in seconds: 0.182312 
+time in seconds: 0.184382 
+time in seconds: 0.180795 
+time in seconds: 0.185695 
+time in seconds: 0.185022 
+time in seconds: 0.197243 
+time in seconds: 0.208812 
+time in seconds: 0.183633 
+time in seconds: 0.200182 
+time in seconds: 0.204936 
+time in seconds: 0.216751 
+time in seconds: 0.219980 
+time in seconds: 0.246818 
+time in seconds: 0.233424 
+time in seconds: 0.258297 
+time in seconds: 0.235271 
+time in seconds: 0.249765 
+time in seconds: 0.271674 
+rank 32, test 5, use_barrier 0 time in seconds: 0.150732 
+time in seconds: 0.154583 
+time in seconds: 0.157768 
+time in seconds: 0.154874 
+time in seconds: 0.169988 
+time in seconds: 0.181425 
+time in seconds: 0.178941 
+time in seconds: 0.187851 
+time in seconds: 0.183885 
+time in seconds: 0.196894 
+time in seconds: 0.186266 
+time in seconds: 0.201191 
+time in seconds: 0.192726 
+time in seconds: 0.196671 
+time in seconds: 0.215126 
+time in seconds: 0.215496 
+time in seconds: 0.216971 
+time in seconds: 0.220797 
+time in seconds: 0.227465 
+time in seconds: 0.222427 
+time in seconds: 0.241289 
+time in seconds: 0.239734 
+time in seconds: 0.229205 
+time in seconds: 0.263227 
+rank 32, test 5, use_barrier 1 time in seconds: 0.151437 
+time in seconds: 0.151356 
+time in seconds: 0.155395 
+time in seconds: 0.179254 
+time in seconds: 0.179113 
+time in seconds: 0.175298 
+time in seconds: 0.163137 
+time in seconds: 0.179540 
+time in seconds: 0.187985 
+time in seconds: 0.182245 
+time in seconds: 0.179174 
+time in seconds: 0.188457 
+time in seconds: 0.198771 
+time in seconds: 0.184277 
+time in seconds: 0.189297 
+time in seconds: 0.196195 
+time in seconds: 0.181040 
+time in seconds: 0.201472 
+time in seconds: 0.220258 
+time in seconds: 0.219298 
+time in seconds: 0.220232 
+[mpiexec@mastiff] Sending Ctrl-C to processes as requested
+[mpiexec@mastiff] Press Ctrl-C again to force abort
+rank 32, test 6, use_barrier 0 [mpiexec@mastiff] Sending Ctrl-C to processes as requested
+[mpiexec@mastiff] Press Ctrl-C again to force abort
+rank 32, test 6, use_barrier 1 [mpiexec@mastiff] Sending Ctrl-C to processes as requested
+[mpiexec@mastiff] Press Ctrl-C again to force abort
+rank 32, test 7, use_barrier 0 [mpiexec@mastiff] Sending Ctrl-C to processes as requested
+[mpiexec@mastiff] Press Ctrl-C again to force abort
+rank 32, test 7, use_barrier 1 time in seconds: 0.166133 
+time in seconds: 0.165736 
+time in seconds: 0.161860 
+time in seconds: 0.169867 
+time in seconds: 0.189015 
+time in seconds: 0.195610 
+time in seconds: 0.193782 
+time in seconds: 0.191755 
+time in seconds: 0.193984 
+time in seconds: 0.205306 
+time in seconds: 0.194427 
+time in seconds: 0.191463 
+time in seconds: 0.210170 
+time in seconds: 0.215226 
+time in seconds: 0.202952 
+time in seconds: 0.207540 
+time in seconds: 0.211136 
+time in seconds: 0.213207 
+time in seconds: 0.213408 
+time in seconds: 0.217374 
+time in seconds: 0.208757 
+time in seconds: 0.222847 
+time in seconds: 0.215601 
+time in seconds: 0.230212 
+time in seconds: 0.229354 
+time in seconds: 0.248186 
+time in seconds: 0.251312 
+time in seconds: 0.252339 
+time in seconds: 0.266368 
+time in seconds: 0.270923 
+time in seconds: 0.267690 
+time in seconds: 0.272731 
+rank 1, test 1, use_barrier 0 time in seconds: 0.152913 
+rank 1, test 1, use_barrier 1 [mpiexec@mastiff] Sending Ctrl-C to processes as requested
+[mpiexec@mastiff] Press Ctrl-C again to force abort
+rank 1, test 2, use_barrier 0 time in seconds: 0.140326 
+rank 1, test 2, use_barrier 1 [mpiexec@mastiff] Sending Ctrl-C to processes as requested
+[mpiexec@mastiff] Press Ctrl-C again to force abort
+rank 1, test 3, use_barrier 0 time in seconds: 0.143363 
+rank 1, test 3, use_barrier 1 [mpiexec@mastiff] Sending Ctrl-C to processes as requested
+[mpiexec@mastiff] Press Ctrl-C again to force abort
+rank 1, test 4, use_barrier 0 time in seconds: 0.146252 
+rank 1, test 4, use_barrier 1 [mpiexec@mastiff] Sending Ctrl-C to processes as requested
+[mpiexec@mastiff] Press Ctrl-C again to force abort
+rank 1, test 5, use_barrier 0 time in seconds: 0.141898 
+rank 1, test 5, use_barrier 1 [mpiexec@mastiff] Sending Ctrl-C to processes as requested
+[mpiexec@mastiff] Press Ctrl-C again to force abort
+rank 1, test 6, use_barrier 0 time in seconds: 0.157629 
+rank 1, test 6, use_barrier 1 [mpiexec@mastiff] Sending Ctrl-C to processes as requested
+[mpiexec@mastiff] Press Ctrl-C again to force abort
+rank 1, test 7, use_barrier 0 time in seconds: 0.159311 
+rank 1, test 7, use_barrier 1 [mpiexec@mastiff] Sending Ctrl-C to processes as requested
+[mpiexec@mastiff] Press Ctrl-C again to force abort
+rank 2, test 1, use_barrier 0 time in seconds: 0.152341 
+time in seconds: 0.154200 
+rank 2, test 1, use_barrier 1 [mpiexec@mastiff] Sending Ctrl-C to processes as requested
+[mpiexec@mastiff] Press Ctrl-C again to force abort
+time in seconds: 0.157065 
+rank 2, test 2, use_barrier 0 [mpiexec@mastiff] Sending Ctrl-C to processes as requested
+[mpiexec@mastiff] Press Ctrl-C again to force abort
+rank 2, test 2, use_barrier 1 time in seconds: 0.142835 
+time in seconds: 0.144551 
+rank 2, test 3, use_barrier 0 [mpiexec@mastiff] Sending Ctrl-C to processes as requested
+[mpiexec@mastiff] Press Ctrl-C again to force abort
+rank 2, test 3, use_barrier 1 time in seconds: 0.138817 
+time in seconds: 0.155023 
+rank 2, test 4, use_barrier 0 time in seconds: 0.145780 
+time in seconds: 0.146425 
+rank 2, test 4, use_barrier 1 time in seconds: 0.157992 
+time in seconds: 0.164981 
+rank 2, test 5, use_barrier 0 [mpiexec@mastiff] Sending Ctrl-C to processes as requested
+[mpiexec@mastiff] Press Ctrl-C again to force abort
+rank 2, test 5, use_barrier 1 time in seconds: 0.163800 
+time in seconds: 0.174900 
+rank 2, test 6, use_barrier 0 [mpiexec@mastiff] Sending Ctrl-C to processes as requested
+[mpiexec@mastiff] Press Ctrl-C again to force abort
+rank 2, test 6, use_barrier 1 time in seconds: 0.153220 
+time in seconds: 0.159797 
+rank 2, test 7, use_barrier 0 [mpiexec@mastiff] Sending Ctrl-C to processes as requested
+[mpiexec@mastiff] Press Ctrl-C again to force abort
+rank 2, test 7, use_barrier 1 time in seconds: 0.155988 
+time in seconds: 0.156907 
+rank 4, test 1, use_barrier 0 time in seconds: 0.154675 
+time in seconds: 0.161311 
+time in seconds: 0.159615 
+time in seconds: 0.163754 
+rank 4, test 1, use_barrier 1 [mpiexec@mastiff] Sending Ctrl-C to processes as requested
+[mpiexec@mastiff] Press Ctrl-C again to force abort
+rank 4, test 2, use_barrier 0 [mpiexec@mastiff] Sending Ctrl-C to processes as requested
+[mpiexec@mastiff] Press Ctrl-C again to force abort
+Ctrl-C caught... cleaning up processes
+rank 4, test 2, use_barrier 1 [mpiexec@mastiff] Sending Ctrl-C to processes as requested
+[mpiexec@mastiff] Press Ctrl-C again to force abort
+[mpiexec@mastiff] Sending Ctrl-C to processes as requested
+[mpiexec@mastiff] Press Ctrl-C again to force abort
+Ctrl-C caught... cleaning up processes
+Ctrl-C caught... cleaning up processes
+rank 4, test 3, use_barrier 0 [mpiexec@mastiff] Sending Ctrl-C to processes as requested
+[mpiexec@mastiff] Press Ctrl-C again to force abort
+rank 4, test 3, use_barrier 1 [mpiexec@mastiff] Sending Ctrl-C to processes as requested
+[mpiexec@mastiff] Press Ctrl-C again to force abort
+Ctrl-C caught... cleaning up processes
+rank 4, test 4, use_barrier 0 [mpiexec@mastiff] Sending Ctrl-C to processes as requested
+[mpiexec@mastiff] Press Ctrl-C again to force abort
+rank 4, test 4, use_barrier 1 [mpiexec@mastiff] Sending Ctrl-C to processes as requested
+[mpiexec@mastiff] Press Ctrl-C again to force abort
+rank 4, test 5, use_barrier 0 [mpiexec@mastiff] Sending Ctrl-C to processes as requested
+[mpiexec@mastiff] Press Ctrl-C again to force abort
+rank 4, test 5, use_barrier 1 [mpiexec@mastiff] Sending Ctrl-C to processes as requested
+[mpiexec@mastiff] Press Ctrl-C again to force abort
+rank 4, test 6, use_barrier 0 [mpiexec@mastiff] Sending Ctrl-C to processes as requested
+[mpiexec@mastiff] Press Ctrl-C again to force abort
+rank 4, test 6, use_barrier 1 [mpiexec@mastiff] Sending Ctrl-C to processes as requested
+[mpiexec@mastiff] Press Ctrl-C again to force abort
+rank 4, test 7, use_barrier 0 [mpiexec@mastiff] Sending Ctrl-C to processes as requested
+[mpiexec@mastiff] Press Ctrl-C again to force abort
+rank 4, test 7, use_barrier 1 [mpiexec@mastiff] Sending Ctrl-C to processes as requested
+[mpiexec@mastiff] Press Ctrl-C again to force abort
+rank 8, test 1, use_barrier 0 [mpiexec@mastiff] Sending Ctrl-C to processes as requested
+[mpiexec@mastiff] Press Ctrl-C again to force abort
+rank 8, test 1, use_barrier 1 [mpiexec@mastiff] Sending Ctrl-C to processes as requested
+[mpiexec@mastiff] Press Ctrl-C again to force abort
+rank 8, test 2, use_barrier 0 time in seconds: 0.139997 
+time in seconds: 0.146755 
+time in seconds: 0.150976 
+time in seconds: 0.153532 
+time in seconds: 0.151805 
+time in seconds: 0.147848 
+time in seconds: 0.155891 
+time in seconds: 0.159371 
+rank 8, test 2, use_barrier 1 time in seconds: 0.143679 
+time in seconds: 0.142414 
+time in seconds: 0.148844 
+time in seconds: 0.149938 
+time in seconds: 0.139855 
+time in seconds: 0.152121 
+time in seconds: 0.153744 
+time in seconds: 0.154078 
+rank 8, test 3, use_barrier 0 timestamp: Fri Feb 15 22:02:34 EST 2019
+rank 1, test 1, use_barrier 0 time in seconds: 0.297173, (use_barrier: 0, ranks: ./a.out)
+rank 1, test 1, use_barrier 1 time in seconds: 0.298918, (use_barrier: 1, ranks: ./a.out)
+rank 1, test 2, use_barrier 0 time in seconds: 0.290318, (use_barrier: 0, ranks: ./a.out)
+rank 1, test 2, use_barrier 1 time in seconds: 0.286843, (use_barrier: 1, ranks: ./a.out)
+rank 1, test 3, use_barrier 0 time in seconds: 0.294645, (use_barrier: 0, ranks: ./a.out)
+rank 1, test 3, use_barrier 1 time in seconds: 0.289122, (use_barrier: 1, ranks: ./a.out)
+rank 1, test 4, use_barrier 0 time in seconds: 0.294493, (use_barrier: 0, ranks: ./a.out)
+rank 1, test 4, use_barrier 1 time in seconds: 0.292642, (use_barrier: 1, ranks: ./a.out)
+rank 1, test 5, use_barrier 0 time in seconds: 0.290349, (use_barrier: 0, ranks: ./a.out)
+rank 1, test 5, use_barrier 1 time in seconds: 0.287830, (use_barrier: 1, ranks: ./a.out)
+rank 1, test 6, use_barrier 0 time in seconds: 0.301405, (use_barrier: 0, ranks: ./a.out)
+rank 1, test 6, use_barrier 1 time in seconds: 0.302261, (use_barrier: 1, ranks: ./a.out)
+rank 1, test 7, use_barrier 0 time in seconds: 0.297171, (use_barrier: 0, ranks: ./a.out)
+rank 1, test 7, use_barrier 1 time in seconds: 0.298568, (use_barrier: 1, ranks: ./a.out)
+rank 2, test 1, use_barrier 0 time in seconds: 0.241124, (use_barrier: 0, ranks: ./a.out)
+rank 2, test 1, use_barrier 1 time in seconds: 0.257675, (use_barrier: 1, ranks: ./a.out)
+rank 2, test 2, use_barrier 0 time in seconds: 0.225499, (use_barrier: 0, ranks: ./a.out)
+rank 2, test 2, use_barrier 1 time in seconds: 0.232776, (use_barrier: 1, ranks: ./a.out)
+rank 2, test 3, use_barrier 0 time in seconds: 0.222857, (use_barrier: 0, ranks: ./a.out)
+rank 2, test 3, use_barrier 1 time in seconds: 0.232570, (use_barrier: 1, ranks: ./a.out)
+rank 2, test 4, use_barrier 0 time in seconds: 0.229958, (use_barrier: 0, ranks: ./a.out)
+rank 2, test 4, use_barrier 1 time in seconds: 0.215701, (use_barrier: 1, ranks: ./a.out)
+rank 2, test 5, use_barrier 0 time in seconds: 0.221291, (use_barrier: 0, ranks: ./a.out)
+rank 2, test 5, use_barrier 1 time in seconds: 0.232641, (use_barrier: 1, ranks: ./a.out)
+rank 2, test 6, use_barrier 0 time in seconds: 0.263854, (use_barrier: 0, ranks: ./a.out)
+rank 2, test 6, use_barrier 1 time in seconds: 0.244492, (use_barrier: 1, ranks: ./a.out)
+rank 2, test 7, use_barrier 0 time in seconds: 0.238913, (use_barrier: 0, ranks: ./a.out)
+rank 2, test 7, use_barrier 1 time in seconds: 0.240773, (use_barrier: 1, ranks: ./a.out)
+rank 4, test 1, use_barrier 0 time in seconds: 0.230132, (use_barrier: 0, ranks: ./a.out)
+rank 4, test 1, use_barrier 1 time in seconds: 0.217938, (use_barrier: 1, ranks: ./a.out)
+rank 4, test 2, use_barrier 0 time in seconds: 0.210857, (use_barrier: 0, ranks: ./a.out)
+rank 4, test 2, use_barrier 1 time in seconds: 0.205354, (use_barrier: 1, ranks: ./a.out)
+rank 4, test 3, use_barrier 0 time in seconds: 0.210094, (use_barrier: 0, ranks: ./a.out)
+rank 4, test 3, use_barrier 1 time in seconds: 0.210019, (use_barrier: 1, ranks: ./a.out)
+rank 4, test 4, use_barrier 0 time in seconds: 0.216617, (use_barrier: 0, ranks: ./a.out)
+rank 4, test 4, use_barrier 1 time in seconds: 0.212515, (use_barrier: 1, ranks: ./a.out)
+rank 4, test 5, use_barrier 0 time in seconds: 0.201304, (use_barrier: 0, ranks: ./a.out)
+rank 4, test 5, use_barrier 1 time in seconds: 0.214372, (use_barrier: 1, ranks: ./a.out)
+rank 4, test 6, use_barrier 0 time in seconds: 0.230402, (use_barrier: 0, ranks: ./a.out)
+rank 4, test 6, use_barrier 1 time in seconds: 0.229853, (use_barrier: 1, ranks: ./a.out)
+rank 4, test 7, use_barrier 0 time in seconds: 0.216611, (use_barrier: 0, ranks: ./a.out)
+rank 4, test 7, use_barrier 1 time in seconds: 0.221955, (use_barrier: 1, ranks: ./a.out)
+rank 8, test 1, use_barrier 0 time in seconds: 0.203256, (use_barrier: 0, ranks: ./a.out)
+rank 8, test 1, use_barrier 1 time in seconds: 0.230680, (use_barrier: 1, ranks: ./a.out)
+rank 8, test 2, use_barrier 0 time in seconds: 0.189636, (use_barrier: 0, ranks: ./a.out)
+rank 8, test 2, use_barrier 1 time in seconds: 0.167712, (use_barrier: 1, ranks: ./a.out)
+rank 8, test 3, use_barrier 0 time in seconds: 0.250887, (use_barrier: 0, ranks: ./a.out)
+rank 8, test 3, use_barrier 1 time in seconds: 0.187840, (use_barrier: 1, ranks: ./a.out)
+rank 8, test 4, use_barrier 0 time in seconds: 0.199964, (use_barrier: 0, ranks: ./a.out)
+rank 8, test 4, use_barrier 1 time in seconds: 0.243392, (use_barrier: 1, ranks: ./a.out)
+rank 8, test 5, use_barrier 0 time in seconds: 0.202693, (use_barrier: 0, ranks: ./a.out)
+rank 8, test 5, use_barrier 1 time in seconds: 0.197428, (use_barrier: 1, ranks: ./a.out)
+rank 8, test 6, use_barrier 0 time in seconds: 0.250507, (use_barrier: 0, ranks: ./a.out)
+rank 8, test 6, use_barrier 1 time in seconds: 0.218381, (use_barrier: 1, ranks: ./a.out)
+rank 8, test 7, use_barrier 0 time in seconds: 0.227102, (use_barrier: 0, ranks: ./a.out)
+rank 8, test 7, use_barrier 1 time in seconds: 0.205823, (use_barrier: 1, ranks: ./a.out)
+rank 16, test 1, use_barrier 0 time in seconds: 0.240398, (use_barrier: 0, ranks: ./a.out)
+rank 16, test 1, use_barrier 1 time in seconds: 0.251074, (use_barrier: 1, ranks: ./a.out)
+rank 16, test 2, use_barrier 0 time in seconds: 0.229294, (use_barrier: 0, ranks: ./a.out)
+rank 16, test 2, use_barrier 1 time in seconds: 0.242727, (use_barrier: 1, ranks: ./a.out)
+rank 16, test 3, use_barrier 0 time in seconds: 0.178234, (use_barrier: 0, ranks: ./a.out)
+rank 16, test 3, use_barrier 1 time in seconds: 0.223189, (use_barrier: 1, ranks: ./a.out)
+rank 16, test 4, use_barrier 0 time in seconds: 0.224825, (use_barrier: 0, ranks: ./a.out)
+rank 16, test 4, use_barrier 1 time in seconds: 0.235870, (use_barrier: 1, ranks: ./a.out)
+rank 16, test 5, use_barrier 0 time in seconds: 0.228592, (use_barrier: 0, ranks: ./a.out)
+rank 16, test 5, use_barrier 1 time in seconds: 0.224915, (use_barrier: 1, ranks: ./a.out)
+rank 16, test 6, use_barrier 0 time in seconds: 0.228992, (use_barrier: 0, ranks: ./a.out)
+rank 16, test 6, use_barrier 1 time in seconds: 0.167051, (use_barrier: 1, ranks: ./a.out)
+rank 16, test 7, use_barrier 0 time in seconds: 0.241176, (use_barrier: 0, ranks: ./a.out)
+rank 16, test 7, use_barrier 1 time in seconds: 0.251714, (use_barrier: 1, ranks: ./a.out)
+rank 32, test 1, use_barrier 0 time in seconds: 0.232200, (use_barrier: 0, ranks: ./a.out)
+rank 32, test 1, use_barrier 1 time in seconds: 0.237545, (use_barrier: 1, ranks: ./a.out)
+rank 32, test 2, use_barrier 0 time in seconds: 0.223452, (use_barrier: 0, ranks: ./a.out)
+rank 32, test 2, use_barrier 1 time in seconds: 0.178161, (use_barrier: 1, ranks: ./a.out)
+rank 32, test 3, use_barrier 0 time in seconds: 0.176084, (use_barrier: 0, ranks: ./a.out)
+rank 32, test 3, use_barrier 1 time in seconds: 0.233497, (use_barrier: 1, ranks: ./a.out)
+rank 32, test 4, use_barrier 0 time in seconds: 0.240240, (use_barrier: 0, ranks: ./a.out)
+rank 32, test 4, use_barrier 1 time in seconds: 0.199313, (use_barrier: 1, ranks: ./a.out)
+rank 32, test 5, use_barrier 0 time in seconds: 0.228366, (use_barrier: 0, ranks: ./a.out)
+rank 32, test 5, use_barrier 1 time in seconds: 0.233843, (use_barrier: 1, ranks: ./a.out)
+rank 32, test 6, use_barrier 0 time in seconds: 0.262124, (use_barrier: 0, ranks: ./a.out)
+rank 32, test 6, use_barrier 1 time in seconds: 0.216288, (use_barrier: 1, ranks: ./a.out)
+rank 32, test 7, use_barrier 0 time in seconds: 0.253545, (use_barrier: 0, ranks: ./a.out)
+rank 32, test 7, use_barrier 1 time in seconds: 0.242950, (use_barrier: 1, ranks: ./a.out)
+rank 1, test 1, use_barrier 0 time in seconds: 0.303858, (use_barrier: 0, ranks: ./a.out)
+rank 1, test 1, use_barrier 1 time in seconds: 0.302962, (use_barrier: 1, ranks: ./a.out)
+rank 1, test 2, use_barrier 0 time in seconds: 0.285155, (use_barrier: 0, ranks: ./a.out)
+rank 1, test 2, use_barrier 1 time in seconds: 0.285201, (use_barrier: 1, ranks: ./a.out)
+rank 1, test 3, use_barrier 0 time in seconds: 0.286023, (use_barrier: 0, ranks: ./a.out)
+rank 1, test 3, use_barrier 1 time in seconds: 0.287922, (use_barrier: 1, ranks: ./a.out)
+rank 1, test 4, use_barrier 0 time in seconds: 0.290778, (use_barrier: 0, ranks: ./a.out)
+rank 1, test 4, use_barrier 1 time in seconds: 0.294114, (use_barrier: 1, ranks: ./a.out)
+rank 1, test 5, use_barrier 0 time in seconds: 0.304977, (use_barrier: 0, ranks: ./a.out)
+rank 1, test 5, use_barrier 1 time in seconds: 0.286322, (use_barrier: 1, ranks: ./a.out)
+rank 1, test 6, use_barrier 0 time in seconds: 0.304781, (use_barrier: 0, ranks: ./a.out)
+rank 1, test 6, use_barrier 1 time in seconds: 0.301814, (use_barrier: 1, ranks: ./a.out)
+rank 1, test 7, use_barrier 0 time in seconds: 0.306953, (use_barrier: 0, ranks: ./a.out)
+rank 1, test 7, use_barrier 1 time in seconds: 0.301146, (use_barrier: 1, ranks: ./a.out)
+rank 2, test 1, use_barrier 0 time in seconds: 0.246313, (use_barrier: 0, ranks: ./a.out)
+rank 2, test 1, use_barrier 1 time in seconds: 0.245235, (use_barrier: 1, ranks: ./a.out)
+rank 2, test 2, use_barrier 0 time in seconds: 0.218866, (use_barrier: 0, ranks: ./a.out)
+rank 2, test 2, use_barrier 1 time in seconds: 0.221276, (use_barrier: 1, ranks: ./a.out)
+rank 2, test 3, use_barrier 0 time in seconds: 0.224543, (use_barrier: 0, ranks: ./a.out)
+rank 2, test 3, use_barrier 1 time in seconds: 0.225158, (use_barrier: 1, ranks: ./a.out)
+rank 2, test 4, use_barrier 0 time in seconds: 0.233750, (use_barrier: 0, ranks: ./a.out)
+rank 2, test 4, use_barrier 1 time in seconds: 0.253044, (use_barrier: 1, ranks: ./a.out)
+rank 2, test 5, use_barrier 0 time in seconds: 0.235340, (use_barrier: 0, ranks: ./a.out)
+rank 2, test 5, use_barrier 1 time in seconds: 0.227487, (use_barrier: 1, ranks: ./a.out)
+rank 2, test 6, use_barrier 0 time in seconds: 0.244434, (use_barrier: 0, ranks: ./a.out)
+rank 2, test 6, use_barrier 1 time in seconds: 0.244682, (use_barrier: 1, ranks: ./a.out)
+rank 2, test 7, use_barrier 0 time in seconds: 0.238623, (use_barrier: 0, ranks: ./a.out)
+rank 2, test 7, use_barrier 1 time in seconds: 0.246703, (use_barrier: 1, ranks: ./a.out)
+rank 4, test 1, use_barrier 0 time in seconds: 0.223830, (use_barrier: 0, ranks: ./a.out)
+rank 4, test 1, use_barrier 1 time in seconds: 0.229850, (use_barrier: 1, ranks: ./a.out)
+rank 4, test 2, use_barrier 0 time in seconds: 0.206240, (use_barrier: 0, ranks: ./a.out)
+rank 4, test 2, use_barrier 1 time in seconds: 0.210448, (use_barrier: 1, ranks: ./a.out)
+rank 4, test 3, use_barrier 0 time in seconds: 0.178463, (use_barrier: 0, ranks: ./a.out)
+rank 4, test 3, use_barrier 1 time in seconds: 0.217373, (use_barrier: 1, ranks: ./a.out)
+rank 4, test 4, use_barrier 0 time in seconds: 0.206927, (use_barrier: 0, ranks: ./a.out)
+rank 4, test 4, use_barrier 1 time in seconds: 0.217890, (use_barrier: 1, ranks: ./a.out)
+rank 4, test 5, use_barrier 0 time in seconds: 0.196851, (use_barrier: 0, ranks: ./a.out)
+rank 4, test 5, use_barrier 1 time in seconds: 0.200977, (use_barrier: 1, ranks: ./a.out)
+rank 4, test 6, use_barrier 0 time in seconds: 0.231583, (use_barrier: 0, ranks: ./a.out)
+rank 4, test 6, use_barrier 1 time in seconds: 0.221863, (use_barrier: 1, ranks: ./a.out)
+rank 4, test 7, use_barrier 0 time in seconds: 0.221640, (use_barrier: 0, ranks: ./a.out)
+rank 4, test 7, use_barrier 1 time in seconds: 0.216352, (use_barrier: 1, ranks: ./a.out)
+rank 8, test 1, use_barrier 0 time in seconds: 0.249685, (use_barrier: 0, ranks: ./a.out)
+rank 8, test 1, use_barrier 1 time in seconds: 0.222420, (use_barrier: 1, ranks: ./a.out)
+rank 8, test 2, use_barrier 0 time in seconds: 0.238219, (use_barrier: 0, ranks: ./a.out)
+rank 8, test 2, use_barrier 1 time in seconds: 0.234933, (use_barrier: 1, ranks: ./a.out)
+rank 8, test 3, use_barrier 0 time in seconds: 0.236278, (use_barrier: 0, ranks: ./a.out)
+rank 8, test 3, use_barrier 1 time in seconds: 0.241271, (use_barrier: 1, ranks: ./a.out)
+rank 8, test 4, use_barrier 0 time in seconds: 0.204385, (use_barrier: 0, ranks: ./a.out)
+rank 8, test 4, use_barrier 1 time in seconds: 0.248682, (use_barrier: 1, ranks: ./a.out)
+rank 8, test 5, use_barrier 0 time in seconds: 0.221270, (use_barrier: 0, ranks: ./a.out)
+rank 8, test 5, use_barrier 1 time in seconds: 0.196333, (use_barrier: 1, ranks: ./a.out)
+rank 8, test 6, use_barrier 0 time in seconds: 0.248198, (use_barrier: 0, ranks: ./a.out)
+rank 8, test 6, use_barrier 1 time in seconds: 0.214255, (use_barrier: 1, ranks: ./a.out)
+rank 8, test 7, use_barrier 0 time in seconds: 0.223905, (use_barrier: 0, ranks: ./a.out)
+rank 8, test 7, use_barrier 1 time in seconds: 0.220065, (use_barrier: 1, ranks: ./a.out)
+rank 16, test 1, use_barrier 0 time in seconds: 0.259810, (use_barrier: 0, ranks: ./a.out)
+rank 16, test 1, use_barrier 1 time in seconds: 0.251594, (use_barrier: 1, ranks: ./a.out)
+rank 16, test 2, use_barrier 0 time in seconds: 0.233652, (use_barrier: 0, ranks: ./a.out)
+rank 16, test 2, use_barrier 1 time in seconds: 0.231573, (use_barrier: 1, ranks: ./a.out)
+rank 16, test 3, use_barrier 0 time in seconds: 0.187492, (use_barrier: 0, ranks: ./a.out)
+rank 16, test 3, use_barrier 1 time in seconds: 0.230633, (use_barrier: 1, ranks: ./a.out)
+rank 16, test 4, use_barrier 0 time in seconds: 0.239272, (use_barrier: 0, ranks: ./a.out)
+rank 16, test 4, use_barrier 1 time in seconds: 0.189377, (use_barrier: 1, ranks: ./a.out)
+rank 16, test 5, use_barrier 0 time in seconds: 0.217404, (use_barrier: 0, ranks: ./a.out)
+rank 16, test 5, use_barrier 1 time in seconds: 0.179965, (use_barrier: 1, ranks: ./a.out)
+rank 16, test 6, use_barrier 0 time in seconds: 0.209055, (use_barrier: 0, ranks: ./a.out)
+rank 16, test 6, use_barrier 1 time in seconds: 0.165959, (use_barrier: 1, ranks: ./a.out)
+rank 16, test 7, use_barrier 0 time in seconds: 0.230296, (use_barrier: 0, ranks: ./a.out)
+rank 16, test 7, use_barrier 1 time in seconds: 0.198565, (use_barrier: 1, ranks: ./a.out)
+rank 32, test 1, use_barrier 0 time in seconds: 0.233930, (use_barrier: 0, ranks: ./a.out)
+rank 32, test 1, use_barrier 1 time in seconds: 0.208303, (use_barrier: 1, ranks: ./a.out)
+rank 32, test 2, use_barrier 0 time in seconds: 0.181429, (use_barrier: 0, ranks: ./a.out)
+rank 32, test 2, use_barrier 1 time in seconds: 0.207823, (use_barrier: 1, ranks: ./a.out)
+rank 32, test 3, use_barrier 0 time in seconds: 0.240285, (use_barrier: 0, ranks: ./a.out)
+rank 32, test 3, use_barrier 1 time in seconds: 0.166894, (use_barrier: 1, ranks: ./a.out)
+rank 32, test 4, use_barrier 0 time in seconds: 0.241194, (use_barrier: 0, ranks: ./a.out)
+rank 32, test 4, use_barrier 1 time in seconds: 0.177886, (use_barrier: 1, ranks: ./a.out)
+rank 32, test 5, use_barrier 0 time in seconds: 0.236524, (use_barrier: 0, ranks: ./a.out)
+rank 32, test 5, use_barrier 1 time in seconds: 0.234224, (use_barrier: 1, ranks: ./a.out)
+rank 32, test 6, use_barrier 0 time in seconds: 0.230232, (use_barrier: 0, ranks: ./a.out)
+rank 32, test 6, use_barrier 1 time in seconds: 0.254582, (use_barrier: 1, ranks: ./a.out)
+rank 32, test 7, use_barrier 0 time in seconds: 0.252420, (use_barrier: 0, ranks: ./a.out)
+rank 32, test 7, use_barrier 1 time in seconds: 0.259973, (use_barrier: 1, ranks: ./a.out)
+rank 1, test 1, use_barrier 0 time in seconds: 0.296902, (use_barrier: 0, ranks: ./a.out)
+rank 1, test 1, use_barrier 1 time in seconds: 0.298924, (use_barrier: 1, ranks: ./a.out)
+rank 1, test 2, use_barrier 0 time in seconds: 0.290383, (use_barrier: 0, ranks: ./a.out)
+rank 1, test 2, use_barrier 1 time in seconds: 0.287608, (use_barrier: 1, ranks: ./a.out)
+rank 1, test 3, use_barrier 0 time in seconds: 0.287195, (use_barrier: 0, ranks: ./a.out)
+rank 1, test 3, use_barrier 1 time in seconds: 0.293310, (use_barrier: 1, ranks: ./a.out)
+rank 1, test 4, use_barrier 0 time in seconds: 0.289234, (use_barrier: 0, ranks: ./a.out)
+rank 1, test 4, use_barrier 1 time in seconds: 0.294945, (use_barrier: 1, ranks: ./a.out)
+rank 1, test 5, use_barrier 0 time in seconds: 0.302277, (use_barrier: 0, ranks: ./a.out)
+rank 1, test 5, use_barrier 1 time in seconds: 0.287882, (use_barrier: 1, ranks: ./a.out)
+rank 1, test 6, use_barrier 0 time in seconds: 0.301856, (use_barrier: 0, ranks: ./a.out)
+rank 1, test 6, use_barrier 1 time in seconds: 0.307824, (use_barrier: 1, ranks: ./a.out)
+rank 1, test 7, use_barrier 0 time in seconds: 0.303309, (use_barrier: 0, ranks: ./a.out)
+rank 1, test 7, use_barrier 1 time in seconds: 0.304084, (use_barrier: 1, ranks: ./a.out)
+rank 2, test 1, use_barrier 0 time in seconds: 0.244501, (use_barrier: 0, ranks: ./a.out)
+rank 2, test 1, use_barrier 1 time in seconds: 0.239919, (use_barrier: 1, ranks: ./a.out)
+rank 2, test 2, use_barrier 0 time in seconds: 0.218588, (use_barrier: 0, ranks: ./a.out)
+rank 2, test 2, use_barrier 1 time in seconds: 0.246586, (use_barrier: 1, ranks: ./a.out)
+rank 2, test 3, use_barrier 0 time in seconds: 0.228321, (use_barrier: 0, ranks: ./a.out)
+rank 2, test 3, use_barrier 1 time in seconds: 0.224895, (use_barrier: 1, ranks: ./a.out)
+rank 2, test 4, use_barrier 0 time in seconds: 0.227453, (use_barrier: 0, ranks: ./a.out)
+rank 2, test 4, use_barrier 1 time in seconds: 0.227557, (use_barrier: 1, ranks: ./a.out)
+rank 2, test 5, use_barrier 0 time in seconds: 0.221625, (use_barrier: 0, ranks: ./a.out)
+rank 2, test 5, use_barrier 1 time in seconds: 0.227724, (use_barrier: 1, ranks: ./a.out)
+rank 2, test 6, use_barrier 0 time in seconds: 0.246027, (use_barrier: 0, ranks: ./a.out)
+rank 2, test 6, use_barrier 1 time in seconds: 0.235786, (use_barrier: 1, ranks: ./a.out)
+rank 2, test 7, use_barrier 0 time in seconds: 0.243153, (use_barrier: 0, ranks: ./a.out)
+rank 2, test 7, use_barrier 1 time in seconds: 0.257075, (use_barrier: 1, ranks: ./a.out)
+rank 4, test 1, use_barrier 0 time in seconds: 0.246392, (use_barrier: 0, ranks: ./a.out)
+rank 4, test 1, use_barrier 1 time in seconds: 0.201593, (use_barrier: 1, ranks: ./a.out)
+rank 4, test 2, use_barrier 0 time in seconds: 0.212767, (use_barrier: 0, ranks: ./a.out)
+rank 4, test 2, use_barrier 1 time in seconds: 0.208697, (use_barrier: 1, ranks: ./a.out)
+rank 4, test 3, use_barrier 0 time in seconds: 0.206728, (use_barrier: 0, ranks: ./a.out)
+rank 4, test 3, use_barrier 1 time in seconds: 0.212503, (use_barrier: 1, ranks: ./a.out)
+rank 4, test 4, use_barrier 0 time in seconds: 0.210923, (use_barrier: 0, ranks: ./a.out)
+rank 4, test 4, use_barrier 1 time in seconds: 0.213448, (use_barrier: 1, ranks: ./a.out)
+rank 4, test 5, use_barrier 0 time in seconds: 0.207253, (use_barrier: 0, ranks: ./a.out)
+rank 4, test 5, use_barrier 1 time in seconds: 0.206851, (use_barrier: 1, ranks: ./a.out)
+rank 4, test 6, use_barrier 0 time in seconds: 0.222292, (use_barrier: 0, ranks: ./a.out)
+rank 4, test 6, use_barrier 1 time in seconds: 0.214595, (use_barrier: 1, ranks: ./a.out)
+rank 4, test 7, use_barrier 0 time in seconds: 0.226118, (use_barrier: 0, ranks: ./a.out)
+rank 4, test 7, use_barrier 1 time in seconds: 0.222114, (use_barrier: 1, ranks: ./a.out)
+rank 8, test 1, use_barrier 0 time in seconds: 0.266976, (use_barrier: 0, ranks: ./a.out)
+rank 8, test 1, use_barrier 1 time in seconds: 0.199581, (use_barrier: 1, ranks: ./a.out)
+rank 8, test 2, use_barrier 0 time in seconds: 0.215536, (use_barrier: 0, ranks: ./a.out)
+rank 8, test 2, use_barrier 1 time in seconds: 0.233998, (use_barrier: 1, ranks: ./a.out)
+rank 8, test 3, use_barrier 0 time in seconds: 0.209561, (use_barrier: 0, ranks: ./a.out)
+rank 8, test 3, use_barrier 1 time in seconds: 0.225411, (use_barrier: 1, ranks: ./a.out)
+rank 8, test 4, use_barrier 0 time in seconds: 0.220200, (use_barrier: 0, ranks: ./a.out)
+rank 8, test 4, use_barrier 1 time in seconds: 0.255784, (use_barrier: 1, ranks: ./a.out)
+rank 8, test 5, use_barrier 0 time in seconds: 0.239680, (use_barrier: 0, ranks: ./a.out)
+rank 8, test 5, use_barrier 1 time in seconds: 0.241452, (use_barrier: 1, ranks: ./a.out)
+rank 8, test 6, use_barrier 0 time in seconds: 0.223541, (use_barrier: 0, ranks: ./a.out)
+rank 8, test 6, use_barrier 1 time in seconds: 0.217612, (use_barrier: 1, ranks: ./a.out)
+rank 8, test 7, use_barrier 0 time in seconds: 0.210800, (use_barrier: 0, ranks: ./a.out)
+rank 8, test 7, use_barrier 1 time in seconds: 0.229601, (use_barrier: 1, ranks: ./a.out)
+rank 16, test 1, use_barrier 0 time in seconds: 0.239040, (use_barrier: 0, ranks: ./a.out)
+rank 16, test 1, use_barrier 1 time in seconds: 0.183586, (use_barrier: 1, ranks: ./a.out)
+rank 16, test 2, use_barrier 0 time in seconds: 0.228550, (use_barrier: 0, ranks: ./a.out)
+rank 16, test 2, use_barrier 1 time in seconds: 0.224698, (use_barrier: 1, ranks: ./a.out)
+rank 16, test 3, use_barrier 0 time in seconds: 0.189647, (use_barrier: 0, ranks: ./a.out)
+rank 16, test 3, use_barrier 1 time in seconds: 0.178803, (use_barrier: 1, ranks: ./a.out)
+rank 16, test 4, use_barrier 0 time in seconds: 0.252504, (use_barrier: 0, ranks: ./a.out)
+rank 16, test 4, use_barrier 1 time in seconds: 0.222575, (use_barrier: 1, ranks: ./a.out)
+rank 16, test 5, use_barrier 0 time in seconds: 0.149729, (use_barrier: 0, ranks: ./a.out)
+rank 16, test 5, use_barrier 1 time in seconds: 0.204545, (use_barrier: 1, ranks: ./a.out)
+rank 16, test 6, use_barrier 0 time in seconds: 0.213681, (use_barrier: 0, ranks: ./a.out)
+rank 16, test 6, use_barrier 1 time in seconds: 0.252801, (use_barrier: 1, ranks: ./a.out)
+rank 16, test 7, use_barrier 0 time in seconds: 0.169690, (use_barrier: 0, ranks: ./a.out)
+rank 16, test 7, use_barrier 1 time in seconds: 0.221082, (use_barrier: 1, ranks: ./a.out)
+rank 32, test 1, use_barrier 0 time in seconds: 0.205159, (use_barrier: 0, ranks: ./a.out)
+rank 32, test 1, use_barrier 1 time in seconds: 0.234613, (use_barrier: 1, ranks: ./a.out)
+rank 32, test 2, use_barrier 0 time in seconds: 0.226791, (use_barrier: 0, ranks: ./a.out)
+rank 32, test 2, use_barrier 1 time in seconds: 0.170231, (use_barrier: 1, ranks: ./a.out)
+rank 32, test 3, use_barrier 0 time in seconds: 0.189084, (use_barrier: 0, ranks: ./a.out)
+rank 32, test 3, use_barrier 1 time in seconds: 0.163579, (use_barrier: 1, ranks: ./a.out)
+rank 32, test 4, use_barrier 0 time in seconds: 0.170147, (use_barrier: 0, ranks: ./a.out)
+rank 32, test 4, use_barrier 1 time in seconds: 0.235308, (use_barrier: 1, ranks: ./a.out)
+rank 32, test 5, use_barrier 0 time in seconds: 0.226884, (use_barrier: 0, ranks: ./a.out)
+rank 32, test 5, use_barrier 1 time in seconds: 0.211251, (use_barrier: 1, ranks: ./a.out)
+rank 32, test 6, use_barrier 0 time in seconds: 0.223190, (use_barrier: 0, ranks: ./a.out)
+rank 32, test 6, use_barrier 1 time in seconds: 0.258435, (use_barrier: 1, ranks: ./a.out)
+rank 32, test 7, use_barrier 0 time in seconds: 0.230037, (use_barrier: 0, ranks: ./a.out)
+rank 32, test 7, use_barrier 1 time in seconds: 0.245732, (use_barrier: 1, ranks: ./a.out)
+rank 1, test 1, use_barrier 0 time in seconds: 0.306714, (use_barrier: 0, ranks: ./a.out)
+rank 1, test 1, use_barrier 1 time in seconds: 0.300510, (use_barrier: 1, ranks: ./a.out)
+rank 1, test 2, use_barrier 0 time in seconds: 0.292478, (use_barrier: 0, ranks: ./a.out)
+rank 1, test 2, use_barrier 1 time in seconds: 0.284038, (use_barrier: 1, ranks: ./a.out)
+rank 1, test 3, use_barrier 0 time in seconds: 0.308797, (use_barrier: 0, ranks: ./a.out)
+rank 1, test 3, use_barrier 1 time in seconds: 0.285449, (use_barrier: 1, ranks: ./a.out)
+rank 1, test 4, use_barrier 0 time in seconds: 0.290759, (use_barrier: 0, ranks: ./a.out)
+rank 1, test 4, use_barrier 1 time in seconds: 0.291945, (use_barrier: 1, ranks: ./a.out)
+rank 1, test 5, use_barrier 0 time in seconds: 0.287454, (use_barrier: 0, ranks: ./a.out)
+rank 1, test 5, use_barrier 1 time in seconds: 0.291287, (use_barrier: 1, ranks: ./a.out)
+rank 1, test 6, use_barrier 0 time in seconds: 0.299676, (use_barrier: 0, ranks: ./a.out)
+rank 1, test 6, use_barrier 1 time in seconds: 0.301983, (use_barrier: 1, ranks: ./a.out)
+rank 1, test 7, use_barrier 0 time in seconds: 0.297076, (use_barrier: 0, ranks: ./a.out)
+rank 1, test 7, use_barrier 1 time in seconds: 0.296776, (use_barrier: 1, ranks: ./a.out)
+rank 2, test 1, use_barrier 0 time in seconds: 0.240949, (use_barrier: 0, ranks: ./a.out)
+rank 2, test 1, use_barrier 1 time in seconds: 0.235095, (use_barrier: 1, ranks: ./a.out)
+rank 2, test 2, use_barrier 0 time in seconds: 0.217165, (use_barrier: 0, ranks: ./a.out)
+rank 2, test 2, use_barrier 1 time in seconds: 0.219251, (use_barrier: 1, ranks: ./a.out)
+rank 2, test 3, use_barrier 0 time in seconds: 0.224998, (use_barrier: 0, ranks: ./a.out)
+rank 2, test 3, use_barrier 1 time in seconds: 0.225893, (use_barrier: 1, ranks: ./a.out)
+rank 2, test 4, use_barrier 0 time in seconds: 0.215446, (use_barrier: 0, ranks: ./a.out)
+rank 2, test 4, use_barrier 1 time in seconds: 0.227050, (use_barrier: 1, ranks: ./a.out)
+rank 2, test 5, use_barrier 0 time in seconds: 0.224669, (use_barrier: 0, ranks: ./a.out)
+rank 2, test 5, use_barrier 1 time in seconds: 0.227673, (use_barrier: 1, ranks: ./a.out)
+rank 2, test 6, use_barrier 0 time in seconds: 0.253905, (use_barrier: 0, ranks: ./a.out)
+rank 2, test 6, use_barrier 1 time in seconds: 0.244169, (use_barrier: 1, ranks: ./a.out)
+rank 2, test 7, use_barrier 0 time in seconds: 0.241791, (use_barrier: 0, ranks: ./a.out)
+rank 2, test 7, use_barrier 1 time in seconds: 0.241099, (use_barrier: 1, ranks: ./a.out)
+rank 4, test 1, use_barrier 0 time in seconds: 0.228925, (use_barrier: 0, ranks: ./a.out)
+rank 4, test 1, use_barrier 1 time in seconds: 0.223971, (use_barrier: 1, ranks: ./a.out)
+rank 4, test 2, use_barrier 0 time in seconds: 0.202175, (use_barrier: 0, ranks: ./a.out)
+rank 4, test 2, use_barrier 1 time in seconds: 0.204676, (use_barrier: 1, ranks: ./a.out)
+rank 4, test 3, use_barrier 0 time in seconds: 0.206188, (use_barrier: 0, ranks: ./a.out)
+rank 4, test 3, use_barrier 1 time in seconds: 0.203641, (use_barrier: 1, ranks: ./a.out)
+rank 4, test 4, use_barrier 0 time in seconds: 0.208191, (use_barrier: 0, ranks: ./a.out)
+rank 4, test 4, use_barrier 1 time in seconds: 0.232177, (use_barrier: 1, ranks: ./a.out)
+rank 4, test 5, use_barrier 0 time in seconds: 0.208074, (use_barrier: 0, ranks: ./a.out)
+rank 4, test 5, use_barrier 1 time in seconds: 0.215773, (use_barrier: 1, ranks: ./a.out)
+rank 4, test 6, use_barrier 0 time in seconds: 0.217532, (use_barrier: 0, ranks: ./a.out)
+rank 4, test 6, use_barrier 1 time in seconds: 0.228302, (use_barrier: 1, ranks: ./a.out)
+rank 4, test 7, use_barrier 0 time in seconds: 0.227080, (use_barrier: 0, ranks: ./a.out)
+rank 4, test 7, use_barrier 1 time in seconds: 0.220386, (use_barrier: 1, ranks: ./a.out)
+rank 8, test 1, use_barrier 0 time in seconds: 0.209429, (use_barrier: 0, ranks: ./a.out)
+rank 8, test 1, use_barrier 1 time in seconds: 0.238551, (use_barrier: 1, ranks: ./a.out)
+rank 8, test 2, use_barrier 0 time in seconds: 0.201221, (use_barrier: 0, ranks: ./a.out)
+rank 8, test 2, use_barrier 1 time in seconds: 0.215470, (use_barrier: 1, ranks: ./a.out)
+rank 8, test 3, use_barrier 0 time in seconds: 0.196431, (use_barrier: 0, ranks: ./a.out)
+rank 8, test 3, use_barrier 1 time in seconds: 0.193934, (use_barrier: 1, ranks: ./a.out)
+rank 8, test 4, use_barrier 0 time in seconds: 0.244111, (use_barrier: 0, ranks: ./a.out)
+rank 8, test 4, use_barrier 1 time in seconds: 0.212245, (use_barrier: 1, ranks: ./a.out)
+rank 8, test 5, use_barrier 0 time in seconds: 0.209822, (use_barrier: 0, ranks: ./a.out)
+rank 8, test 5, use_barrier 1 time in seconds: 0.186368, (use_barrier: 1, ranks: ./a.out)
+rank 8, test 6, use_barrier 0 time in seconds: 0.204327, (use_barrier: 0, ranks: ./a.out)
+rank 8, test 6, use_barrier 1 time in seconds: 0.199349, (use_barrier: 1, ranks: ./a.out)
+rank 8, test 7, use_barrier 0 time in seconds: 0.206670, (use_barrier: 0, ranks: ./a.out)
+rank 8, test 7, use_barrier 1 time in seconds: 0.213037, (use_barrier: 1, ranks: ./a.out)
+rank 16, test 1, use_barrier 0 time in seconds: 0.232078, (use_barrier: 0, ranks: ./a.out)
+rank 16, test 1, use_barrier 1 time in seconds: 0.194853, (use_barrier: 1, ranks: ./a.out)
+rank 16, test 2, use_barrier 0 time in seconds: 0.178354, (use_barrier: 0, ranks: ./a.out)
+rank 16, test 2, use_barrier 1 time in seconds: 0.156192, (use_barrier: 1, ranks: ./a.out)
+rank 16, test 3, use_barrier 0 time in seconds: 0.180395, (use_barrier: 0, ranks: ./a.out)
+rank 16, test 3, use_barrier 1 time in seconds: 0.231773, (use_barrier: 1, ranks: ./a.out)
+rank 16, test 4, use_barrier 0 time in seconds: 0.205961, (use_barrier: 0, ranks: ./a.out)
+rank 16, test 4, use_barrier 1 time in seconds: 0.204798, (use_barrier: 1, ranks: ./a.out)
+rank 16, test 5, use_barrier 0 time in seconds: 0.234560, (use_barrier: 0, ranks: ./a.out)
+rank 16, test 5, use_barrier 1 time in seconds: 0.180951, (use_barrier: 1, ranks: ./a.out)
+rank 16, test 6, use_barrier 0 time in seconds: 0.209615, (use_barrier: 0, ranks: ./a.out)
+rank 16, test 6, use_barrier 1 time in seconds: 0.243219, (use_barrier: 1, ranks: ./a.out)
+rank 16, test 7, use_barrier 0 time in seconds: 0.245532, (use_barrier: 0, ranks: ./a.out)
+rank 16, test 7, use_barrier 1 time in seconds: 0.249774, (use_barrier: 1, ranks: ./a.out)
+rank 32, test 1, use_barrier 0 time in seconds: 0.231098, (use_barrier: 0, ranks: ./a.out)
+rank 32, test 1, use_barrier 1 time in seconds: 0.258641, (use_barrier: 1, ranks: ./a.out)
+rank 32, test 2, use_barrier 0 time in seconds: 0.239837, (use_barrier: 0, ranks: ./a.out)
+rank 32, test 2, use_barrier 1 time in seconds: 0.167363, (use_barrier: 1, ranks: ./a.out)
+rank 32, test 3, use_barrier 0 time in seconds: 0.239822, (use_barrier: 0, ranks: ./a.out)
+rank 32, test 3, use_barrier 1 time in seconds: 0.167744, (use_barrier: 1, ranks: ./a.out)
+rank 32, test 4, use_barrier 0 time in seconds: 0.241077, (use_barrier: 0, ranks: ./a.out)
+rank 32, test 4, use_barrier 1 time in seconds: 0.235517, (use_barrier: 1, ranks: ./a.out)
+rank 32, test 5, use_barrier 0 time in seconds: 0.205192, (use_barrier: 0, ranks: ./a.out)
+rank 32, test 5, use_barrier 1 time in seconds: 0.181329, (use_barrier: 1, ranks: ./a.out)
+rank 32, test 6, use_barrier 0 time in seconds: 0.261026, (use_barrier: 0, ranks: ./a.out)
+rank 32, test 6, use_barrier 1 time in seconds: 0.247979, (use_barrier: 1, ranks: ./a.out)
+rank 32, test 7, use_barrier 0 time in seconds: 0.243014, (use_barrier: 0, ranks: ./a.out)
+rank 32, test 7, use_barrier 1 time in seconds: 0.243783, (use_barrier: 1, ranks: ./a.out)
+rank 1, test 1, use_barrier 0 time in seconds: 0.298521, (use_barrier: 0, ranks: ./a.out)
+rank 1, test 1, use_barrier 1 time in seconds: 0.300358, (use_barrier: 1, ranks: ./a.out)
+rank 1, test 2, use_barrier 0 time in seconds: 0.291964, (use_barrier: 0, ranks: ./a.out)
+rank 1, test 2, use_barrier 1 time in seconds: 0.285193, (use_barrier: 1, ranks: ./a.out)
+rank 1, test 3, use_barrier 0 time in seconds: 0.285073, (use_barrier: 0, ranks: ./a.out)
+rank 1, test 3, use_barrier 1 time in seconds: 0.303971, (use_barrier: 1, ranks: ./a.out)
+rank 1, test 4, use_barrier 0 time in seconds: 0.291335, (use_barrier: 0, ranks: ./a.out)
+rank 1, test 4, use_barrier 1 time in seconds: 0.290786, (use_barrier: 1, ranks: ./a.out)
+rank 1, test 5, use_barrier 0 time in seconds: 0.288335, (use_barrier: 0, ranks: ./a.out)
+rank 1, test 5, use_barrier 1 time in seconds: 0.288601, (use_barrier: 1, ranks: ./a.out)
+rank 1, test 6, use_barrier 0 time in seconds: 0.303476, (use_barrier: 0, ranks: ./a.out)
+rank 1, test 6, use_barrier 1 time in seconds: 0.296158, (use_barrier: 1, ranks: ./a.out)
+rank 1, test 7, use_barrier 0 time in seconds: 0.301528, (use_barrier: 0, ranks: ./a.out)
+rank 1, test 7, use_barrier 1 time in seconds: 0.300390, (use_barrier: 1, ranks: ./a.out)
+rank 2, test 1, use_barrier 0 time in seconds: 0.239329, (use_barrier: 0, ranks: ./a.out)
+rank 2, test 1, use_barrier 1 time in seconds: 0.241485, (use_barrier: 1, ranks: ./a.out)
+rank 2, test 2, use_barrier 0 time in seconds: 0.219900, (use_barrier: 0, ranks: ./a.out)
+rank 2, test 2, use_barrier 1 time in seconds: 0.227175, (use_barrier: 1, ranks: ./a.out)
+rank 2, test 3, use_barrier 0 time in seconds: 0.211780, (use_barrier: 0, ranks: ./a.out)
+rank 2, test 3, use_barrier 1 time in seconds: 0.223561, (use_barrier: 1, ranks: ./a.out)
+rank 2, test 4, use_barrier 0 time in seconds: 0.229078, (use_barrier: 0, ranks: ./a.out)
+rank 2, test 4, use_barrier 1 time in seconds: 0.236630, (use_barrier: 1, ranks: ./a.out)
+rank 2, test 5, use_barrier 0 time in seconds: 0.221621, (use_barrier: 0, ranks: ./a.out)
+rank 2, test 5, use_barrier 1 time in seconds: 0.222298, (use_barrier: 1, ranks: ./a.out)
+rank 2, test 6, use_barrier 0 time in seconds: 0.245056, (use_barrier: 0, ranks: ./a.out)
+rank 2, test 6, use_barrier 1 time in seconds: 0.241864, (use_barrier: 1, ranks: ./a.out)
+rank 2, test 7, use_barrier 0 time in seconds: 0.234199, (use_barrier: 0, ranks: ./a.out)
+rank 2, test 7, use_barrier 1 time in seconds: 0.239254, (use_barrier: 1, ranks: ./a.out)
+rank 4, test 1, use_barrier 0 time in seconds: 0.231794, (use_barrier: 0, ranks: ./a.out)
+rank 4, test 1, use_barrier 1 time in seconds: 0.218256, (use_barrier: 1, ranks: ./a.out)
+rank 4, test 2, use_barrier 0 time in seconds: 0.212379, (use_barrier: 0, ranks: ./a.out)
+rank 4, test 2, use_barrier 1 time in seconds: 0.207453, (use_barrier: 1, ranks: ./a.out)
+rank 4, test 3, use_barrier 0 time in seconds: 0.210222, (use_barrier: 0, ranks: ./a.out)
+rank 4, test 3, use_barrier 1 time in seconds: 0.206800, (use_barrier: 1, ranks: ./a.out)
+rank 4, test 4, use_barrier 0 time in seconds: 0.211570, (use_barrier: 0, ranks: ./a.out)
+rank 4, test 4, use_barrier 1 time in seconds: 0.213237, (use_barrier: 1, ranks: ./a.out)
+rank 4, test 5, use_barrier 0 time in seconds: 0.217879, (use_barrier: 0, ranks: ./a.out)
+rank 4, test 5, use_barrier 1 time in seconds: 0.201549, (use_barrier: 1, ranks: ./a.out)
+rank 4, test 6, use_barrier 0 time in seconds: 0.228959, (use_barrier: 0, ranks: ./a.out)
+rank 4, test 6, use_barrier 1 time in seconds: 0.231063, (use_barrier: 1, ranks: ./a.out)
+rank 4, test 7, use_barrier 0 time in seconds: 0.201593, (use_barrier: 0, ranks: ./a.out)
+rank 4, test 7, use_barrier 1 time in seconds: 0.232051, (use_barrier: 1, ranks: ./a.out)
+rank 8, test 1, use_barrier 0 time in seconds: 0.188140, (use_barrier: 0, ranks: ./a.out)
+rank 8, test 1, use_barrier 1 time in seconds: 0.190970, (use_barrier: 1, ranks: ./a.out)
+rank 8, test 2, use_barrier 0 time in seconds: 0.225680, (use_barrier: 0, ranks: ./a.out)
+rank 8, test 2, use_barrier 1 time in seconds: 0.228698, (use_barrier: 1, ranks: ./a.out)
+rank 8, test 3, use_barrier 0 time in seconds: 0.227599, (use_barrier: 0, ranks: ./a.out)
+rank 8, test 3, use_barrier 1 time in seconds: 0.236853, (use_barrier: 1, ranks: ./a.out)
+rank 8, test 4, use_barrier 0 time in seconds: 0.191504, (use_barrier: 0, ranks: ./a.out)
+rank 8, test 4, use_barrier 1 time in seconds: 0.211206, (use_barrier: 1, ranks: ./a.out)
+rank 8, test 5, use_barrier 0 time in seconds: 0.252561, (use_barrier: 0, ranks: ./a.out)
+rank 8, test 5, use_barrier 1 time in seconds: 0.229988, (use_barrier: 1, ranks: ./a.out)
+rank 8, test 6, use_barrier 0 time in seconds: 0.237368, (use_barrier: 0, ranks: ./a.out)
+rank 8, test 6, use_barrier 1 time in seconds: 0.237728, (use_barrier: 1, ranks: ./a.out)
+rank 8, test 7, use_barrier 0 time in seconds: 0.227131, (use_barrier: 0, ranks: ./a.out)
+rank 8, test 7, use_barrier 1 time in seconds: 0.182312, (use_barrier: 1, ranks: ./a.out)
+rank 16, test 1, use_barrier 0 time in seconds: 0.226693, (use_barrier: 0, ranks: ./a.out)
+rank 16, test 1, use_barrier 1 time in seconds: 0.248309, (use_barrier: 1, ranks: ./a.out)
+rank 16, test 2, use_barrier 0 time in seconds: 0.216514, (use_barrier: 0, ranks: ./a.out)
+rank 16, test 2, use_barrier 1 time in seconds: 0.182812, (use_barrier: 1, ranks: ./a.out)
+rank 16, test 3, use_barrier 0 time in seconds: 0.238409, (use_barrier: 0, ranks: ./a.out)
+rank 16, test 3, use_barrier 1 time in seconds: 0.239255, (use_barrier: 1, ranks: ./a.out)
+rank 16, test 4, use_barrier 0 time in seconds: 0.216475, (use_barrier: 0, ranks: ./a.out)
+rank 16, test 4, use_barrier 1 time in seconds: 0.227727, (use_barrier: 1, ranks: ./a.out)
+rank 16, test 5, use_barrier 0 time in seconds: 0.238958, (use_barrier: 0, ranks: ./a.out)
+rank 16, test 5, use_barrier 1 time in seconds: 0.224302, (use_barrier: 1, ranks: ./a.out)
+rank 16, test 6, use_barrier 0 time in seconds: 0.197989, (use_barrier: 0, ranks: ./a.out)
+rank 16, test 6, use_barrier 1 time in seconds: 0.207585, (use_barrier: 1, ranks: ./a.out)
+rank 16, test 7, use_barrier 0 time in seconds: 0.223570, (use_barrier: 0, ranks: ./a.out)
+rank 16, test 7, use_barrier 1 time in seconds: 0.245430, (use_barrier: 1, ranks: ./a.out)
+rank 32, test 1, use_barrier 0 time in seconds: 0.182745, (use_barrier: 0, ranks: ./a.out)
+rank 32, test 1, use_barrier 1 time in seconds: 0.201668, (use_barrier: 1, ranks: ./a.out)
+rank 32, test 2, use_barrier 0 time in seconds: 0.184482, (use_barrier: 0, ranks: ./a.out)
+rank 32, test 2, use_barrier 1 time in seconds: 0.199760, (use_barrier: 1, ranks: ./a.out)
+rank 32, test 3, use_barrier 0 time in seconds: 0.227479, (use_barrier: 0, ranks: ./a.out)
+rank 32, test 3, use_barrier 1 time in seconds: 0.229645, (use_barrier: 1, ranks: ./a.out)
+rank 32, test 4, use_barrier 0 time in seconds: 0.222273, (use_barrier: 0, ranks: ./a.out)
+rank 32, test 4, use_barrier 1 time in seconds: 0.241675, (use_barrier: 1, ranks: ./a.out)
+rank 32, test 5, use_barrier 0 time in seconds: 0.232253, (use_barrier: 0, ranks: ./a.out)
+rank 32, test 5, use_barrier 1 time in seconds: 0.175777, (use_barrier: 1, ranks: ./a.out)
+rank 32, test 6, use_barrier 0 time in seconds: 0.197949, (use_barrier: 0, ranks: ./a.out)
+rank 32, test 6, use_barrier 1 time in seconds: 0.245628, (use_barrier: 1, ranks: ./a.out)
+rank 32, test 7, use_barrier 0 time in seconds: 0.268169, (use_barrier: 0, ranks: ./a.out)
+rank 32, test 7, use_barrier 1 time in seconds: 0.244481, (use_barrier: 1, ranks: ./a.out)
+rank 1, test 1, use_barrier 0 time in seconds: 0.305845, (use_barrier: 0, ranks: ./a.out)
+rank 1, test 1, use_barrier 1 time in seconds: 0.299836, (use_barrier: 1, ranks: ./a.out)
+rank 1, test 2, use_barrier 0 time in seconds: 0.288514, (use_barrier: 0, ranks: ./a.out)
+rank 1, test 2, use_barrier 1 time in seconds: 0.288967, (use_barrier: 1, ranks: ./a.out)
+rank 1, test 3, use_barrier 0 time in seconds: 0.286250, (use_barrier: 0, ranks: ./a.out)
+rank 1, test 3, use_barrier 1 time in seconds: 0.285776, (use_barrier: 1, ranks: ./a.out)
+rank 1, test 4, use_barrier 0 time in seconds: 0.288313, (use_barrier: 0, ranks: ./a.out)
+rank 1, test 4, use_barrier 1 time in seconds: 0.294923, (use_barrier: 1, ranks: ./a.out)
+rank 1, test 5, use_barrier 0 time in seconds: 0.300438, (use_barrier: 0, ranks: ./a.out)
+rank 1, test 5, use_barrier 1 time in seconds: 0.286617, (use_barrier: 1, ranks: ./a.out)
+rank 1, test 6, use_barrier 0 time in seconds: 0.304926, (use_barrier: 0, ranks: ./a.out)
+rank 1, test 6, use_barrier 1 time in seconds: 0.305572, (use_barrier: 1, ranks: ./a.out)
+rank 1, test 7, use_barrier 0 time in seconds: 0.301402, (use_barrier: 0, ranks: ./a.out)
+rank 1, test 7, use_barrier 1 time in seconds: 0.304016, (use_barrier: 1, ranks: ./a.out)
+rank 2, test 1, use_barrier 0 time in seconds: 0.237229, (use_barrier: 0, ranks: ./a.out)
+rank 2, test 1, use_barrier 1 time in seconds: 0.243788, (use_barrier: 1, ranks: ./a.out)
+rank 2, test 2, use_barrier 0 time in seconds: 0.228078, (use_barrier: 0, ranks: ./a.out)
+rank 2, test 2, use_barrier 1 time in seconds: 0.232753, (use_barrier: 1, ranks: ./a.out)
+rank 2, test 3, use_barrier 0 time in seconds: 0.223741, (use_barrier: 0, ranks: ./a.out)
+rank 2, test 3, use_barrier 1 time in seconds: 0.223232, (use_barrier: 1, ranks: ./a.out)
+rank 2, test 4, use_barrier 0 time in seconds: 0.226578, (use_barrier: 0, ranks: ./a.out)
+rank 2, test 4, use_barrier 1 time in seconds: 0.233124, (use_barrier: 1, ranks: ./a.out)
+rank 2, test 5, use_barrier 0 time in seconds: 0.230469, (use_barrier: 0, ranks: ./a.out)
+rank 2, test 5, use_barrier 1 time in seconds: 0.222335, (use_barrier: 1, ranks: ./a.out)
+rank 2, test 6, use_barrier 0 time in seconds: 0.238944, (use_barrier: 0, ranks: ./a.out)
+rank 2, test 6, use_barrier 1 time in seconds: 0.236960, (use_barrier: 1, ranks: ./a.out)
+rank 2, test 7, use_barrier 0 time in seconds: 0.241731, (use_barrier: 0, ranks: ./a.out)
+rank 2, test 7, use_barrier 1 time in seconds: 0.239110, (use_barrier: 1, ranks: ./a.out)
+rank 4, test 1, use_barrier 0 time in seconds: 0.228548, (use_barrier: 0, ranks: ./a.out)
+rank 4, test 1, use_barrier 1 time in seconds: 0.215011, (use_barrier: 1, ranks: ./a.out)
+rank 4, test 2, use_barrier 0 time in seconds: 0.208139, (use_barrier: 0, ranks: ./a.out)
+rank 4, test 2, use_barrier 1 time in seconds: 0.211244, (use_barrier: 1, ranks: ./a.out)
+rank 4, test 3, use_barrier 0 time in seconds: 0.209247, (use_barrier: 0, ranks: ./a.out)
+rank 4, test 3, use_barrier 1 time in seconds: 0.208580, (use_barrier: 1, ranks: ./a.out)
+rank 4, test 4, use_barrier 0 time in seconds: 0.214161, (use_barrier: 0, ranks: ./a.out)
+rank 4, test 4, use_barrier 1 time in seconds: 0.220958, (use_barrier: 1, ranks: ./a.out)
+rank 4, test 5, use_barrier 0 time in seconds: 0.205572, (use_barrier: 0, ranks: ./a.out)
+rank 4, test 5, use_barrier 1 time in seconds: 0.209991, (use_barrier: 1, ranks: ./a.out)
+rank 4, test 6, use_barrier 0 time in seconds: 0.218796, (use_barrier: 0, ranks: ./a.out)
+rank 4, test 6, use_barrier 1 time in seconds: 0.238720, (use_barrier: 1, ranks: ./a.out)
+rank 4, test 7, use_barrier 0 time in seconds: 0.230842, (use_barrier: 0, ranks: ./a.out)
+rank 4, test 7, use_barrier 1 time in seconds: 0.222320, (use_barrier: 1, ranks: ./a.out)
+rank 8, test 1, use_barrier 0 time in seconds: 0.207737, (use_barrier: 0, ranks: ./a.out)
+rank 8, test 1, use_barrier 1 time in seconds: 0.198640, (use_barrier: 1, ranks: ./a.out)
+rank 8, test 2, use_barrier 0 time in seconds: 0.205142, (use_barrier: 0, ranks: ./a.out)
+rank 8, test 2, use_barrier 1 time in seconds: 0.239729, (use_barrier: 1, ranks: ./a.out)
+rank 8, test 3, use_barrier 0 time in seconds: 0.256336, (use_barrier: 0, ranks: ./a.out)
+rank 8, test 3, use_barrier 1 time in seconds: 0.231312, (use_barrier: 1, ranks: ./a.out)
+rank 8, test 4, use_barrier 0 time in seconds: 0.190748, (use_barrier: 0, ranks: ./a.out)
+rank 8, test 4, use_barrier 1 time in seconds: 0.248173, (use_barrier: 1, ranks: ./a.out)
+rank 8, test 5, use_barrier 0 time in seconds: 0.200008, (use_barrier: 0, ranks: ./a.out)
+rank 8, test 5, use_barrier 1 time in seconds: 0.254910, (use_barrier: 1, ranks: ./a.out)
+rank 8, test 6, use_barrier 0 time in seconds: 0.219790, (use_barrier: 0, ranks: ./a.out)
+rank 8, test 6, use_barrier 1 time in seconds: 0.240738, (use_barrier: 1, ranks: ./a.out)
+rank 8, test 7, use_barrier 0 time in seconds: 0.215442, (use_barrier: 0, ranks: ./a.out)
+rank 8, test 7, use_barrier 1 time in seconds: 0.184302, (use_barrier: 1, ranks: ./a.out)
+rank 16, test 1, use_barrier 0 time in seconds: 0.251626, (use_barrier: 0, ranks: ./a.out)
+rank 16, test 1, use_barrier 1 time in seconds: 0.234149, (use_barrier: 1, ranks: ./a.out)
+rank 16, test 2, use_barrier 0 time in seconds: 0.225585, (use_barrier: 0, ranks: ./a.out)
+rank 16, test 2, use_barrier 1 time in seconds: 0.194492, (use_barrier: 1, ranks: ./a.out)
+rank 16, test 3, use_barrier 0 time in seconds: 0.169809, (use_barrier: 0, ranks: ./a.out)
+rank 16, test 3, use_barrier 1 time in seconds: 0.150288, (use_barrier: 1, ranks: ./a.out)
+rank 16, test 4, use_barrier 0 time in seconds: 0.217876, (use_barrier: 0, ranks: ./a.out)
+rank 16, test 4, use_barrier 1 time in seconds: 0.245825, (use_barrier: 1, ranks: ./a.out)
+rank 16, test 5, use_barrier 0 time in seconds: 0.240876, (use_barrier: 0, ranks: ./a.out)
+rank 16, test 5, use_barrier 1 time in seconds: 0.236493, (use_barrier: 1, ranks: ./a.out)
+rank 16, test 6, use_barrier 0 time in seconds: 0.201590, (use_barrier: 0, ranks: ./a.out)
+rank 16, test 6, use_barrier 1 time in seconds: 0.250421, (use_barrier: 1, ranks: ./a.out)
+rank 16, test 7, use_barrier 0 time in seconds: 0.248214, (use_barrier: 0, ranks: ./a.out)
+rank 16, test 7, use_barrier 1 time in seconds: 0.193806, (use_barrier: 1, ranks: ./a.out)
+rank 32, test 1, use_barrier 0 time in seconds: 0.215173, (use_barrier: 0, ranks: ./a.out)
+rank 32, test 1, use_barrier 1 time in seconds: 0.218762, (use_barrier: 1, ranks: ./a.out)
+rank 32, test 2, use_barrier 0 time in seconds: 0.237960, (use_barrier: 0, ranks: ./a.out)
+rank 32, test 2, use_barrier 1 time in seconds: 0.231375, (use_barrier: 1, ranks: ./a.out)
+rank 32, test 3, use_barrier 0 time in seconds: 0.177791, (use_barrier: 0, ranks: ./a.out)
+rank 32, test 3, use_barrier 1 time in seconds: 0.196360, (use_barrier: 1, ranks: ./a.out)
+rank 32, test 4, use_barrier 0 time in seconds: 0.231192, (use_barrier: 0, ranks: ./a.out)
+rank 32, test 4, use_barrier 1 time in seconds: 0.242907, (use_barrier: 1, ranks: ./a.out)
+rank 32, test 5, use_barrier 0 time in seconds: 0.175524, (use_barrier: 0, ranks: ./a.out)
+rank 32, test 5, use_barrier 1 time in seconds: 0.213474, (use_barrier: 1, ranks: ./a.out)
+rank 32, test 6, use_barrier 0 time in seconds: 0.191902, (use_barrier: 0, ranks: ./a.out)
+rank 32, test 6, use_barrier 1 time in seconds: 0.234052, (use_barrier: 1, ranks: ./a.out)
+rank 32, test 7, use_barrier 0 time in seconds: 0.238657, (use_barrier: 0, ranks: ./a.out)
+rank 32, test 7, use_barrier 1 time in seconds: 0.197958, (use_barrier: 1, ranks: ./a.out)
+rank 1, test 1, use_barrier 0 time in seconds: 0.303271, (use_barrier: 0, ranks: ./a.out)
+rank 1, test 1, use_barrier 1 time in seconds: 0.306203, (use_barrier: 1, ranks: ./a.out)
+rank 1, test 2, use_barrier 0 time in seconds: 0.284173, (use_barrier: 0, ranks: ./a.out)
+rank 1, test 2, use_barrier 1 time in seconds: 0.290016, (use_barrier: 1, ranks: ./a.out)
+rank 1, test 3, use_barrier 0 time in seconds: 0.283837, (use_barrier: 0, ranks: ./a.out)
+rank 1, test 3, use_barrier 1 time in seconds: 0.288869, (use_barrier: 1, ranks: ./a.out)
+rank 1, test 4, use_barrier 0 time in seconds: 0.290406, (use_barrier: 0, ranks: ./a.out)
+rank 1, test 4, use_barrier 1 time in seconds: 0.292847, (use_barrier: 1, ranks: ./a.out)
+rank 1, test 5, use_barrier 0 time in seconds: 0.294099, (use_barrier: 0, ranks: ./a.out)
+rank 1, test 5, use_barrier 1 time in seconds: 0.305711, (use_barrier: 1, ranks: ./a.out)
+rank 1, test 6, use_barrier 0 time in seconds: 0.305003, (use_barrier: 0, ranks: ./a.out)
+rank 1, test 6, use_barrier 1 time in seconds: 0.304611, (use_barrier: 1, ranks: ./a.out)
+rank 1, test 7, use_barrier 0 time in seconds: 0.321407, (use_barrier: 0, ranks: ./a.out)
+rank 1, test 7, use_barrier 1 time in seconds: 0.301080, (use_barrier: 1, ranks: ./a.out)
+rank 2, test 1, use_barrier 0 time in seconds: 0.246540, (use_barrier: 0, ranks: ./a.out)
+rank 2, test 1, use_barrier 1 time in seconds: 0.238495, (use_barrier: 1, ranks: ./a.out)
+rank 2, test 2, use_barrier 0 time in seconds: 0.227698, (use_barrier: 0, ranks: ./a.out)
+rank 2, test 2, use_barrier 1 time in seconds: 0.227500, (use_barrier: 1, ranks: ./a.out)
+rank 2, test 3, use_barrier 0 time in seconds: 0.219621, (use_barrier: 0, ranks: ./a.out)
+rank 2, test 3, use_barrier 1 time in seconds: 0.222340, (use_barrier: 1, ranks: ./a.out)
+rank 2, test 4, use_barrier 0 time in seconds: 0.251285, (use_barrier: 0, ranks: ./a.out)
+rank 2, test 4, use_barrier 1 time in seconds: 0.226266, (use_barrier: 1, ranks: ./a.out)
+rank 2, test 5, use_barrier 0 time in seconds: 0.225727, (use_barrier: 0, ranks: ./a.out)
+rank 2, test 5, use_barrier 1 time in seconds: 0.224161, (use_barrier: 1, ranks: ./a.out)
+rank 2, test 6, use_barrier 0 time in seconds: 0.224288, (use_barrier: 0, ranks: ./a.out)
+rank 2, test 6, use_barrier 1 time in seconds: 0.242644, (use_barrier: 1, ranks: ./a.out)
+rank 2, test 7, use_barrier 0 time in seconds: 0.228029, (use_barrier: 0, ranks: ./a.out)
+rank 2, test 7, use_barrier 1 time in seconds: 0.262795, (use_barrier: 1, ranks: ./a.out)
+rank 4, test 1, use_barrier 0 time in seconds: 0.224494, (use_barrier: 0, ranks: ./a.out)
+rank 4, test 1, use_barrier 1 time in seconds: 0.242295, (use_barrier: 1, ranks: ./a.out)
+rank 4, test 2, use_barrier 0 time in seconds: 0.205736, (use_barrier: 0, ranks: ./a.out)
+rank 4, test 2, use_barrier 1 time in seconds: 0.214139, (use_barrier: 1, ranks: ./a.out)
+rank 4, test 3, use_barrier 0 time in seconds: 0.208127, (use_barrier: 0, ranks: ./a.out)
+rank 4, test 3, use_barrier 1 time in seconds: 0.201267, (use_barrier: 1, ranks: ./a.out)
+rank 4, test 4, use_barrier 0 time in seconds: 0.213394, (use_barrier: 0, ranks: ./a.out)
+rank 4, test 4, use_barrier 1 time in seconds: 0.214966, (use_barrier: 1, ranks: ./a.out)
+rank 4, test 5, use_barrier 0 time in seconds: 0.216003, (use_barrier: 0, ranks: ./a.out)
+rank 4, test 5, use_barrier 1 time in seconds: 0.208579, (use_barrier: 1, ranks: ./a.out)
+rank 4, test 6, use_barrier 0 time in seconds: 0.236765, (use_barrier: 0, ranks: ./a.out)
+rank 4, test 6, use_barrier 1 time in seconds: 0.228990, (use_barrier: 1, ranks: ./a.out)
+rank 4, test 7, use_barrier 0 time in seconds: 0.231872, (use_barrier: 0, ranks: ./a.out)
+rank 4, test 7, use_barrier 1 time in seconds: 0.234609, (use_barrier: 1, ranks: ./a.out)
+rank 8, test 1, use_barrier 0 time in seconds: 0.237170, (use_barrier: 0, ranks: ./a.out)
+rank 8, test 1, use_barrier 1 time in seconds: 0.223363, (use_barrier: 1, ranks: ./a.out)
+rank 8, test 2, use_barrier 0 time in seconds: 0.226759, (use_barrier: 0, ranks: ./a.out)
+rank 8, test 2, use_barrier 1 time in seconds: 0.220993, (use_barrier: 1, ranks: ./a.out)
+rank 8, test 3, use_barrier 0 time in seconds: 0.208184, (use_barrier: 0, ranks: ./a.out)
+rank 8, test 3, use_barrier 1 time in seconds: 0.201870, (use_barrier: 1, ranks: ./a.out)
+rank 8, test 4, use_barrier 0 time in seconds: 0.231005, (use_barrier: 0, ranks: ./a.out)
+rank 8, test 4, use_barrier 1 time in seconds: 0.212348, (use_barrier: 1, ranks: ./a.out)
+rank 8, test 5, use_barrier 0 time in seconds: 0.235719, (use_barrier: 0, ranks: ./a.out)
+rank 8, test 5, use_barrier 1 time in seconds: 0.180158, (use_barrier: 1, ranks: ./a.out)
+rank 8, test 6, use_barrier 0 time in seconds: 0.251689, (use_barrier: 0, ranks: ./a.out)
+rank 8, test 6, use_barrier 1 time in seconds: 0.213137, (use_barrier: 1, ranks: ./a.out)
+rank 8, test 7, use_barrier 0 time in seconds: 0.204296, (use_barrier: 0, ranks: ./a.out)
+rank 8, test 7, use_barrier 1 time in seconds: 0.231014, (use_barrier: 1, ranks: ./a.out)
+rank 16, test 1, use_barrier 0 time in seconds: 0.257874, (use_barrier: 0, ranks: ./a.out)
+rank 16, test 1, use_barrier 1 time in seconds: 0.208683, (use_barrier: 1, ranks: ./a.out)
+rank 16, test 2, use_barrier 0 time in seconds: 0.243909, (use_barrier: 0, ranks: ./a.out)
+rank 16, test 2, use_barrier 1 time in seconds: 0.176111, (use_barrier: 1, ranks: ./a.out)
+rank 16, test 3, use_barrier 0 time in seconds: 0.217037, (use_barrier: 0, ranks: ./a.out)
+rank 16, test 3, use_barrier 1 time in seconds: 0.213269, (use_barrier: 1, ranks: ./a.out)
+rank 16, test 4, use_barrier 0 time in seconds: 0.182549, (use_barrier: 0, ranks: ./a.out)
+rank 16, test 4, use_barrier 1 time in seconds: 0.227791, (use_barrier: 1, ranks: ./a.out)
+rank 16, test 5, use_barrier 0 time in seconds: 0.191417, (use_barrier: 0, ranks: ./a.out)
+rank 16, test 5, use_barrier 1 time in seconds: 0.205472, (use_barrier: 1, ranks: ./a.out)
+rank 16, test 6, use_barrier 0 time in seconds: 0.214610, (use_barrier: 0, ranks: ./a.out)
+rank 16, test 6, use_barrier 1 time in seconds: 0.220206, (use_barrier: 1, ranks: ./a.out)
+rank 16, test 7, use_barrier 0 time in seconds: 0.185562, (use_barrier: 0, ranks: ./a.out)
+rank 16, test 7, use_barrier 1 time in seconds: 0.170064, (use_barrier: 1, ranks: ./a.out)
+rank 32, test 1, use_barrier 0 time in seconds: 0.241852, (use_barrier: 0, ranks: ./a.out)
+rank 32, test 1, use_barrier 1 time in seconds: 0.248365, (use_barrier: 1, ranks: ./a.out)
+rank 32, test 2, use_barrier 0 time in seconds: 0.171563, (use_barrier: 0, ranks: ./a.out)
+rank 32, test 2, use_barrier 1 time in seconds: 0.213774, (use_barrier: 1, ranks: ./a.out)
+rank 32, test 3, use_barrier 0 time in seconds: 0.204389, (use_barrier: 0, ranks: ./a.out)
+rank 32, test 3, use_barrier 1 time in seconds: 0.234432, (use_barrier: 1, ranks: ./a.out)
+rank 32, test 4, use_barrier 0 time in seconds: 0.241728, (use_barrier: 0, ranks: ./a.out)
+rank 32, test 4, use_barrier 1 time in seconds: 0.243748, (use_barrier: 1, ranks: ./a.out)
+rank 32, test 5, use_barrier 0 time in seconds: 0.243250, (use_barrier: 0, ranks: ./a.out)
+rank 32, test 5, use_barrier 1 time in seconds: 0.223790, (use_barrier: 1, ranks: ./a.out)
+rank 32, test 6, use_barrier 0 time in seconds: 0.250188, (use_barrier: 0, ranks: ./a.out)
+rank 32, test 6, use_barrier 1 time in seconds: 0.233613, (use_barrier: 1, ranks: ./a.out)
+rank 32, test 7, use_barrier 0 time in seconds: 0.238485, (use_barrier: 0, ranks: ./a.out)
+rank 32, test 7, use_barrier 1 time in seconds: 0.222284, (use_barrier: 1, ranks: ./a.out)
+rank 1, test 1, use_barrier 0 time in seconds: 0.304363, (use_barrier: 0, ranks: ./a.out)
+rank 1, test 1, use_barrier 1 time in seconds: 0.306489, (use_barrier: 1, ranks: ./a.out)
+rank 1, test 2, use_barrier 0 time in seconds: 0.287710, (use_barrier: 0, ranks: ./a.out)
+rank 1, test 2, use_barrier 1 time in seconds: 0.286950, (use_barrier: 1, ranks: ./a.out)
+rank 1, test 3, use_barrier 0 time in seconds: 0.294291, (use_barrier: 0, ranks: ./a.out)
+rank 1, test 3, use_barrier 1 time in seconds: 0.290021, (use_barrier: 1, ranks: ./a.out)
+rank 1, test 4, use_barrier 0 time in seconds: 0.290076, (use_barrier: 0, ranks: ./a.out)
+rank 1, test 4, use_barrier 1 time in seconds: 0.294670, (use_barrier: 1, ranks: ./a.out)
+rank 1, test 5, use_barrier 0 time in seconds: 0.289660, (use_barrier: 0, ranks: ./a.out)
+rank 1, test 5, use_barrier 1 time in seconds: 0.291966, (use_barrier: 1, ranks: ./a.out)
+rank 1, test 6, use_barrier 0 time in seconds: 0.303394, (use_barrier: 0, ranks: ./a.out)
+rank 1, test 6, use_barrier 1 time in seconds: 0.302611, (use_barrier: 1, ranks: ./a.out)
+rank 1, test 7, use_barrier 0 time in seconds: 0.304513, (use_barrier: 0, ranks: ./a.out)
+rank 1, test 7, use_barrier 1 time in seconds: 0.309699, (use_barrier: 1, ranks: ./a.out)
+rank 2, test 1, use_barrier 0 time in seconds: 0.249601, (use_barrier: 0, ranks: ./a.out)
+rank 2, test 1, use_barrier 1 time in seconds: 0.231125, (use_barrier: 1, ranks: ./a.out)
+rank 2, test 2, use_barrier 0 time in seconds: 0.226682, (use_barrier: 0, ranks: ./a.out)
+rank 2, test 2, use_barrier 1 time in seconds: 0.228975, (use_barrier: 1, ranks: ./a.out)
+rank 2, test 3, use_barrier 0 time in seconds: 0.225117, (use_barrier: 0, ranks: ./a.out)
+rank 2, test 3, use_barrier 1 time in seconds: 0.220138, (use_barrier: 1, ranks: ./a.out)
+rank 2, test 4, use_barrier 0 time in seconds: 0.237532, (use_barrier: 0, ranks: ./a.out)
+rank 2, test 4, use_barrier 1 time in seconds: 0.225155, (use_barrier: 1, ranks: ./a.out)
+rank 2, test 5, use_barrier 0 time in seconds: 0.220628, (use_barrier: 0, ranks: ./a.out)
+rank 2, test 5, use_barrier 1 time in seconds: 0.228029, (use_barrier: 1, ranks: ./a.out)
+rank 2, test 6, use_barrier 0 time in seconds: 0.242484, (use_barrier: 0, ranks: ./a.out)
+rank 2, test 6, use_barrier 1 time in seconds: 0.239886, (use_barrier: 1, ranks: ./a.out)
+rank 2, test 7, use_barrier 0 time in seconds: 0.240697, (use_barrier: 0, ranks: ./a.out)
+rank 2, test 7, use_barrier 1 time in seconds: 0.265024, (use_barrier: 1, ranks: ./a.out)
+rank 4, test 1, use_barrier 0 time in seconds: 0.234715, (use_barrier: 0, ranks: ./a.out)
+rank 4, test 1, use_barrier 1 time in seconds: 0.217389, (use_barrier: 1, ranks: ./a.out)
+rank 4, test 2, use_barrier 0 time in seconds: 0.213506, (use_barrier: 0, ranks: ./a.out)
+rank 4, test 2, use_barrier 1 time in seconds: 0.203572, (use_barrier: 1, ranks: ./a.out)
+rank 4, test 3, use_barrier 0 time in seconds: 0.209203, (use_barrier: 0, ranks: ./a.out)
+rank 4, test 3, use_barrier 1 time in seconds: 0.209942, (use_barrier: 1, ranks: ./a.out)
+rank 4, test 4, use_barrier 0 time in seconds: 0.210886, (use_barrier: 0, ranks: ./a.out)
+rank 4, test 4, use_barrier 1 time in seconds: 0.212229, (use_barrier: 1, ranks: ./a.out)
+rank 4, test 5, use_barrier 0 time in seconds: 0.190436, (use_barrier: 0, ranks: ./a.out)
+rank 4, test 5, use_barrier 1 time in seconds: 0.211608, (use_barrier: 1, ranks: ./a.out)
+rank 4, test 6, use_barrier 0 time in seconds: 0.222154, (use_barrier: 0, ranks: ./a.out)
+rank 4, test 6, use_barrier 1 time in seconds: 0.232715, (use_barrier: 1, ranks: ./a.out)
+rank 4, test 7, use_barrier 0 time in seconds: 0.236128, (use_barrier: 0, ranks: ./a.out)
+rank 4, test 7, use_barrier 1 time in seconds: 0.227834, (use_barrier: 1, ranks: ./a.out)
+rank 8, test 1, use_barrier 0 time in seconds: 0.269926, (use_barrier: 0, ranks: ./a.out)
+rank 8, test 1, use_barrier 1 time in seconds: 0.223183, (use_barrier: 1, ranks: ./a.out)
+rank 8, test 2, use_barrier 0 time in seconds: 0.243852, (use_barrier: 0, ranks: ./a.out)
+rank 8, test 2, use_barrier 1 time in seconds: 0.209275, (use_barrier: 1, ranks: ./a.out)
+rank 8, test 3, use_barrier 0 time in seconds: 0.206223, (use_barrier: 0, ranks: ./a.out)
+rank 8, test 3, use_barrier 1 time in seconds: 0.223354, (use_barrier: 1, ranks: ./a.out)
+rank 8, test 4, use_barrier 0 time in seconds: 0.168120, (use_barrier: 0, ranks: ./a.out)
+rank 8, test 4, use_barrier 1 time in seconds: 0.221700, (use_barrier: 1, ranks: ./a.out)
+rank 8, test 5, use_barrier 0 time in seconds: 0.230672, (use_barrier: 0, ranks: ./a.out)
+rank 8, test 5, use_barrier 1 time in seconds: 0.222410, (use_barrier: 1, ranks: ./a.out)
+rank 8, test 6, use_barrier 0 time in seconds: 0.227813, (use_barrier: 0, ranks: ./a.out)
+rank 8, test 6, use_barrier 1 time in seconds: 0.211999, (use_barrier: 1, ranks: ./a.out)
+rank 8, test 7, use_barrier 0 time in seconds: 0.224437, (use_barrier: 0, ranks: ./a.out)
+rank 8, test 7, use_barrier 1 time in seconds: 0.217534, (use_barrier: 1, ranks: ./a.out)
+rank 16, test 1, use_barrier 0 time in seconds: 0.185160, (use_barrier: 0, ranks: ./a.out)
+rank 16, test 1, use_barrier 1 time in seconds: 0.263488, (use_barrier: 1, ranks: ./a.out)
+rank 16, test 2, use_barrier 0 time in seconds: 0.232864, (use_barrier: 0, ranks: ./a.out)
+rank 16, test 2, use_barrier 1 time in seconds: 0.185553, (use_barrier: 1, ranks: ./a.out)
+rank 16, test 3, use_barrier 0 time in seconds: 0.220087, (use_barrier: 0, ranks: ./a.out)
+rank 16, test 3, use_barrier 1 time in seconds: 0.178453, (use_barrier: 1, ranks: ./a.out)
+rank 16, test 4, use_barrier 0 time in seconds: 0.238482, (use_barrier: 0, ranks: ./a.out)
+rank 16, test 4, use_barrier 1 time in seconds: 0.236287, (use_barrier: 1, ranks: ./a.out)
+rank 16, test 5, use_barrier 0 time in seconds: 0.224266, (use_barrier: 0, ranks: ./a.out)
+rank 16, test 5, use_barrier 1 time in seconds: 0.224319, (use_barrier: 1, ranks: ./a.out)
+rank 16, test 6, use_barrier 0 time in seconds: 0.241294, (use_barrier: 0, ranks: ./a.out)
+rank 16, test 6, use_barrier 1 time in seconds: 0.238472, (use_barrier: 1, ranks: ./a.out)
+rank 16, test 7, use_barrier 0 time in seconds: 0.208927, (use_barrier: 0, ranks: ./a.out)
+rank 16, test 7, use_barrier 1 time in seconds: 0.253997, (use_barrier: 1, ranks: ./a.out)
+rank 32, test 1, use_barrier 0 time in seconds: 0.242705, (use_barrier: 0, ranks: ./a.out)
+rank 32, test 1, use_barrier 1 time in seconds: 0.242595, (use_barrier: 1, ranks: ./a.out)
+rank 32, test 2, use_barrier 0 time in seconds: 0.173017, (use_barrier: 0, ranks: ./a.out)
+rank 32, test 2, use_barrier 1 time in seconds: 0.246346, (use_barrier: 1, ranks: ./a.out)
+rank 32, test 3, use_barrier 0 time in seconds: 0.230302, (use_barrier: 0, ranks: ./a.out)
+rank 32, test 3, use_barrier 1 time in seconds: 0.191571, (use_barrier: 1, ranks: ./a.out)
+rank 32, test 4, use_barrier 0 time in seconds: 0.192066, (use_barrier: 0, ranks: ./a.out)
+rank 32, test 4, use_barrier 1 time in seconds: 0.173909, (use_barrier: 1, ranks: ./a.out)
+rank 32, test 5, use_barrier 0 time in seconds: 0.235061, (use_barrier: 0, ranks: ./a.out)
+rank 32, test 5, use_barrier 1 time in seconds: 0.222201, (use_barrier: 1, ranks: ./a.out)
+rank 32, test 6, use_barrier 0 time in seconds: 0.259664, (use_barrier: 0, ranks: ./a.out)
+rank 32, test 6, use_barrier 1 time in seconds: 0.250329, (use_barrier: 1, ranks: ./a.out)
+rank 32, test 7, use_barrier 0 time in seconds: 0.239233, (use_barrier: 0, ranks: ./a.out)
+rank 32, test 7, use_barrier 1 time in seconds: 0.235792, (use_barrier: 1, ranks: ./a.out)
+rank 1, test 1, use_barrier 0 time in seconds: 0.304258, (use_barrier: 0, ranks: ./a.out)
+rank 1, test 1, use_barrier 1 time in seconds: 0.302295, (use_barrier: 1, ranks: ./a.out)
+rank 1, test 2, use_barrier 0 time in seconds: 0.293894, (use_barrier: 0, ranks: ./a.out)
+rank 1, test 2, use_barrier 1 time in seconds: 0.292726, (use_barrier: 1, ranks: ./a.out)
+rank 1, test 3, use_barrier 0 time in seconds: 0.285513, (use_barrier: 0, ranks: ./a.out)
+rank 1, test 3, use_barrier 1 time in seconds: 0.287503, (use_barrier: 1, ranks: ./a.out)
+rank 1, test 4, use_barrier 0 time in seconds: 0.297341, (use_barrier: 0, ranks: ./a.out)
+rank 1, test 4, use_barrier 1 time in seconds: 0.282883, (use_barrier: 1, ranks: ./a.out)
+rank 1, test 5, use_barrier 0 time in seconds: 0.293203, (use_barrier: 0, ranks: ./a.out)
+rank 1, test 5, use_barrier 1 time in seconds: 0.290708, (use_barrier: 1, ranks: ./a.out)
+rank 1, test 6, use_barrier 0 time in seconds: 0.299687, (use_barrier: 0, ranks: ./a.out)
+rank 1, test 6, use_barrier 1 time in seconds: 0.296550, (use_barrier: 1, ranks: ./a.out)
+rank 1, test 7, use_barrier 0 time in seconds: 0.300121, (use_barrier: 0, ranks: ./a.out)
+rank 1, test 7, use_barrier 1 time in seconds: 0.304701, (use_barrier: 1, ranks: ./a.out)
+rank 2, test 1, use_barrier 0 time in seconds: 0.237112, (use_barrier: 0, ranks: ./a.out)
+rank 2, test 1, use_barrier 1 time in seconds: 0.231576, (use_barrier: 1, ranks: ./a.out)
+rank 2, test 2, use_barrier 0 time in seconds: 0.221320, (use_barrier: 0, ranks: ./a.out)
+rank 2, test 2, use_barrier 1 time in seconds: 0.227700, (use_barrier: 1, ranks: ./a.out)
+rank 2, test 3, use_barrier 0 time in seconds: 0.225124, (use_barrier: 0, ranks: ./a.out)
+rank 2, test 3, use_barrier 1 time in seconds: 0.218175, (use_barrier: 1, ranks: ./a.out)
+rank 2, test 4, use_barrier 0 time in seconds: 0.230274, (use_barrier: 0, ranks: ./a.out)
+rank 2, test 4, use_barrier 1 time in seconds: 0.231350, (use_barrier: 1, ranks: ./a.out)
+rank 2, test 5, use_barrier 0 time in seconds: 0.219910, (use_barrier: 0, ranks: ./a.out)
+rank 2, test 5, use_barrier 1 time in seconds: 0.222471, (use_barrier: 1, ranks: ./a.out)
+rank 2, test 6, use_barrier 0 time in seconds: 0.231899, (use_barrier: 0, ranks: ./a.out)
+rank 2, test 6, use_barrier 1 time in seconds: 0.246258, (use_barrier: 1, ranks: ./a.out)
+rank 2, test 7, use_barrier 0 time in seconds: 0.242885, (use_barrier: 0, ranks: ./a.out)
+rank 2, test 7, use_barrier 1 time in seconds: 0.235997, (use_barrier: 1, ranks: ./a.out)
+rank 4, test 1, use_barrier 0 time in seconds: 0.228385, (use_barrier: 0, ranks: ./a.out)
+rank 4, test 1, use_barrier 1 time in seconds: 0.224818, (use_barrier: 1, ranks: ./a.out)
+rank 4, test 2, use_barrier 0 time in seconds: 0.206417, (use_barrier: 0, ranks: ./a.out)
+rank 4, test 2, use_barrier 1 time in seconds: 0.213500, (use_barrier: 1, ranks: ./a.out)
+rank 4, test 3, use_barrier 0 time in seconds: 0.221517, (use_barrier: 0, ranks: ./a.out)
+rank 4, test 3, use_barrier 1 time in seconds: 0.210686, (use_barrier: 1, ranks: ./a.out)
+rank 4, test 4, use_barrier 0 time in seconds: 0.211607, (use_barrier: 0, ranks: ./a.out)
+rank 4, test 4, use_barrier 1 time in seconds: 0.215121, (use_barrier: 1, ranks: ./a.out)
+rank 4, test 5, use_barrier 0 time in seconds: 0.201449, (use_barrier: 0, ranks: ./a.out)
+rank 4, test 5, use_barrier 1 time in seconds: 0.206006, (use_barrier: 1, ranks: ./a.out)
+rank 4, test 6, use_barrier 0 time in seconds: 0.223156, (use_barrier: 0, ranks: ./a.out)
+rank 4, test 6, use_barrier 1 time in seconds: 0.223727, (use_barrier: 1, ranks: ./a.out)
+rank 4, test 7, use_barrier 0 time in seconds: 0.224832, (use_barrier: 0, ranks: ./a.out)
+rank 4, test 7, use_barrier 1 time in seconds: 0.216964, (use_barrier: 1, ranks: ./a.out)
+rank 8, test 1, use_barrier 0 time in seconds: 0.223407, (use_barrier: 0, ranks: ./a.out)
+rank 8, test 1, use_barrier 1 time in seconds: 0.221329, (use_barrier: 1, ranks: ./a.out)
+rank 8, test 2, use_barrier 0 time in seconds: 0.169143, (use_barrier: 0, ranks: ./a.out)
+rank 8, test 2, use_barrier 1 time in seconds: 0.242575, (use_barrier: 1, ranks: ./a.out)
+rank 8, test 3, use_barrier 0 time in seconds: 0.207283, (use_barrier: 0, ranks: ./a.out)
+rank 8, test 3, use_barrier 1 time in seconds: 0.210646, (use_barrier: 1, ranks: ./a.out)
+rank 8, test 4, use_barrier 0 time in seconds: 0.211503, (use_barrier: 0, ranks: ./a.out)
+rank 8, test 4, use_barrier 1 time in seconds: 0.207838, (use_barrier: 1, ranks: ./a.out)
+rank 8, test 5, use_barrier 0 time in seconds: 0.215306, (use_barrier: 0, ranks: ./a.out)
+rank 8, test 5, use_barrier 1 time in seconds: 0.226685, (use_barrier: 1, ranks: ./a.out)
+rank 8, test 6, use_barrier 0 time in seconds: 0.193297, (use_barrier: 0, ranks: ./a.out)
+rank 8, test 6, use_barrier 1 time in seconds: 0.204021, (use_barrier: 1, ranks: ./a.out)
+rank 8, test 7, use_barrier 0 time in seconds: 0.252027, (use_barrier: 0, ranks: ./a.out)
+rank 8, test 7, use_barrier 1 time in seconds: 0.242245, (use_barrier: 1, ranks: ./a.out)
+rank 16, test 1, use_barrier 0 time in seconds: 0.217552, (use_barrier: 0, ranks: ./a.out)
+rank 16, test 1, use_barrier 1 time in seconds: 0.164821, (use_barrier: 1, ranks: ./a.out)
+rank 16, test 2, use_barrier 0 time in seconds: 0.216240, (use_barrier: 0, ranks: ./a.out)
+rank 16, test 2, use_barrier 1 time in seconds: 0.215536, (use_barrier: 1, ranks: ./a.out)
+rank 16, test 3, use_barrier 0 time in seconds: 0.211482, (use_barrier: 0, ranks: ./a.out)
+rank 16, test 3, use_barrier 1 time in seconds: 0.238176, (use_barrier: 1, ranks: ./a.out)
+rank 16, test 4, use_barrier 0 time in seconds: 0.235103, (use_barrier: 0, ranks: ./a.out)
+rank 16, test 4, use_barrier 1 time in seconds: 0.231333, (use_barrier: 1, ranks: ./a.out)
+rank 16, test 5, use_barrier 0 time in seconds: 0.227531, (use_barrier: 0, ranks: ./a.out)
+rank 16, test 5, use_barrier 1 time in seconds: 0.231438, (use_barrier: 1, ranks: ./a.out)
+rank 16, test 6, use_barrier 0 time in seconds: 0.239059, (use_barrier: 0, ranks: ./a.out)
+rank 16, test 6, use_barrier 1 time in seconds: 0.211772, (use_barrier: 1, ranks: ./a.out)
+rank 16, test 7, use_barrier 0 time in seconds: 0.232877, (use_barrier: 0, ranks: ./a.out)
+rank 16, test 7, use_barrier 1 time in seconds: 0.212143, (use_barrier: 1, ranks: ./a.out)
+rank 32, test 1, use_barrier 0 time in seconds: 0.238075, (use_barrier: 0, ranks: ./a.out)
+rank 32, test 1, use_barrier 1 time in seconds: 0.225803, (use_barrier: 1, ranks: ./a.out)
+rank 32, test 2, use_barrier 0 time in seconds: 0.182859, (use_barrier: 0, ranks: ./a.out)
+rank 32, test 2, use_barrier 1 time in seconds: 0.226748, (use_barrier: 1, ranks: ./a.out)
+rank 32, test 3, use_barrier 0 time in seconds: 0.177141, (use_barrier: 0, ranks: ./a.out)
+rank 32, test 3, use_barrier 1 time in seconds: 0.205050, (use_barrier: 1, ranks: ./a.out)
+rank 32, test 4, use_barrier 0 time in seconds: 0.169932, (use_barrier: 0, ranks: ./a.out)
+rank 32, test 4, use_barrier 1 time in seconds: 0.244676, (use_barrier: 1, ranks: ./a.out)
+rank 32, test 5, use_barrier 0 time in seconds: 0.231692, (use_barrier: 0, ranks: ./a.out)
+rank 32, test 5, use_barrier 1 time in seconds: 0.165142, (use_barrier: 1, ranks: ./a.out)
+rank 32, test 6, use_barrier 0 time in seconds: 0.215676, (use_barrier: 0, ranks: ./a.out)
+rank 32, test 6, use_barrier 1 time in seconds: 0.251221, (use_barrier: 1, ranks: ./a.out)
+rank 32, test 7, use_barrier 0 time in seconds: 0.222962, (use_barrier: 0, ranks: ./a.out)
+rank 32, test 7, use_barrier 1 time in seconds: 0.240162, (use_barrier: 1, ranks: ./a.out)
+rank 1, test 1, use_barrier 0 time in seconds: 0.299824, (use_barrier: 0, ranks: ./a.out)
+rank 1, test 1, use_barrier 1 time in seconds: 0.297813, (use_barrier: 1, ranks: ./a.out)
+rank 1, test 2, use_barrier 0 time in seconds: 0.286401, (use_barrier: 0, ranks: ./a.out)
+rank 1, test 2, use_barrier 1 time in seconds: 0.292325, (use_barrier: 1, ranks: ./a.out)
+rank 1, test 3, use_barrier 0 time in seconds: 0.286267, (use_barrier: 0, ranks: ./a.out)
+rank 1, test 3, use_barrier 1 time in seconds: 0.288138, (use_barrier: 1, ranks: ./a.out)
+rank 1, test 4, use_barrier 0 time in seconds: 0.291426, (use_barrier: 0, ranks: ./a.out)
+rank 1, test 4, use_barrier 1 time in seconds: 0.290756, (use_barrier: 1, ranks: ./a.out)
+rank 1, test 5, use_barrier 0 time in seconds: 0.286082, (use_barrier: 0, ranks: ./a.out)
+rank 1, test 5, use_barrier 1 time in seconds: 0.290660, (use_barrier: 1, ranks: ./a.out)
+rank 1, test 6, use_barrier 0 time in seconds: 0.305151, (use_barrier: 0, ranks: ./a.out)
+rank 1, test 6, use_barrier 1 time in seconds: 0.304760, (use_barrier: 1, ranks: ./a.out)
+rank 1, test 7, use_barrier 0 time in seconds: 0.305249, (use_barrier: 0, ranks: ./a.out)
+rank 1, test 7, use_barrier 1 time in seconds: 0.298676, (use_barrier: 1, ranks: ./a.out)
+rank 2, test 1, use_barrier 0 time in seconds: 0.240396, (use_barrier: 0, ranks: ./a.out)
+rank 2, test 1, use_barrier 1 time in seconds: 0.239086, (use_barrier: 1, ranks: ./a.out)
+rank 2, test 2, use_barrier 0 time in seconds: 0.232020, (use_barrier: 0, ranks: ./a.out)
+rank 2, test 2, use_barrier 1 time in seconds: 0.222422, (use_barrier: 1, ranks: ./a.out)
+rank 2, test 3, use_barrier 0 time in seconds: 0.227953, (use_barrier: 0, ranks: ./a.out)
+rank 2, test 3, use_barrier 1 time in seconds: 0.228600, (use_barrier: 1, ranks: ./a.out)
+rank 2, test 4, use_barrier 0 time in seconds: 0.227975, (use_barrier: 0, ranks: ./a.out)
+rank 2, test 4, use_barrier 1 time in seconds: 0.232603, (use_barrier: 1, ranks: ./a.out)
+rank 2, test 5, use_barrier 0 time in seconds: 0.221380, (use_barrier: 0, ranks: ./a.out)
+rank 2, test 5, use_barrier 1 time in seconds: 0.226213, (use_barrier: 1, ranks: ./a.out)
+rank 2, test 6, use_barrier 0 time in seconds: 0.227979, (use_barrier: 0, ranks: ./a.out)
+rank 2, test 6, use_barrier 1 time in seconds: 0.238280, (use_barrier: 1, ranks: ./a.out)
+rank 2, test 7, use_barrier 0 time in seconds: 0.235965, (use_barrier: 0, ranks: ./a.out)
+rank 2, test 7, use_barrier 1 time in seconds: 0.224872, (use_barrier: 1, ranks: ./a.out)
+rank 4, test 1, use_barrier 0 time in seconds: 0.233332, (use_barrier: 0, ranks: ./a.out)
+rank 4, test 1, use_barrier 1 time in seconds: 0.209517, (use_barrier: 1, ranks: ./a.out)
+rank 4, test 2, use_barrier 0 time in seconds: 0.206597, (use_barrier: 0, ranks: ./a.out)
+rank 4, test 2, use_barrier 1 time in seconds: 0.199904, (use_barrier: 1, ranks: ./a.out)
+rank 4, test 3, use_barrier 0 time in seconds: 0.219768, (use_barrier: 0, ranks: ./a.out)
+rank 4, test 3, use_barrier 1 time in seconds: 0.202955, (use_barrier: 1, ranks: ./a.out)
+rank 4, test 4, use_barrier 0 time in seconds: 0.209844, (use_barrier: 0, ranks: ./a.out)
+rank 4, test 4, use_barrier 1 time in seconds: 0.215341, (use_barrier: 1, ranks: ./a.out)
+rank 4, test 5, use_barrier 0 time in seconds: 0.199878, (use_barrier: 0, ranks: ./a.out)
+rank 4, test 5, use_barrier 1 time in seconds: 0.205872, (use_barrier: 1, ranks: ./a.out)
+rank 4, test 6, use_barrier 0 time in seconds: 0.226178, (use_barrier: 0, ranks: ./a.out)
+rank 4, test 6, use_barrier 1 time in seconds: 0.223361, (use_barrier: 1, ranks: ./a.out)
+rank 4, test 7, use_barrier 0 time in seconds: 0.222939, (use_barrier: 0, ranks: ./a.out)
+rank 4, test 7, use_barrier 1 time in seconds: 0.242621, (use_barrier: 1, ranks: ./a.out)
+rank 8, test 1, use_barrier 0 time in seconds: 0.219233, (use_barrier: 0, ranks: ./a.out)
+rank 8, test 1, use_barrier 1 time in seconds: 0.222883, (use_barrier: 1, ranks: ./a.out)
+rank 8, test 2, use_barrier 0 time in seconds: 0.212318, (use_barrier: 0, ranks: ./a.out)
+rank 8, test 2, use_barrier 1 time in seconds: 0.214175, (use_barrier: 1, ranks: ./a.out)
+rank 8, test 3, use_barrier 0 time in seconds: 0.200130, (use_barrier: 0, ranks: ./a.out)
+rank 8, test 3, use_barrier 1 time in seconds: 0.192975, (use_barrier: 1, ranks: ./a.out)
+rank 8, test 4, use_barrier 0 time in seconds: 0.205095, (use_barrier: 0, ranks: ./a.out)
+rank 8, test 4, use_barrier 1 time in seconds: 0.200923, (use_barrier: 1, ranks: ./a.out)
+rank 8, test 5, use_barrier 0 time in seconds: 0.208988, (use_barrier: 0, ranks: ./a.out)
+rank 8, test 5, use_barrier 1 time in seconds: 0.247419, (use_barrier: 1, ranks: ./a.out)
+rank 8, test 6, use_barrier 0 time in seconds: 0.216667, (use_barrier: 0, ranks: ./a.out)
+rank 8, test 6, use_barrier 1 time in seconds: 0.252281, (use_barrier: 1, ranks: ./a.out)
+rank 8, test 7, use_barrier 0 time in seconds: 0.235506, (use_barrier: 0, ranks: ./a.out)
+rank 8, test 7, use_barrier 1 time in seconds: 0.222111, (use_barrier: 1, ranks: ./a.out)
+rank 16, test 1, use_barrier 0 time in seconds: 0.163235, (use_barrier: 0, ranks: ./a.out)
+rank 16, test 1, use_barrier 1 time in seconds: 0.220980, (use_barrier: 1, ranks: ./a.out)
+rank 16, test 2, use_barrier 0 time in seconds: 0.202677, (use_barrier: 0, ranks: ./a.out)
+rank 16, test 2, use_barrier 1 time in seconds: 0.207563, (use_barrier: 1, ranks: ./a.out)
+rank 16, test 3, use_barrier 0 time in seconds: 0.180502, (use_barrier: 0, ranks: ./a.out)
+rank 16, test 3, use_barrier 1 time in seconds: 0.147415, (use_barrier: 1, ranks: ./a.out)
+rank 16, test 4, use_barrier 0 time in seconds: 0.186189, (use_barrier: 0, ranks: ./a.out)
+rank 16, test 4, use_barrier 1 time in seconds: 0.206354, (use_barrier: 1, ranks: ./a.out)
+rank 16, test 5, use_barrier 0 time in seconds: 0.207585, (use_barrier: 0, ranks: ./a.out)
+rank 16, test 5, use_barrier 1 time in seconds: 0.191941, (use_barrier: 1, ranks: ./a.out)
+rank 16, test 6, use_barrier 0 time in seconds: 0.225940, (use_barrier: 0, ranks: ./a.out)
+rank 16, test 6, use_barrier 1 time in seconds: 0.236948, (use_barrier: 1, ranks: ./a.out)
+rank 16, test 7, use_barrier 0 time in seconds: 0.213920, (use_barrier: 0, ranks: ./a.out)
+rank 16, test 7, use_barrier 1 time in seconds: 0.190277, (use_barrier: 1, ranks: ./a.out)
+rank 32, test 1, use_barrier 0 time in seconds: 0.257711, (use_barrier: 0, ranks: ./a.out)
+rank 32, test 1, use_barrier 1 time in seconds: 0.213213, (use_barrier: 1, ranks: ./a.out)
+rank 32, test 2, use_barrier 0 time in seconds: 0.214303, (use_barrier: 0, ranks: ./a.out)
+rank 32, test 2, use_barrier 1 time in seconds: 0.165437, (use_barrier: 1, ranks: ./a.out)
+rank 32, test 3, use_barrier 0 time in seconds: 0.233185, (use_barrier: 0, ranks: ./a.out)
+rank 32, test 3, use_barrier 1 time in seconds: 0.223668, (use_barrier: 1, ranks: ./a.out)
+rank 32, test 4, use_barrier 0 time in seconds: 0.246514, (use_barrier: 0, ranks: ./a.out)
+rank 32, test 4, use_barrier 1 time in seconds: 0.228096, (use_barrier: 1, ranks: ./a.out)
+rank 32, test 5, use_barrier 0 time in seconds: 0.200906, (use_barrier: 0, ranks: ./a.out)
+rank 32, test 5, use_barrier 1 time in seconds: 0.239962, (use_barrier: 1, ranks: ./a.out)
+rank 32, test 6, use_barrier 0 time in seconds: 0.210703, (use_barrier: 0, ranks: ./a.out)
+rank 32, test 6, use_barrier 1 time in seconds: 0.243495, (use_barrier: 1, ranks: ./a.out)
+rank 32, test 7, use_barrier 0 time in seconds: 0.184635, (use_barrier: 0, ranks: ./a.out)
+rank 32, test 7, use_barrier 1 time in seconds: 0.202550, (use_barrier: 1, ranks: ./a.out)
