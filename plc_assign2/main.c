@@ -72,8 +72,6 @@ int main(int argc, char ** argv){
 
 		readInData(argv[1], hex_input_a, hex_input_b); /* not debugged */
 
-		start_time = MPI_Wtime(); /* a time tick fashion*/
-
 		/*2. MPI rank 0 convert hex to binary number, revert,  */
 
 		convert_hex_2_bit(hex_input_a, hex_input_b, bin1, bin2, HEX_INPUT_SIZE); /* not debugged */
@@ -125,7 +123,12 @@ int main(int argc, char ** argv){
 
 
 	/*execute algorithm -> see cla() */
+
+	start_time = MPI_Wtime(); /* a time tick fashion*/
+
 	cla(use_barrier, my_mpi_rank, my_mpi_size, allocation, bin_rank_1, bin_rank_2, sumi); 
+
+	end_time = MPI_Wtime();
 
 	#ifdef DEBUG
 		printf("rank %d, main: here2! \n", my_mpi_rank); /* three reached here */

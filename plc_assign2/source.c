@@ -326,7 +326,6 @@ int main(int argc, char ** argv) {
 		implement a look-up table instead
 	*/
 
-	start_t = clock();
 
 	{ /* adding a mini scope here to destroy some tmp variables; */
 		char *tmp1, *tmp2, tmp_[2];
@@ -385,7 +384,11 @@ int main(int argc, char ** argv) {
 	//4. functions for each step in the above algorithm. You can do it using for loops and do not have to perform the equation substitutions by hand as we did in class.
 	//5. A master “cla” routine will run thru all the steps.
 	
+	start_t = clock();
+
 	cla();
+
+	end_t = clock();
 
 	//6. reconvert the binary sum of the two numbers into hex output.
 
@@ -418,8 +421,6 @@ int main(int argc, char ** argv) {
 		//printf("%X", tmp); /* %x format for hex*/
 	}
 	//printf("\n");
-
-	end_t = clock();
 
 	printf("time in seconds: %f \n", 
 								(double)(end_t - start_t)/CLOCKS_PER_SEC);
