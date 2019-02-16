@@ -13,10 +13,11 @@ thus for all the same level computations, use one for loop and set initial carry
 #include <stdlib.h>
 #include <string.h>
 #include <math.h>
+#include <time.h>
 
 // EXAMPLE DATA STRUCTURE DESIGN AND LAYOUT FOR CLA 
-#define input_size 1024
-#define block_size 8
+#define input_size 262144
+#define block_size 32
 
 //Do not touch these defines 
 #define digits (input_size+1) 
@@ -272,12 +273,12 @@ int cla() { /*master routine*/
 
 	g();
 	p();
-	gg();
-	gp();
-	sg();
-	sp();
-	sc();
-	gc();
+	//gg();
+	//gp();
+	//sg();
+	//sp();
+	//sc();
+	//gc();
 	c();
 	sum_cla();
 
@@ -285,7 +286,9 @@ int cla() { /*master routine*/
 
 }
 
-int main() {
+int main(int argc, char ** argv) {
+
+	clock_t start_t, end_t, total_t;
 
 	setvbuf(stdout, NULL, _IONBF, 0);
 
@@ -298,7 +301,9 @@ int main() {
 	hex1[0] = '0'; /*pend a leading 0, as MSB (the most significant bit, highest value position)*/
 	hex2[0] = '0';
 
-	scanf("%s\n%s\n", &(*(hex1 + 1)), &(*(hex2 + 1))); /* could also use &(hex1[1]) here */ /*input from stdin*/
+	FILE *my_input_file=fopen(argv[1], "r");
+
+	fscanf(my_input_file, "%s\n%s\n", &(*(hex1 + 1)), &(*(hex2 + 1))); /* could also use &(hex1[1]) here */ /*input from stdin*/
 #ifdef DEBUG_pass
 	printf("%s \n", hex2);
 #endif // DEBUG
@@ -320,6 +325,9 @@ int main() {
 
 		implement a look-up table instead
 	*/
+
+	start_t = clock();
+
 	{ /* adding a mini scope here to destroy some tmp variables; */
 		char *tmp1, *tmp2, tmp_[2];
 		tmp_[1] = '\0';
@@ -407,10 +415,14 @@ int main() {
 			if (j == 3) break;
 			tmp = tmp * 2;
 		}
-		printf("%X", tmp); /* %x format for hex*/
+		//printf("%X", tmp); /* %x format for hex*/
 	}
-	printf("\n");
+	//printf("\n");
 
+	end_t = clock();
+
+	printf("time in seconds: %f \n", 
+								(double)(end_t - start_t)/CLOCKS_PER_SEC);
 
 	free(hex1);
 	free(hex2);

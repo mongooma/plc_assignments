@@ -72,9 +72,12 @@ int main(int argc, char ** argv){
 
 		/*2. MPI rank 0 convert hex to binary number, revert,  */
 
+		double start_time = MPI_Wtime(); /* a time tick fashion*/
+
 		convert_hex_2_bit(hex_input_a, hex_input_b, bin1, bin2, HEX_INPUT_SIZE); /* not debugged */
 
 		revert_binary(bin1, bin2, HEX_INPUT_SIZE * 4);	
+
 
 	}
 
@@ -85,6 +88,7 @@ int main(int argc, char ** argv){
 		}
 	}
 	#endif
+
 
 	/*3. MPI Rank 0 distribute the input binary arrays to each rank in the correct order 
 	where (for a 32 ranks conﬁguration) MPI rank 1 has bits 32,768 through 65,535 
@@ -120,9 +124,7 @@ int main(int argc, char ** argv){
 
 
 	/*execute algorithm -> see cla() */
-	double start_time = MPI_Wtime(); /* a time tick fashion*/
 	cla(use_barrier, my_mpi_rank, my_mpi_size, allocation, bin_rank_1, bin_rank_2, sumi); 
-	double end_time = MPI_Wtime();
 
 	#ifdef DEBUG
 		printf("rank %d, main: here2! \n", my_mpi_rank); /* three reached here */
@@ -148,18 +150,20 @@ int main(int argc, char ** argv){
 	#endif
 
 	MPI_Gather(sumi, allocation, MPI_INT, sumi_all, allocation, MPI_INT, 0, MPI_COMM_WORLD); 
+	
 
 	/*  Rank 0 will then re-reverse the sum and output the ﬁnal result. */
 	if( my_mpi_rank == 0){
 		revert_hex_sum(sumi_all, HEX_INPUT_SIZE * 4);
 		convert_bit_2_hex(sumi_all, HEX_INPUT_SIZE * 4);
-
+		double end_time = MPI_Wtime();
 	}
+
 
 	MPI_Finalize();
 
 
-	if(my_mpi_rank == 0){
+	if(my_mpi_rank == 0){ /*only monitor root process rank 0*/
 		printf("time in seconds: %f, (use_barrier: %d, ranks: %s)\n", 
 								(end_time - start_time), use_barrier, argv[0] );
 	}
