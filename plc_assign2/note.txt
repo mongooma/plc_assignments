@@ -3,9 +3,9 @@ note:
 1.  use "echo 0 | sudo dd of=/proc/sys/kernel/yama/ptrace_scope" to set ptrace_scope to 0, this cancel the cma denied warnings.
 
 2. The issue still occurs - at MPI_Scatter for rank 0, which is blocking
-	- MPI_Scatter should not used within if(my_mpi_rank == 0){} scope
+	- SOLVED: MPI_Scatter should not used within if(my_mpi_rank == 0){} scope
 
 
-3. 
+3. use smaller examples, i.e 4^4 input size 
 
 

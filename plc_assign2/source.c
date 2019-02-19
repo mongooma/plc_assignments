@@ -16,8 +16,10 @@ thus for all the same level computations, use one for loop and set initial carry
 #include <time.h>
 
 // EXAMPLE DATA STRUCTURE DESIGN AND LAYOUT FOR CLA 
-#define input_size 262144
-#define block_size 32
+// #define input_size 262144
+#define input_size 64
+// #define block_size 32
+#define block_size 4
 
 //Do not touch these defines 
 #define digits (input_size+1) 

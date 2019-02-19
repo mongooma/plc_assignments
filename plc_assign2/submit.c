@@ -2,13 +2,7 @@
 #include<stdlib.h>
 #include<unistd.h>
 #include<mpi.h>
-#include "functions.h"
 
-/* this file will be accessed per MPI rank, 
-   the bins used by each rank are stored in bin_rank
-*/
-
-//#define block_size 32 /* not a variable in this assignment */
 #define block_size 32 /* not a variable in this assignment */
 #define c_minus_1 0 /*primary value to set off the calculation chain*/
 
@@ -28,6 +22,75 @@ char lookup[16][5] = { "0000",
 						"1101",
 						"1110",
 						"1111" };
+
+
+#define HEX_INPUT_SIZE 262144
+// #define HEX_INPUT_SIZE 64
+
+/* variables for performance report:
+	ranks: 2, 4, 8, 16, 32
+	use_barrier: 0, 1
+
+*/
+
+// Compile Code: mpicc -g -Wall main.c 
+// Example Run Code: mpirun -np 4 ./a.out input.txt
+
+
+// Both input and output files will 524490 bytes in size. The two additional
+//    characters are due to a newline characters between each input and at the
+//    end of the file.
+
+
+
+/*
+ use 32 bit blocks and extend it to work in parallel for a 1M (e.g., 1,048,576) 
+ bit CLA adder with 32 bit blocks using up to 32 MPI ranks on the class server, 
+ mastiff.cs.rpi.edu. 
+*/
+
+
+/*notation: significance order: b<--|<--a*/
+
+
+void readInData(const char * filename,  
+						char * hex_input_a, char * hex_input_b);
+
+int convert_hex_2_bit(char * hex_input_a, char * hex_input_b, int * bin1, int *bin2, int input_size);
+
+int revert_binary(int * bin1, int * bin2, int bits);
+
+int revert_hex_sum(int * sumi, int bits);
+
+int convert_bit_2_hex(int * sumi, int bits, char * output);
+
+int cla(int use_barrier, int my_mpi_rank, int my_mpi_size, int alloc, int * bin1, int *bin2, int *sumi);
+
+int g(int bits, int *gi, int *bin1, int * bin2);
+
+int p(int bits, int *pi, int *bin1, int * bin2);
+
+int gg(int ngroups, int *ggj, int *gi, int * pi);
+
+int gp(int ngroups, int *gpj, int * pi);
+
+int sg(int nsections, int *sgk, int *ggj, int * gpj);
+
+int sp(int nsections, int *spk, int *gpj);
+
+int ssg(int nsupersections, int *ssgl, int *sgk, int * spk);
+
+int ssp(int nsupersections, int *sspl, int * spk);
+
+int ssc(int * sscl, int * ssgl, int * sspl, int my_mpi_size, int my_mpi_rank, int nsupersections);
+
+int sc(int * sscl, int * sck, int * sgk, int * spk, int nsections, int my_mpi_rank);
+
+int gc(int * sck, int * gcj, int * ggj, int * gpj, int ngroups, int my_mpi_rank);
+
+int c(int * gcj, int * ci, int * gi, int * pi, int bits, int my_mpi_rank);
+
+int sum_cla(int * sumi, int * bin1, int * bin2, int * ci, int bits);
 
 
 /*notation: significance order: b<--|<--a*/
@@ -112,9 +175,9 @@ int revert_hex_sum(int * sumi, int bits){
 
 }
 
-int convert_bit_2_hex(int * sumi, int bits){
+int convert_bit_2_hex(int * sumi, int bits, char * output){
 
-	FILE *f = fopen("./testdata/output.txt", "w"); /* use fprintf for debugging output*/
+	FILE *f = fopen(output, "w"); /* use fprintf for debugging output*/
 	for (int i = 0; i < bits; i += 4) {
 		int tmp = 0; 
 		for (int j = 0; j < 4; j++) {
@@ -549,3 +612,153 @@ int sum_cla(int * sumi, int * bin1, int * bin2, int * ci, int bits) { /*getting 
 
 
 
+
+
+int main(int argc, char ** argv){
+	/*
+	if( argc != 2 ){
+		printf("Not sufficient arguments, only %d found. \n", argc);
+		exit(-1);
+	}
+	*/
+	// Add 1 to array size because strings must be null terminated
+	double start_time, end_time;
+
+	int use_barrier = atoi(argv[argc-1]);
+	//printf("Use use_barrier: %d", use_barrier);
+
+	char * hex_input_a = calloc(HEX_INPUT_SIZE+1, sizeof(char)); //add 1 for '\0'
+	char * hex_input_b = calloc(HEX_INPUT_SIZE+1, sizeof(char));
+
+	//Integer array of inputs in binary form 4;
+	int * bin1 = calloc((HEX_INPUT_SIZE) * 4, sizeof(int)); /* keep the fashion of assign 1, 0000 for the */
+	int * bin2 = calloc((HEX_INPUT_SIZE) * 4, sizeof(int));
+
+
+	int my_mpi_size = -1; // total no. of ranks
+	int my_mpi_rank = -1; // the current rank of the process
+
+	MPI_Init( &argc, &argv);
+
+	MPI_Comm_size(MPI_COMM_WORLD, &my_mpi_size);
+	MPI_Comm_rank(MPI_COMM_WORLD, &my_mpi_rank);
+
+	int allocation = (HEX_INPUT_SIZE * 4) / my_mpi_size;
+	int * bin_rank_1 = calloc(allocation, sizeof(int));
+	int * bin_rank_2 = calloc(allocation, sizeof(int));
+	int * sumi = calloc(allocation, sizeof(int));
+	int * sumi_all = calloc(HEX_INPUT_SIZE * 4 , sizeof(int));
+
+	/*1. MPI rank 0 read in bit number, */
+
+	if(my_mpi_rank == 0){
+
+		readInData(argv[1], hex_input_a, hex_input_b); /* not debugged */
+
+		/*2. MPI rank 0 convert hex to binary number, revert,  */
+
+		convert_hex_2_bit(hex_input_a, hex_input_b, bin1, bin2, HEX_INPUT_SIZE); /* not debugged */
+
+		revert_binary(bin1, bin2, HEX_INPUT_SIZE * 4);	
+
+	}
+
+	#ifdef DEBUG
+	if(my_mpi_rank == 3){
+		for(int i=0; i < 4; i ++){
+			printf("bin1[%d]: %d \n", i, sumi[i]);
+		}
+	}
+	#endif
+
+
+	/*3. MPI Rank 0 distribute the input binary arrays to each rank in the correct order 
+	where (for a 32 ranks conﬁguration) MPI rank 1 has bits 32,768 through 65,535 
+	and MPI rank 2 has bits 65536 through 98304 and so on. */
+
+	/* int MPI_Scatter(const void *sendbuf, int sendcount, MPI_Datatype sendtype,
+        void *recvbuf, int recvcount, MPI_Datatype recvtype, int root,
+        MPI_Comm comm)*/
+	#ifdef DEBUG_p
+		printf("rank %d, main: here00! \n", my_mpi_rank); /* three reached here */
+	#endif 
+	MPI_Scatter(bin1, allocation, MPI_INT, bin_rank_1, allocation, MPI_INT, 0, MPI_COMM_WORLD);
+	#ifdef DEBUG_p
+		printf("rank %d, main: here00! \n", my_mpi_rank); /* three reached here */
+	#endif 
+	MPI_Scatter(bin2, allocation, MPI_INT, bin_rank_2, allocation, MPI_INT, 0, MPI_COMM_WORLD);
+	#ifdef DEBUG_p
+		printf("rank %d, main: here01! \n", my_mpi_rank); /* three reached here */
+	#endif 
+
+	free(hex_input_a);
+	free(hex_input_b);
+	free(bin1);
+	free(bin2);
+
+
+	#ifdef DEBUG_P
+		printf("rank %d, main: here1! \n", my_mpi_rank); /* three reached here */
+	#endif 
+
+	MPI_Barrier(MPI_COMM_WORLD); /* make it optional for performance study*/
+
+
+
+	/*execute algorithm -> see cla() */
+
+	start_time = MPI_Wtime(); /* a time tick fashion*/
+
+	cla(use_barrier, my_mpi_rank, my_mpi_size, allocation, bin_rank_1, bin_rank_2, sumi); 
+
+	end_time = MPI_Wtime();
+
+	#ifdef DEBUG_P
+		printf("rank %d, main: here2! \n", my_mpi_rank); /* three reached here */
+	#endif 
+
+
+	/* for synchronization */
+	MPI_Barrier(MPI_COMM_WORLD); /* make it optional for performance study*/
+
+
+	/* Have each rank send their part of the ﬁnal sumi solution to Rank 0. */
+
+	/*  MPI_Gather(const void *sendbuf, int sendcount, MPI_Datatype sendtype,
+            void *recvbuf, int recvcount, MPI_Datatype recvtype, int root,
+            MPI_Comm comm) */	
+	
+	#ifdef DEBUG
+	if(my_mpi_rank == 3){
+		for(int i=0; i < 4; i ++){
+			printf("sumi[%d]: %d \n", i, sumi[i]);
+		}
+	}
+	#endif
+
+	MPI_Gather(sumi, allocation, MPI_INT, sumi_all, allocation, MPI_INT, 0, MPI_COMM_WORLD); 
+	
+
+	/*  Rank 0 will then re-reverse the sum and output the ﬁnal result. */
+	if( my_mpi_rank == 0){
+		revert_hex_sum(sumi_all, HEX_INPUT_SIZE * 4);
+		convert_bit_2_hex(sumi_all, HEX_INPUT_SIZE * 4, argv[2]); // submit otuput file
+		end_time = MPI_Wtime();
+	}
+
+
+	MPI_Finalize();
+
+
+	// if(my_mpi_rank == 0){ /*only monitor root process rank 0*/
+	// 	printf("time in seconds: %f, (use_barrier: %d, ranks: %s)\n", 
+	// 							(end_time - start_time), use_barrier, argv[0] );
+	// }
+
+	free(bin_rank_1);
+	free(bin_rank_2);
+	free(sumi);
+	free(sumi_all);
+
+
+}

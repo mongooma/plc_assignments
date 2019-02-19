@@ -5,6 +5,7 @@
 #include "functions.h"
 
 #define HEX_INPUT_SIZE 262144
+// #define HEX_INPUT_SIZE 64
 
 /* variables for performance report:
 	ranks: 2, 4, 8, 16, 32
@@ -28,8 +29,9 @@
  mastiff.cs.rpi.edu. 
 */
 
-/* 0. represent the 1,048,576 bit input numbers as 262,144 hex digits. and 
-	and write to some file */
+
+/*notation: significance order: b<--|<--a*/
+
 
 int main(int argc, char ** argv){
 	/*
@@ -96,15 +98,15 @@ int main(int argc, char ** argv){
 	/* int MPI_Scatter(const void *sendbuf, int sendcount, MPI_Datatype sendtype,
         void *recvbuf, int recvcount, MPI_Datatype recvtype, int root,
         MPI_Comm comm)*/
-	#ifdef DEBUG
+	#ifdef DEBUG_p
 		printf("rank %d, main: here00! \n", my_mpi_rank); /* three reached here */
 	#endif 
 	MPI_Scatter(bin1, allocation, MPI_INT, bin_rank_1, allocation, MPI_INT, 0, MPI_COMM_WORLD);
-	#ifdef DEBUG
+	#ifdef DEBUG_p
 		printf("rank %d, main: here00! \n", my_mpi_rank); /* three reached here */
 	#endif 
 	MPI_Scatter(bin2, allocation, MPI_INT, bin_rank_2, allocation, MPI_INT, 0, MPI_COMM_WORLD);
-	#ifdef DEBUG
+	#ifdef DEBUG_p
 		printf("rank %d, main: here01! \n", my_mpi_rank); /* three reached here */
 	#endif 
 
@@ -114,7 +116,7 @@ int main(int argc, char ** argv){
 	free(bin2);
 
 
-	#ifdef DEBUG
+	#ifdef DEBUG_P
 		printf("rank %d, main: here1! \n", my_mpi_rank); /* three reached here */
 	#endif 
 
@@ -130,7 +132,7 @@ int main(int argc, char ** argv){
 
 	end_time = MPI_Wtime();
 
-	#ifdef DEBUG
+	#ifdef DEBUG_P
 		printf("rank %d, main: here2! \n", my_mpi_rank); /* three reached here */
 	#endif 
 
