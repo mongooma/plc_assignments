@@ -1,0 +1,108 @@
+PCP8mmnq
+
+temp pwd: TKYAifbi*9
+
+https://secure.cci.rpi.edu/passwd to change the pwd
+
+---
+
+Usage:
+
+1. Connect to one of the "landing pads"
+
+https://secure.cci.rpi.edu/wiki/index.php?title=Landing_Pad
+Use SSH to connect to one of the following host names:
+
+lp01.ccni.rpi.edu
+lp02.ccni.rpi.edu
+lp03.ccni.rpi.edu
+lp04.ccni.rpi.edu
+
+All of these hosts share the same SSH public key fingerprint:
+
+58:5e:2d:1d:91:7e:9c:40:96:08:88:58:b8:1c:15:74
+
+
+2. use the gcc compiler
+
+gcc 4.4.6 (BGQ-V1R1M1-120726) (mpi-gnu)
+
+3. check the job queue at https://secure.cci.rpi.edu/
+By default a single user may submit a maximum of 128 jobs to the queue.
+
+4. Partitions
+Other job sizes are not possible due to hardware constraints. 
+Name    Max Runtime (hours)     Job Size (Nodes)
+debug   (default) 1             1, 2, 4 .. 32
+small   24                      1, 2, 4 .. 32, 64
+medium  12                      128, 256, 512
+large   6                       1024, 2048
+verylarge   6                   3072, 4096 
+
+5. Submitting jobs
+
+Jobs should be submitted using sbatch. Examples of salloc and srun are for special cases such as debugging.
+
+
+Makefile:
+
+all:
+```
+    mpixlc -O5 mpi-hello.c -o mpi-hello.xl
+```
+debug:
+```
+    mpixlc -g mpi-hello.c -o mpi-hello.xl
+```
+An example sbatch script (equivalent to the testjob.sh script from the BG/L) is:
+
+```
+run-hello.h
+#!/bin/sh
+srun --ntasks 256 --overcommit -o hello.log /gpfs/u/home/SPNR/SPNRcaro/barn/mpi-hello.xl 
+```
+
+
+Run sbatch script with sbatch command;
+(and check queue &)
+```
+[SPNRcaro@q barn]$ sbatch --partition debug --nodes 4 --time 15 ./run-hello.sh 
+Submitted batch job 499644
+[SPNRcaro@q barn]$ 
+[SPNRcaro@q barn]$ 
+[SPNRcaro@q barn]$ squeue
+             JOBID PARTITION     NAME     USER ST       TIME  NODES MIDPLANELIST(REASON)
+            499644     debug run-hell SPNRcaro  R       0:03      4 bgq0210[30100x30130]
+[SPNRcaro@q barn]$ ls -al
+total 46336
+drwxr-s---  2 SPNRcaro SPNR     4096 Feb 23 11:29 .
+drwxr-x--- 15 root     SPNR     4096 Oct  8 16:50 ..
+-rw-r--r--  1 SPNRcaro SPNR     6885 Feb 23 11:08 example-job-run
+-rw-r--r--  1 SPNRcaro SPNR    26876 Feb 23 11:29 hello.log
+-rw-r--r--  1 SPNRcaro SPNR       45 Feb 23 10:56 Makefile
+-rw-r--r--  1 SPNRcaro SPNR      695 Feb 23 10:55 mpi-hello.c
+-rwxr-xr-x  1 SPNRcaro SPNR 46697611 Feb 23 10:59 mpi-hello.xl
+-rwx------  1 SPNRcaro SPNR      101 Feb 23 11:28 run-hello.sh
+-rw-r--r--  1 SPNRcaro SPNR        0 Feb 23 11:29 slurm-499644.out
+[SPNRcaro@q barn]$ 
+```
+
+6. Example Output
+
+http://www.cs.rpi.edu/~chrisc/COURSES/PARALLEL/SPRING-2019/code/example-job-run
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
