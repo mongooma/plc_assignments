@@ -1,0 +1,29 @@
+--------------------------------------------------------------------------
+WARNING: Linux kernel CMA support was requested via the
+btl_vader_single_copy_mechanism MCA variable, but CMA support is
+not available due to restrictive ptrace settings.
+
+The vader shared memory BTL will fall back on another single-copy
+mechanism if one is available. This may result in lower performance.
+
+  Local host: DESKTOP-DHTF8G8
+--------------------------------------------------------------------------
+rank 0: local sum 1. 
+rank 1: local sum 5. 
+rank 3: local sum 13. 
+ rank 3: send 13 to rank 2. 
+rank 2: local sum 9. 
+ rank 2: recv 13 from rank 3. 
+rank 2: send 22 to rank 0. 
+ rank 0: recv 5 from rank 1. 
+rank 0: recv 22 from rank 2. 
+28 0.000000
+28 0.000000
+rank 0: sum 28
+ 13 0.000000
+13 0.000000
+ rank 1: send 5 to rank 0. 
+ 5 0.000000
+5 0.000000
+ 22 0.000000
+22 0.000000

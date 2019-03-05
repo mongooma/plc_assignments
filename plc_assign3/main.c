@@ -3,7 +3,9 @@
 #include <string.h>
 #include <time.h>
 
-#define BGQ 1 // when running BG/Q, comment out when running on mastiff
+#include "functions.h"
+
+// #define BGQ 1 // when running BG/Q, comment out when running on mastiff
 #ifdef BGQ 
 #include<hwi/include/bqc/A2_inlines.h> 
 #else 
@@ -43,8 +45,14 @@
 
 */
 
+/* For different ranks, may want to run with an environment number setting:
+	env RANK_no=... 
 
-int main(){
+	Since I haven't found solutions to "extracting the no. of ranks within the communicator during running"
+	*/
+
+
+int main(int argc, char ** argv){
 
 	/* Use the Blue Gene/Q’s “GetTimeBase()” function to measure the number of 
 		cycles this point-2-point reduce operation took as well as the MPI 
@@ -54,20 +62,51 @@ int main(){
 	double processor_frequency = 1600000000.0; 
 	unsigned long long start_cycles=0; 
 	unsigned long long end_cycles=0; 
+	int my_mpi_size;
+	int my_mpi_rank; 
+	int sum = 0;
+
+	/* demo */
+	int arr[8] = {0, 1, 2, 3, 4, 5, 6, 7};
+	int allocation = 2;
+	/***/
+	int * rank_arr = calloc(allocation, sizeof(int));
+	// int * sum = calloc(allocation, sizeof(int));
+
 
 	/*...*/
+	MPI_Init( &argc, &argv); /* also take params from regular command line input */
 
-	start_cycles= GetTimeBase(); 
-	MPI_P2P_Reduce(); 
+	MPI_Comm_size(MPI_COMM_WORLD, &my_mpi_size);
+	MPI_Comm_rank(MPI_COMM_WORLD, &my_mpi_rank);
+
+
+	MPI_Scatter(arr, 2, MPI_INT,
+            	rank_arr, 2, MPI_INT, 0,
+            	MPI_COMM_WORLD);
+
+	start_cycles= GetTimeBase();
+	/* reduce is called from every rank*/ 
+	MPI_P2P_reduce(rank_arr, &sum, 2,
+                       MPI_INT, MPI_SUM, 0,
+                       MPI_COMM_WORLD); 
 	end_cycles= GetTimeBase();
-
 	time_in_secs = ((double)(end_cycles - start_cycles)) / processor_frequency;
 
+	printf("%d %f\n%d %f\n", 
+	 		sum, time_in_secs, sum, time_in_secs);
 
+	MPI_Barrier(MPI_COMM_WORLD); /* make it optional for performance study*/
 
+	#ifdef DEBUG
+	if(my_mpi_rank == 0){
+		printf("rank 0: sum %d\n", sum);
+		/* sum up the * sum */
 
-	printf("%d %d\n%d %d\n", 
-			sum_user, time_in_secs_user, sum, time_in_secs)
+	}
+	#endif
+
+	MPI_Finalize();
 
 
 }
