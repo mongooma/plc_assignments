@@ -52,9 +52,9 @@
 */
 
 
-int MPI_P2P_reduce(const int *sendbuf, int * recvbuf, int count,
-                     MPI_Datatype datatype, MPI_Op op, int root,
-                     MPI_Comm comm){
+int MPI_P2P_reduce(const unsigned long long *sendbuf, unsigned long long *recvbuf, int count,
+                       MPI_Datatype datatype, MPI_Op op, int root,
+                       MPI_Comm comm){
 
 	/*  your implementation will only perform the MPI SUM operation 
 		and the ﬁnal reduction result goes to MPI rank 0. */
@@ -170,7 +170,7 @@ int MPI_P2P_reduce(const int *sendbuf, int * recvbuf, int count,
             	int tag, MPI_Comm comm, MPI_Request *request)
             	*/
             	if(myrank == i){
-					MPI_Isend(recvbuf, 1, MPI_INT, i - step, 0, MPI_COMM_WORLD, &request);
+					MPI_Isend(recvbuf, 1, datatype, i - step, 0, MPI_COMM_WORLD, &request);
 				#ifdef DEBUG
 					printf("rank %d: send %d to rank %d. \n ", myrank, *recvbuf, i - step);
 				#endif
@@ -178,7 +178,7 @@ int MPI_P2P_reduce(const int *sendbuf, int * recvbuf, int count,
 
 			}else{
 				if(myrank == i){
-					MPI_Irecv(tmp_buf, 1, MPI_INT, i + step, 0, MPI_COMM_WORLD, &request);
+					MPI_Irecv(tmp_buf, 1, datatype, i + step, 0, MPI_COMM_WORLD, &request);
 				#ifdef DEBUG
 					printf("rank %d: recv %d from rank %d. \n", myrank, *tmp_buf, i + step);
 				#endif

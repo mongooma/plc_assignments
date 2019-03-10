@@ -44,6 +44,10 @@ verylarge   6                   3072, 4096
 Jobs should be submitted using sbatch. Examples of salloc and srun are for special cases such as debugging.
 
 
+-----
+
+Professor's instructions:
+
 Makefile:
 
 all:

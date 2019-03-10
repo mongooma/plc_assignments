@@ -17,18 +17,20 @@ int main(int argc, char **argv){
 	MPI_Comm_size(MPI_COMM_WORLD, &my_mpi_size);
 	MPI_Comm_rank(MPI_COMM_WORLD, &my_mpi_rank);
 
-	int arr[8] = {0, 1, 2, 3};
-	int allocation = 1;
-	int * rank_arr = calloc(1, sizeof(int));
-	int sum;
+	int arr[8] = {0, 1, 2, 3, 4, 5, 6, 7};
+	int allocation = 2;
+	int * rank_arr = calloc(2, sizeof(int));
+	int * sum = calloc(2, sizeof(int));
 	MPI_Scatter(arr, allocation, MPI_INT, rank_arr, allocation, MPI_INT, 0, MPI_COMM_WORLD);
 
-	MPI_Reduce(rank_arr, &sum, allocation,
+	MPI_Reduce(rank_arr, sum, allocation,
                        MPI_INT, MPI_SUM, 0,
                        MPI_COMM_WORLD);
 
 	if(my_mpi_rank == 0){
-		printf("sum 0-8: %d\n", sum);
+		for(int i=0; i < allocation; i ++){
+			printf("sum 0-8: %d\n", sum[i]);
+		}
 	}
 
 
