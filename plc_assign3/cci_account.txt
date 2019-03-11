@@ -1,8 +1,11 @@
 PCP8mmnq
 
-temp pwd: TKYAifbi*9
+pwd: TKYAifbi*9 (for both landing pads and q machine)
 
-https://secure.cci.rpi.edu/passwd to change the pwd
+first ssh to landing pads
+then 'ssh q' to BG/Q machine
+
+https://secure.cci.rpi.edu/passwd to change the pwd (will take effect after a while (30min?) if change)
 
 ---
 

@@ -61,7 +61,7 @@ int main(int argc, char ** argv){
 	*/
 	double time_in_secs = 0; 
 	double time_in_secs_mpi = 0; 
-	double processor_frequency = 1600000000.0; 
+	//double processor_frequency = 1600000000.0; 
 	unsigned long long start_cycles=0; 
 	unsigned long long end_cycles=0; 
 	int my_mpi_size;
@@ -74,38 +74,36 @@ int main(int argc, char ** argv){
 	unsigned long long sum_mpi = 0;
 
 	/* demo */
-	unsigned long long arr[8] = {0, 1, 2, 3, 4, 5, 6, 7};
-	int allocation = 2;
+	//unsigned long long arr[8] = {0, 1, 2, 3, 4, 5, 6, 7};
+	//int allocation = 2;
 	/***/
 
-	// unsigned long long * arr = calloc(1073741824, sizeof(unsigned long long));
-	// for(int i=0; i < 1073741824; i ++){
-	// 	arr[i] = (unsigned long long) i;
-	// }
-	// int allocation = 1073741824 / atoi(getenv("RANK_NO"));
+	// MPI_Scatter(arr, 2, MPI_LONG_LONG,
+ //            	rank_arr, 2, MPI_LONG_LONG, 0,
+ //            	MPI_COMM_WORLD);
+	// don't use this coz will use up a single rank's memory
 
-	/***/
 
+	int allocation = 1073741824 / my_mpi_size;
+	//int allocation = 1024*1024*64 / atoi(getenv("RANK_NO"));
 	unsigned long long * rank_arr = calloc(allocation, sizeof(unsigned long long));
 	unsigned long long * sum_arr = calloc(allocation, sizeof(unsigned long long));
+	// allocate arrays to individual ranks directly
+	for(int i=0; i < allocation; i ++){
+		rank_arr[i] = (allocation * my_mpi_rank) + (unsigned long long) i;
+	}
+	
+	MPI_Barrier(MPI_COMM_WORLD); 
 
-
-	/*...*/
-
-
-	MPI_Scatter(arr, 2, MPI_LONG_LONG,
-            	rank_arr, 2, MPI_LONG_LONG, 0,
-            	MPI_COMM_WORLD);
-
-	start_cycles= GetTimeBase();
+	start_cycles= GetTimeBase(); // ONLY EFFECTIVE AT BG/Q MACHINE
 	/* reduce is called from every rank*/ 
 	MPI_P2P_reduce(rank_arr, &sum, 2,
                        MPI_LONG_LONG, MPI_SUM, 0,
                        MPI_COMM_WORLD); 
 	end_cycles= GetTimeBase();
-	time_in_secs = ((double)(end_cycles - start_cycles)) / processor_frequency;
+	time_in_secs = ((double)(end_cycles - start_cycles)) ;// processor_frequency;
 
-	MPI_Barrier(MPI_COMM_WORLD); /* make it optional for performance study*/
+	MPI_Barrier(MPI_COMM_WORLD); 
 
 	/* compare with MPI_reduce */
 	start_cycles= GetTimeBase();
@@ -113,7 +111,7 @@ int main(int argc, char ** argv){
                    MPI_LONG_LONG, MPI_SUM, 0,
                    MPI_COMM_WORLD); 
 	end_cycles= GetTimeBase();
-	time_in_secs_mpi = ((double)(end_cycles - start_cycles)) / processor_frequency;
+	time_in_secs_mpi = ((double)(end_cycles - start_cycles));// / processor_frequency;
 
 	for(int i=0; i < allocation; i ++){
 		sum_mpi += sum_arr[i];
@@ -121,11 +119,11 @@ int main(int argc, char ** argv){
 	/**/
 
 	if(my_mpi_rank == 0){
-		printf("%lld %f\n%lld %f\n", 
+		printf("%lld %.20f\n%lld %.20f\n", 
 	 		sum, time_in_secs, sum_mpi, time_in_secs_mpi);
 	}
 
-	MPI_Barrier(MPI_COMM_WORLD); /* make it optional for performance study*/
+	MPI_Barrier(MPI_COMM_WORLD); 
 
 	#ifdef DEBUG
 	if(my_mpi_rank == 0){
