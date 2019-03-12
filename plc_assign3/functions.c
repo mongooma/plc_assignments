@@ -136,13 +136,12 @@ int MPI_P2P_reduce(const unsigned long long *sendbuf, unsigned long long *recvbu
 	/*1.  Each rank computes sum over local data array.*/
 
 	int myrank;
+	int mysize;
 	MPI_Comm_rank(MPI_COMM_WORLD, &myrank);
+	MPI_Comm_size(MPI_COMM_WORLD, &mysize);
 
-	for(int i = 0; i < count; i ++){
-		*recvbuf += sendbuf[i];
-	}
 	#ifdef DEBUG
-		printf("rank %d: local sum %d. \n ", myrank, *recvbuf);
+		printf("rank %d: local sum %lld. \n ", myrank, *recvbuf);
 	#endif
 
 
@@ -153,7 +152,8 @@ int MPI_P2P_reduce(const unsigned long long *sendbuf, unsigned long long *recvbu
 	int r = 0;
 	int step = 1;
 	int rev = 0;
-	int *tmp_buf = calloc(1, sizeof(int));
+	unsigned long long * tmp_buf = calloc(1, sizeof(unsigned long long));
+	* recvbuf = * sendbuf; 
 
 	MPI_Request request;
 
@@ -162,7 +162,7 @@ int MPI_P2P_reduce(const unsigned long long *sendbuf, unsigned long long *recvbu
 		// step = (int) pow(2, (double) r);
 		rev = 0;
 		/* from high to low*/
-		for(int i = atoi(getenv("RANK_NO")) - step; i >= 0; i -= step){
+		for(int i = mysize - step; i >= 0; i -= step){
 			/* This is supposed to be very slow because we are using for loop here*/
 			if(!rev){
 				/*
@@ -172,7 +172,7 @@ int MPI_P2P_reduce(const unsigned long long *sendbuf, unsigned long long *recvbu
             	if(myrank == i){
 					MPI_Isend(recvbuf, 1, datatype, i - step, 0, MPI_COMM_WORLD, &request);
 				#ifdef DEBUG
-					printf("rank %d: send %d to rank %d. \n ", myrank, *recvbuf, i - step);
+					printf("rank %d: send %lld to rank %d. \n ", myrank, *recvbuf, i - step);
 				#endif
             	}
 
@@ -180,7 +180,7 @@ int MPI_P2P_reduce(const unsigned long long *sendbuf, unsigned long long *recvbu
 				if(myrank == i){
 					MPI_Irecv(tmp_buf, 1, datatype, i + step, 0, MPI_COMM_WORLD, &request);
 				#ifdef DEBUG
-					printf("rank %d: recv %d from rank %d. \n", myrank, *tmp_buf, i + step);
+					printf("rank %d: recv %lld from rank %d. \n", myrank, *tmp_buf, i + step);
 				#endif
 					/* sum up */
 					*recvbuf += *tmp_buf;
@@ -197,10 +197,11 @@ int MPI_P2P_reduce(const unsigned long long *sendbuf, unsigned long long *recvbu
 		r++;
 		step = step * 2;
 		// if((int) pow( 2, r) > atoi(getenv("RANK_NO"))) break; // All the results in rank 0
-		if((step) >= atoi(getenv("RANK_NO"))) break; // All the results in rank 0
+		if((step) >= mysize) break; // All the results in rank 0
 	}
 
 	/* The result will be stored at rank 0 *sum*/
+	MPI_Barrier(MPI_COMM_WORLD); /* use barrier to synchronize */
 	free(tmp_buf);
 	return 0;
 }

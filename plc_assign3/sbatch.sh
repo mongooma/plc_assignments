@@ -8,7 +8,7 @@
 #SBATCH --mail-type=ALL
 #SBATCH --mail-user=<email>
 
-srun --nodes=1 --ntasks=64  --overcommit -o result.log ./main.xl --job-name=reduce_test -begin=01:00:00 -D --mail-type=ALL --mail-user=rhythm_qing@hotmail.com &
+srun --nodes=1 --ntasks=64  --overcommit -o result.log /gpfs/u/barn/PCP8/PCP8mmnq/plc_assign3/main.xl --job-name=reduce_test -begin=01:00:00 -D --mail-type=ALL --mail-user=rhythm_qing@hotmail.com &
 srun --nodes=2 --ntasks=128 --overcommit -o result.log ./main.xl --job-name=reduce_test -begin=01:00:00 -D --mail-type=ALL --mail-user=rhythm_qing@hotmail.com &
 srun --nodes=4 --ntasks=256 --overcommit -o result.log ./main.xl --job-name=reduce_test -begin=01:00:00 -D --mail-type=ALL --mail-user=rhythm_qing@hotmail.com &
 srun --nodes=8 --ntasks=512 --overcommit -o result.log ./main.xl --job-name=reduce_test -begin=01:00:00 -D --mail-type=ALL --mail-user=rhythm_qing@hotmail.com &

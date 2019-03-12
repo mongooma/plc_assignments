@@ -3,9 +3,31 @@ PCP8mmnq
 pwd: TKYAifbi*9 (for both landing pads and q machine)
 
 first ssh to landing pads
+ssh PCP8mmnq@lp01.ccni.rpi.edu
 then 'ssh q' to BG/Q machine
 
 https://secure.cci.rpi.edu/passwd to change the pwd (will take effect after a while (30min?) if change)
+---
+
+Debug:
+
+check out https://secure.cci.rpi.edu/wiki/index.php/Blue_Gene/Q#Debugging_from_startup gdb
+
+salloc -p debug -t <mins> -n <no. of nodes> //seems only allow 1 node 
+module load gdb
+srun --runjob-opts="--start-tool `which gdbtool` " --ntasks <number of MPI ranks> <executable> <executable arguments>
+
+Compile:
+
+mpixlc -O *.c -o a.xl // faster program
+
+mpicc ...
+
+run:
+
+if not on debug, using sbatch to run srun, and srun commands must be in a bash script
+
+if on debug: srun --runjob-opts="--start-tool `which gdbtool` " --ntasks <number of MPI ranks> <executable> <executable arguments> 
 
 ---
 
@@ -68,10 +90,14 @@ run-hello.h
 #!/bin/sh
 srun --ntasks 256 --overcommit -o hello.log /gpfs/u/home/SPNR/SPNRcaro/barn/mpi-hello.xl 
 ```
-
+when editing in vim, use ':set ff=unix' to convert to unix line endings
 
 Run sbatch script with sbatch command;
 (and check queue &)
+
+squeue to check pending/running jobs;
+scancel to cancel jobs;
+
 ```
 [SPNRcaro@q barn]$ sbatch --partition debug --nodes 4 --time 15 ./run-hello.sh 
 Submitted batch job 499644
