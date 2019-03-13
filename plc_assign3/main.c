@@ -85,7 +85,7 @@ int main(int argc, char ** argv){
 
 
 	//int allocation = 1073741824 / my_mpi_size;
-	int allocation = 1024 * 1024 / my_mpi_size;
+	int allocation = 1024 * 1024 * 4 / my_mpi_size;
 	unsigned long long * rank_arr = calloc(allocation, sizeof(unsigned long long));
 	unsigned long long rank_i = 0;
 

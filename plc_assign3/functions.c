@@ -151,52 +151,48 @@ int MPI_P2P_reduce(const unsigned long long *sendbuf, unsigned long long *recvbu
 
 	int r = 0;
 	int step = 1;
-	int rev = 0;
 	unsigned long long * tmp_buf = calloc(1, sizeof(unsigned long long));
 	* recvbuf = * sendbuf; 
 
 	MPI_Request request;
+	MPI_Status 	status;
 
 	MPI_Barrier(MPI_COMM_WORLD); /* synchronization */
 	while(1){
 		// step = (int) pow(2, (double) r);
-		rev = 0;
 		/* from high to low*/
-		for(int i = mysize - step; i >= 0; i -= step){
-			/* This is supposed to be very slow because we are using for loop here*/
-			if(!rev){
-				/*
-				int MPI_Isend(const void *buf, int count, MPI_Datatype datatype, int dest,
-            	int tag, MPI_Comm comm, MPI_Request *request)
-            	*/
-            	if(myrank == i){
-					MPI_Isend(recvbuf, 1, datatype, i - step, 0, MPI_COMM_WORLD, &request);
-				#ifdef DEBUG
-					printf("rank %d: send %lld to rank %d. \n ", myrank, *recvbuf, i - step);
-				#endif
-            	}
 
-			}else{
-				if(myrank == i){
-					MPI_Irecv(tmp_buf, 1, datatype, i + step, 0, MPI_COMM_WORLD, &request);
-				#ifdef DEBUG
-					printf("rank %d: recv %lld from rank %d. \n", myrank, *tmp_buf, i + step);
-				#endif
-					/* sum up */
-					*recvbuf += *tmp_buf;
+		/*
+		int MPI_Isend(const void *buf, int count, MPI_Datatype datatype, int dest,
+    	int tag, MPI_Comm comm, MPI_Request *request)
+    	*/
+    	if((myrank / step) % 2 == 1){
+			MPI_Isend(recvbuf, 1, datatype, myrank - step, 0, MPI_COMM_WORLD, &request);
+		#ifdef DEBUG
+			printf("rank %d: send %lld to rank %d. \n ", myrank, *recvbuf, myrank - step);
+		#endif
+    	}
 
-				}
-				
+		if((myrank / step) % 2 == 0){
+			while(1){
+				MPI_Irecv(tmp_buf, 1, datatype, myrank + step, 0, MPI_COMM_WORLD, &request);
+				MPI_Wait(&request, &status);
+				if(*tmp_buf != 0) break;
 			}
 
-			MPI_Barrier(MPI_COMM_WORLD); /* use barrier to synchronize */
-
-			rev = !rev;
+		#ifdef DEBUG
+			printf("rank %d: recv %lld from rank %d. \n", myrank, *tmp_buf, myrank + step);
+		#endif
+			/* sum up */
+			*recvbuf += *tmp_buf;
 		}
+		
+		
+		MPI_Barrier(MPI_COMM_WORLD); /* use barrier to synchronize */
+
 
 		r++;
 		step = step * 2;
-		// if((int) pow( 2, r) > atoi(getenv("RANK_NO"))) break; // All the results in rank 0
 		if((step) >= mysize) break; // All the results in rank 0
 	}
 
