@@ -3,10 +3,13 @@
 #include <string.h>
 #include <time.h>
 #include <mpi.h>
+#include <fcntl.h>
+#include <sys/types.h>
+#include <sys/stat.h>
 
 #include "functions.h"
 
-// #define BGQ 1 // when running BG/Q, comment out when running on mastiff
+//#define BGQ 1 // when running BG/Q, comment out when running on mastiff
 #ifdef BGQ 
 #include <hwi/include/bqc/A2_inlines.h> 
 #else 
@@ -66,6 +69,7 @@ int main(int argc, char ** argv){
 	unsigned long long end_cycles=0; 
 	int my_mpi_size;
 	int my_mpi_rank; 
+	FILE *log;
 	MPI_Init( &argc, &argv); /* also take params from regular command line input */
 	MPI_Comm_size(MPI_COMM_WORLD, &my_mpi_size);
 	MPI_Comm_rank(MPI_COMM_WORLD, &my_mpi_rank);
@@ -84,8 +88,8 @@ int main(int argc, char ** argv){
 	// don't use this coz will use up a single rank's memory
 
 
-	//int allocation = 1073741824 / my_mpi_size;
-	int allocation = 1024 * 1024 * 4 / my_mpi_size;
+	int allocation = 1073741824 / my_mpi_size;
+	//int allocation = 1024 * 1024 * 4 / my_mpi_size;
 	unsigned long long * rank_arr = calloc(allocation, sizeof(unsigned long long));
 	unsigned long long rank_i = 0;
 
@@ -119,8 +123,14 @@ int main(int argc, char ** argv){
 	/**/
 
 	if(my_mpi_rank == 0){
-		printf("%lld %.20f\n%lld %.20f\n", 
-	 		sum, time_in_secs, sum_mpi, time_in_secs_mpi);
+		//printf("%lld %f\n%lld %f\n", 
+	 	//	sum, time_in_secs, sum_mpi, time_in_secs_mpi);
+		printf("%lld\n%lld\n", 
+	 		sum, sum_mpi);
+	 	//log = fopen("/gpfs/u/home/PCP8/PCP8mmnq/barn/result.log", "a+");
+		//fprintf(stderr, "ranks %d: %lld %.20f\n%lld %.20f\n", my_mpi_size, 
+	 	//	sum, time_in_secs, sum_mpi, time_in_secs_mpi);
+		//fclose(log);
 	}
 
 	MPI_Barrier(MPI_COMM_WORLD); 

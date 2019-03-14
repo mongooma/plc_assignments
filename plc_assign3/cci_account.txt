@@ -13,9 +13,14 @@ Debug:
 
 check out https://secure.cci.rpi.edu/wiki/index.php/Blue_Gene/Q#Debugging_from_startup gdb
 
-salloc -p debug -t <mins> -n <no. of nodes> //seems only allow 1 node 
+module load xl
+mpixlc -O *.c  
+salloc -p debug -t <mins> -n <no. of nodes> 
 module load gdb
 srun --runjob-opts="--start-tool `which gdbtool` " --ntasks <number of MPI ranks> <executable> <executable arguments>
+
+srun  --ntasks <number of MPI ranks> <executable> <executable arguments>
+
 
 Compile:
 
