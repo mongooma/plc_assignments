@@ -63,7 +63,7 @@ pthread_mutex_t lock = PTHREAD_MUTEX_INITIALIZER;
 /* Function Decs ***********************************************************/
 /***************************************************************************/
 
-void * update( void ** args_ );
+void * update( void * args_ );
 
 // You define these
 
@@ -166,6 +166,10 @@ int main(int argc, char *argv[])
         args_[i].ALIVE_cells = ALIVE_cells; // thread modify time ticks ALIVE_cells using mutex lock
         
         pthread_create(&tid[i], NULL, update, (void *)&args_[i]);
+        /* int pthread_create(pthread_t *thread, const pthread_attr_t *attr,
+                          void *(*start_routine) (void *), void *arg); 
+            arg is passed as the sole argument for start_rountine;
+                          */
     }
 
     for(int i = 0; i < thread_n; i ++){
@@ -185,6 +189,10 @@ int main(int argc, char *argv[])
     }
     /* some experiment required*/
 
+    printf("time: %d, \n alive: ", time_in_secs_mpi);
+    for(int i=0; i < ticks; i ++){
+        printf("%d, ", ALIVE_cells[i]);
+    }
 
     MPI_Barrier( MPI_COMM_WORLD );
     
@@ -210,13 +218,13 @@ void * update( void * args_ ){
     ticks
     thread no -> tid[i]:i
     no of threads per rank
-    no of rows per *rank*
+    no of rows per *rank*  - include ghost rows
     sub_universe
 
 
     */
 
-    update_arg * args = args_;
+    update_arg * args = args;
 
     int ticks = args->ticks;
     int thread_no = args->thread_no;
@@ -231,7 +239,7 @@ void * update( void * args_ ){
     MPI_Comm_rank( MPI_COMM_WORLD, &mpi_myrank);
     MPI_Comm_size( MPI_COMM_WORLD, &mpi_commsize);
 
-    for( i = 0; i < ticks; i++) { 
+    for( int i = 0; i < ticks; i++) { 
 
         /* Exchange row data with MPI ranks using MPI_Isend/Irecv from thread 0 
           w/i each MPI rank. 
@@ -241,7 +249,7 @@ void * update( void * args_ ){
         Dont’ allow multiple threads to perform any MPI operations within MPI rank/thread group.
 
         */
-        if(thread_no == 0){
+        if(thread_no == 0){ /* thread 0 perform MPI send/recv */
             /* rank 0 <-> rank 1 
 
                 rank 0: row -1     <- rank (total - 1): row END
@@ -265,9 +273,9 @@ void * update( void * args_ ){
             /* int MPI_Irecv(      void *buf, int count, MPI_Datatype datatype, int source, 
                 int tag, MPI_Comm comm, MPI_Request *request) */
             if(mpi_myrank == 0){
-                MPI_Isend(sub_universe + (1 * N), N, MPI_INT, mpi_commsize - 1, MPI_tag, MPI_COMM_WORLD, &request);
+                MPI_Isend(sub_universe + (1 * N), N, MPI_INT, mpi_commsize - 1, 0, MPI_COMM_WORLD, &request);
             }else{
-                MPI_Isend(sub_universe + (1 * N), N, MPI_INT, mpi_myrank - 1, MPI_tag, MPI_COMM_WORLD, &request);   
+                MPI_Isend(sub_universe + (1 * N), N, MPI_INT, mpi_myrank - 1, 0, MPI_COMM_WORLD, &request);   
             }
             
             /* int MPI_Wait(MPI_Request *request, MPI_Status *status)*/
@@ -275,26 +283,26 @@ void * update( void * args_ ){
             /* another way is to do while loop for MPI_Test and check `flag` */
 
             if(mpi_myrank == mpi_commsize-1){
-                MPI_Isend(sub_universe + (rows-1) * N, N, MPI_INT, 0, MPI_tag, MPI_COMM_WORLD, &request);
+                MPI_Isend(sub_universe + (rows-1) * N, N, MPI_INT, 0, 0, MPI_COMM_WORLD, &request);
             }else{
-                MPI_Isend(sub_universe + (rows-1) * N, N, MPI_INT, mpi_myrank + 1, MPI_tag, MPI_COMM_WORLD, &request);
+                MPI_Isend(sub_universe + (rows-1) * N, N, MPI_INT, mpi_myrank + 1, 0, MPI_COMM_WORLD, &request);
 
             }
 
             MPI_Wait(&request, MPI_STATUS_IGNORE); // Wait block until request succeed, `request` deallocated
 
             if(mpi_myrank == 0){
-                MPI_Irecv(sub_universe, N, MPI_INT, mpi_commsize - 1, MPI_tag, MPI_COMM_WORLD, &request);
+                MPI_Irecv(sub_universe, N, MPI_INT, mpi_commsize - 1, 0, MPI_COMM_WORLD, &request);
             }else{
-                MPI_Irecv(sub_universe, N, MPI_INT, mpi_myrank - 1, MPI_tag, MPI_COMM_WORLD, &request);
+                MPI_Irecv(sub_universe, N, MPI_INT, mpi_myrank - 1, 0, MPI_COMM_WORLD, &request);
             }
 
             MPI_Wait(&request, MPI_STATUS_IGNORE); // Wait block until request succeed, `request` deallocated
 
             if(mpi_myrank == mpi_commsize-1){
-                MPI_Irecv(sub_universe + rows * N, N, MPI_INT, 0, MPI_tag, MPI_COMM_WORLD, &request);
+                MPI_Irecv(sub_universe + rows * N, N, MPI_INT, 0, 0, MPI_COMM_WORLD, &request);
             }else{
-                MPI_Irecv(sub_universe + rows * N, N, MPI_INT, mpi_myrank + 1, MPI_tag, MPI_COMM_WORLD, &request);
+                MPI_Irecv(sub_universe + rows * N, N, MPI_INT, mpi_myrank + 1, 0, MPI_COMM_WORLD, &request);
             }
 
             MPI_Wait(&request, MPI_STATUS_IGNORE); // Wait block until request succeed, `request` deallocated
@@ -316,11 +324,11 @@ void * update( void * args_ ){
         */
 
         /* update *simutanously* */
-        int ** sub_universe_thread_part_copy; /* thread_chunk * N */
+        int * sub_universe_thread_part_copy = calloc(rows * N, sizeof(int)); /* rank_chunk * N */
 
         /* get global(in rank) thread row index 0*/
-        int thread_chunk = (int)((rows - 2) / thread_no); // exclude the ghost rows
-        int thread_rows_0 = thread_chunk * (thread_no - 1) + 1; // include the ghost row
+        int thread_chunk = (int)((rows - 2) / no_of_threads); // exclude the ghost rows
+        int thread_rows_0 = thread_chunk * (no_of_threads - 1) + 1; // include the ghost row
 
         /**RULES:
 
@@ -352,6 +360,8 @@ void * update( void * args_ ){
 
             //todo, use RNG
 
+            return -1;
+
         }
 
         int alives;
@@ -376,8 +386,8 @@ void * update( void * args_ ){
             765  ---> eight nbrs
 
             */
-            for(int j = 0: j < N; j ++){
-                living_nbrs = 0
+            for(int j = 0; j < N; j ++){
+                living_nbrs = 0;
 
                 /* 2: previous row corresponding cell */
                 living_nbrs += *(sub_universe + (thread_rows_0 + i - 1) * N + j);
@@ -430,9 +440,9 @@ void * update( void * args_ ){
                     living_nbrs += *(sub_universe + (thread_rows_0 + i) * N + j-1);
                 }
 
-                state = get_state(*(sub_universe + (thread_rows[0] + i + 1) * N + j), living_nbrs);
+                state = get_state(*(sub_universe + (thread_rows_0 + i + 1) * N + j), living_nbrs);
                 /* thread_rows index from non-ghost row*/
-                *(sub_universe_thread_part_copy + (thread_rows[0] + i + 1) * N + j) = state;
+                *(sub_universe_thread_part_copy + (thread_rows_0 + i + 1) * N + j) = state;
 
                 if(state == ALIVE){
                     alives += 1;
