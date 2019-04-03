@@ -17,6 +17,7 @@
 
 #include<mpi.h>
 #include<pthread.h>
+#include<unistd.h>
 
 // #define BGQ 1 // when running BG/Q, comment out when testing on mastiff
 
@@ -57,7 +58,20 @@ typedef struct update_args
 int N = 1024;
 int thread_n  = 64;
 int ticks = 256;
+
+MPI_Request request_send_1;
+MPI_Request request_send_2;
+MPI_Request request_recv_1;
+MPI_Request request_recv_2;
+
+#ifdef DEBUG
+int hanging_tids = 0; //DEBUG
+#endif
+
 pthread_mutex_t lock = PTHREAD_MUTEX_INITIALIZER;
+#ifdef DEBUG
+pthread_mutex_t lock_DEBUG = PTHREAD_MUTEX_INITIALIZER;
+#endif
 
 /***************************************************************************/
 /* Function Decs ***********************************************************/
@@ -157,6 +171,13 @@ int main(int argc, char *argv[])
             int ** sub_universe; 
         }update_arg;
     */
+    #ifdef DEBUG
+    hanging_tids = thread_n;
+    #endif
+
+
+    int tmp;
+
     for(int i = 0; i < thread_n; i ++){
         args_[i].ticks = ticks;
         args_[i].thread_no = i;
@@ -166,15 +187,33 @@ int main(int argc, char *argv[])
         args_[i].ALIVE_cells = ALIVE_cells; // thread modify time ticks ALIVE_cells using mutex lock
         
         pthread_create(&tid[i], NULL, update, (void *)&args_[i]);
+
+
+        pthread_join(tid[i], (void *)&tmp);
         /* int pthread_create(pthread_t *thread, const pthread_attr_t *attr,
                           void *(*start_routine) (void *), void *arg); 
             arg is passed as the sole argument for start_rountine;
                           */
     }
 
-    for(int i = 0; i < thread_n; i ++){
-        pthread_join(tid[i], NULL);
-    }
+    
+    
+
+    // for(int i = 0; i < thread_n; i ++){
+
+    //     #ifdef DEBUG
+    //     while(1){
+    //         printf("%d threads hanging. \n", hanging_tids);
+    //         sleep(1);
+    //     }
+    //     #endif
+
+    //     pthread_join(tid[i], (void *)&tmp); //todo; join seems not working
+        
+    //     #ifdef DEBUG
+    //     printf("thread %d joined \n", i);
+    //     #endif
+    // }
 
     /* int MPI_Reduce(const void *sendbuf, void *recvbuf, int count,
                       MPI_Datatype datatype, MPI_Op op, int root,
@@ -224,7 +263,7 @@ void * update( void * args_ ){
 
     */
 
-    update_arg * args = args;
+    update_arg * args = args_;
 
     int ticks = args->ticks;
     int thread_no = args->thread_no;
@@ -235,7 +274,6 @@ void * update( void * args_ ){
 
     int mpi_myrank;
     int mpi_commsize;
-    MPI_Request request;
     MPI_Comm_rank( MPI_COMM_WORLD, &mpi_myrank);
     MPI_Comm_size( MPI_COMM_WORLD, &mpi_commsize);
 
@@ -250,6 +288,10 @@ void * update( void * args_ ){
 
         */
         if(thread_no == 0){ /* thread 0 perform MPI send/recv */
+
+            #ifdef DEBUG
+            printf("thread %d: here, start MPI send/recv\n", thread_no);
+            #endif
             /* rank 0 <-> rank 1 
 
                 rank 0: row -1     <- rank (total - 1): row END
@@ -273,41 +315,86 @@ void * update( void * args_ ){
             /* int MPI_Irecv(      void *buf, int count, MPI_Datatype datatype, int source, 
                 int tag, MPI_Comm comm, MPI_Request *request) */
             if(mpi_myrank == 0){
-                MPI_Isend(sub_universe + (1 * N), N, MPI_INT, mpi_commsize - 1, 0, MPI_COMM_WORLD, &request);
+                MPI_Isend(sub_universe + (1 * N), N, MPI_INT, mpi_commsize - 1, 0, MPI_COMM_WORLD, &request_send_1);
+
             }else{
-                MPI_Isend(sub_universe + (1 * N), N, MPI_INT, mpi_myrank - 1, 0, MPI_COMM_WORLD, &request);   
+                MPI_Isend(sub_universe + (1 * N), N, MPI_INT, mpi_myrank - 1, 0, MPI_COMM_WORLD, &request_send_1);   
             }
             
             /* int MPI_Wait(MPI_Request *request, MPI_Status *status)*/
-            MPI_Wait(&request, MPI_STATUS_IGNORE); // Wait block until request succeed, `request` deallocated
+            
+            // MPI_Wait(&request_send_1, MPI_STATUS_IGNORE); // Wait block until request succeed, `request` deallocated
             /* another way is to do while loop for MPI_Test and check `flag` */
 
+            // #ifdef DEBUG
+            // printf("thread %d: here, 0 \n", thread_no); // not reached
+            // #endif
+
+
             if(mpi_myrank == mpi_commsize-1){
-                MPI_Isend(sub_universe + (rows-1) * N, N, MPI_INT, 0, 0, MPI_COMM_WORLD, &request);
+                MPI_Isend(sub_universe + (rows-2) * N, N, MPI_INT, 0, 0, MPI_COMM_WORLD, &request_send_2);
             }else{
-                MPI_Isend(sub_universe + (rows-1) * N, N, MPI_INT, mpi_myrank + 1, 0, MPI_COMM_WORLD, &request);
+                MPI_Isend(sub_universe + (rows-2) * N, N, MPI_INT, mpi_myrank + 1, 0, MPI_COMM_WORLD, &request_send_2);
 
             }
 
-            MPI_Wait(&request, MPI_STATUS_IGNORE); // Wait block until request succeed, `request` deallocated
+            // MPI_Wait(&request_send_1, MPI_STATUS_IGNORE); // Wait block until request succeed, `request` deallocated
 
+            // #ifdef DEBUG
+            // printf("thread %d: here, 1 \n", thread_no); // reached
+            // #endif
             if(mpi_myrank == 0){
-                MPI_Irecv(sub_universe, N, MPI_INT, mpi_commsize - 1, 0, MPI_COMM_WORLD, &request);
+                MPI_Irecv(sub_universe, N, MPI_INT, mpi_commsize - 1, 0, MPI_COMM_WORLD, &request_recv_1);
             }else{
-                MPI_Irecv(sub_universe, N, MPI_INT, mpi_myrank - 1, 0, MPI_COMM_WORLD, &request);
+                MPI_Irecv(sub_universe, N, MPI_INT, mpi_myrank - 1, 0, MPI_COMM_WORLD, &request_recv_1);
             }
 
-            MPI_Wait(&request, MPI_STATUS_IGNORE); // Wait block until request succeed, `request` deallocated
 
+            // MPI_Wait(&request_recv_1, MPI_STATUS_IGNORE); // Wait block until request succeed, `request` deallocated
+
+            // #ifdef DEBUG
+            // printf("thread %d: here, 2 \n", thread_no); // reached
+            // #endif
             if(mpi_myrank == mpi_commsize-1){
-                MPI_Irecv(sub_universe + rows * N, N, MPI_INT, 0, 0, MPI_COMM_WORLD, &request);
+                MPI_Irecv(sub_universe + (rows - 1) * N, N, MPI_INT, 0, 0, MPI_COMM_WORLD, &request_recv_2);
             }else{
-                MPI_Irecv(sub_universe + rows * N, N, MPI_INT, mpi_myrank + 1, 0, MPI_COMM_WORLD, &request);
+                MPI_Irecv(sub_universe + (rows - 1) * N, N, MPI_INT, mpi_myrank + 1, 0, MPI_COMM_WORLD, &request_recv_2);
             }
 
-            MPI_Wait(&request, MPI_STATUS_IGNORE); // Wait block until request succeed, `request` deallocated
+            // MPI_Wait(&request_recv_2, MPI_STATUS_IGNORE); // Wait block until request succeed, `request` deallocated
 
+
+            // #ifdef DEBUG
+            // printf("thread %d: here, 3 \n", thread_no); // reached
+            // #endif
         }
+
+        MPI_Wait(&request_send_1, MPI_STATUS_IGNORE); // Wait block until request succeed, `request` deallocated
+            #ifdef DEBUG
+            printf("thread %d: here, 0 \n", thread_no); // not reached
+            #endif
+                    
+        MPI_Wait(&request_send_2, MPI_STATUS_IGNORE); // Wait block until request succeed, `request` deallocated
+            #ifdef DEBUG
+            printf("thread %d: here, 1 \n", thread_no); // reached
+            #endif
+        
+        MPI_Wait(&request_recv_1, MPI_STATUS_IGNORE); // Wait block until request succeed, `request` deallocated
+            #ifdef DEBUG
+            printf("thread %d: here, 2 \n", thread_no); // reached
+            #endif
+        
+        MPI_Wait(&request_recv_2, MPI_STATUS_IGNORE); // Wait block until request succeed, `request` deallocated
+            #ifdef DEBUG
+            printf("thread %d: here, 3 \n", thread_no); // reached
+            #endif
+
+
+        MPI_Barrier(MPI_COMM_WORLD); // notice: at the rank level synchronization
+
+        // #ifdef DEBUG
+        // printf("rank %d: finished initialization. \n", mpi_myrank);
+        // #endif
 
 
         /* HERE each PTHREAD can process a (chunk of?) * row *:
@@ -326,9 +413,16 @@ void * update( void * args_ ){
         /* update *simutanously* */
         int * sub_universe_thread_part_copy = calloc(rows * N, sizeof(int)); /* rank_chunk * N */
 
+        #ifdef DEBUG
+        printf("thread %d: here, 0\n", thread_no);
+
+        #endif
+
         /* get global(in rank) thread row index 0*/
         int thread_chunk = (int)((rows - 2) / no_of_threads); // exclude the ghost rows
         int thread_rows_0 = thread_chunk * (no_of_threads - 1) + 1; // include the ghost row
+
+
 
         /**RULES:
 
@@ -453,6 +547,11 @@ void * update( void * args_ ){
 
         }
 
+        #ifdef DEBUG
+        printf("thread %d: here, 1\n", thread_no);
+
+        #endif
+
 
         /*
         - keep track of total number of ALIVE cells per tick across all threads w/i a MPI rank group.
@@ -469,7 +568,15 @@ void * update( void * args_ ){
     } /*tick end*/
 
 
-    return NULL;
+    pthread_detach(pthread_self()); // nothing to return
+    #ifdef DEBUG
+    pthread_mutex_lock(&lock_DEBUG);
+    hanging_tids -=1;
+    pthread_mutex_unlock(&lock_DEBUG);
+    #endif
+    int * tmp = calloc(1, sizeof(int));
+    *tmp = -1;
+    return tmp;
 
 }
 
