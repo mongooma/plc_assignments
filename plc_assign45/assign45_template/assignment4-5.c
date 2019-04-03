@@ -69,6 +69,7 @@ int hanging_tids = 0; //DEBUG
 #endif
 
 pthread_mutex_t lock = PTHREAD_MUTEX_INITIALIZER;
+pthread_mutex_t lock_universeUpdate = PTHREAD_MUTEX_INITIALIZER;
 #ifdef DEBUG
 pthread_mutex_t lock_DEBUG = PTHREAD_MUTEX_INITIALIZER;
 #endif
@@ -277,7 +278,14 @@ void * update( void * args_ ){
     MPI_Comm_rank( MPI_COMM_WORLD, &mpi_myrank);
     MPI_Comm_size( MPI_COMM_WORLD, &mpi_commsize);
 
+    int alives;
+    int * sub_universe_thread_part_copy = calloc(rows * N, sizeof(int)); /* rank_chunk * N */
+    int living_nbrs;
+    int state;
+
+    /* notice each thread execute their time ticks - local time*/
     for( int i = 0; i < ticks; i++) { 
+        alives = 0;
 
         /* Exchange row data with MPI ranks using MPI_Isend/Irecv from thread 0 
           w/i each MPI rank. 
@@ -411,7 +419,6 @@ void * update( void * args_ ){
         */
 
         /* update *simutanously* */
-        int * sub_universe_thread_part_copy = calloc(rows * N, sizeof(int)); /* rank_chunk * N */
 
         #ifdef DEBUG
         printf("thread %d: here, 0\n", thread_no);
@@ -433,8 +440,6 @@ void * update( void * args_ ){
 
         **/
 
-        int living_nbrs;
-        int state;
         int get_state(int previous_state, int living_nbrs){
 
             if(living_nbrs < 2){
@@ -458,7 +463,6 @@ void * update( void * args_ ){
 
         }
 
-        int alives;
 
         for(int i = 0; i < thread_chunk; i ++ ){ /* thread local row index*/
             /*
@@ -564,8 +568,20 @@ void * update( void * args_ ){
         ALIVE_cells[i] += alives; /*i : index of ticks*/
         pthread_mutex_unlock( &lock);
 
+        // change the rank's sub_universe (rows * N) (in parallel)
+
+        pthread_mutex_lock( &lock_universeUpdate );
+        for(int i = 0; i < thread_chunk; i ++ ){ /* thread local row index*/
+            for(int j = 0; j < N; j ++){
+                *(sub_universe + (thread_rows_0 + i + 1) * N + j) = *(sub_universe_thread_part_copy + (thread_rows_0 + i + 1) * N + j); 
+            }
+        }
+        pthread_mutex_unlock( &lock_universeUpdate );
+
 
     } /*tick end*/
+
+
 
 
     pthread_detach(pthread_self()); // nothing to return
