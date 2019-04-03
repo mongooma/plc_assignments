@@ -1,0 +1,53 @@
+assignment4-5.c: In function ‘main’:
+assignment4-5.c:168:39: warning: passing argument 3 of ‘pthread_create’ from incompatible pointer type [-Wincompatible-pointer-types]
+         pthread_create(&tid[i], NULL, update, args_[i]);
+                                       ^~~~~~
+In file included from assignment4-5.c:19:0:
+/usr/include/pthread.h:234:12: note: expected ‘void * (*)(void *)’ but argument is of type ‘void * (*)(void **)’
+ extern int pthread_create (pthread_t *__restrict __newthread,
+            ^~~~~~~~~~~~~~
+assignment4-5.c:168:47: error: incompatible type for argument 4 of ‘pthread_create’
+         pthread_create(&tid[i], NULL, update, args_[i]);
+                                               ^~~~~
+In file included from assignment4-5.c:19:0:
+/usr/include/pthread.h:234:12: note: expected ‘void * restrict’ but argument is of type ‘update_arg {aka struct update_args}’
+ extern int pthread_create (pthread_t *__restrict __newthread,
+            ^~~~~~~~~~~~~~
+assignment4-5.c:82:9: warning: variable ‘time_in_secs_mpi’ set but not used [-Wunused-but-set-variable]
+     int time_in_secs_mpi;
+         ^~~~~~~~~~~~~~~~
+assignment4-5.c: At top level:
+assignment4-5.c:204:8: error: conflicting types for ‘update’
+ void * update( void * args_ ){
+        ^~~~~~
+assignment4-5.c:66:8: note: previous declaration of ‘update’ was here
+ void * update( void ** args_ );
+        ^~~~~~
+assignment4-5.c: In function ‘update’:
+assignment4-5.c:234:10: error: ‘i’ undeclared (first use in this function)
+     for( i = 0; i < ticks; i++) {
+          ^
+assignment4-5.c:234:10: note: each undeclared identifier is reported only once for each function it appears in
+assignment4-5.c:268:81: error: ‘MPI_tag’ undeclared (first use in this function); did you mean ‘MPI_Wait’?
+                 MPI_Isend(sub_universe + (1 * N), N, MPI_INT, mpi_commsize - 1, MPI_tag, MPI_COMM_WORLD, &request);
+                                                                                 ^~~~~~~
+                                                                                 MPI_Wait
+assignment4-5.c:379:26: error: expected ‘,’ or ‘;’ before ‘:’ token
+             for(int j = 0: j < N; j ++){
+                          ^
+assignment4-5.c:379:39: error: expected ‘;’ before ‘)’ token
+             for(int j = 0: j < N; j ++){
+                                       ^
+assignment4-5.c:383:17: error: expected ‘;’ before ‘living_nbrs’
+                 living_nbrs += *(sub_universe + (thread_rows_0 + i - 1) * N + j);
+                 ^~~~~~~~~~~
+assignment4-5.c:433:53: error: ‘thread_rows’ undeclared (first use in this function); did you mean ‘thread_rows_0’?
+                 state = get_state(*(sub_universe + (thread_rows[0] + i + 1) * N + j), living_nbrs);
+                                                     ^~~~~~~~~~~
+                                                     thread_rows_0
+assignment4-5.c:226:11: warning: variable ‘ALIVE_cells’ set but not used [-Wunused-but-set-variable]
+     int * ALIVE_cells = args->ALIVE_cells;
+           ^~~~~~~~~~~
+assignment4-5.c:223:9: warning: unused variable ‘no_of_threads’ [-Wunused-variable]
+     int no_of_threads = args->no_of_threads;
+         ^~~~~~~~~~~~~

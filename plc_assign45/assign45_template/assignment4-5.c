@@ -13,7 +13,7 @@
 #include<errno.h>
 #include<math.h>
 
-#include<clcg4.h>
+#include"clcg4.h"
 
 #include<mpi.h>
 #include<pthread.h>
@@ -48,7 +48,8 @@ typedef struct update_args
     int thread_no;
     int no_of_threads;
     int rows;
-    int ** sub_universe; 
+    int * sub_universe; 
+    int * ALIVE_cells;
 }update_arg;
 
 // You define these
@@ -62,6 +63,8 @@ pthread_mutex_t lock = PTHREAD_MUTEX_INITIALIZER;
 /* Function Decs ***********************************************************/
 /***************************************************************************/
 
+void * update( void ** args_ );
+
 // You define these
 
 
@@ -74,6 +77,9 @@ int main(int argc, char *argv[])
 //    int i = 0;
     int mpi_myrank;
     int mpi_commsize;
+    unsigned long long start_cycles=0; 
+    unsigned long long end_cycles=0; 
+    int time_in_secs_mpi;
 
 
 // Example MPI startup and using CLCG4 RNG
@@ -94,38 +100,51 @@ int main(int argc, char *argv[])
 
 // Allocate My rank’s chunk of the universe + space for "ghost" rows.
     int rank_rows = (int)(N / mpi_commsize);
-    int ** sub_universe = calloc(rank_rows + 2, sizeof(int *));
-    for(int i = 0; i < rank_rows + 2; i ++){
-        sub_universe[i] = calloc(N, sizeof(int));
-    }
-    if(mpi_myrank == 0){
-        int ** universe = calloc(N, sizeof(int *));
-        for(int i = 0; i < N; i ++){
-            universe[i] = calloc(N, sizeof(int));
 
-        GetTimeBase();
-    }
-    
+    // int ** sub_universe = calloc(rank_rows + 2, sizeof(int *));
+    // for(int i = 0; i < rank_rows + 2; i ++){
+    //     sub_universe[i] = calloc(N, sizeof(int));
+    // }
+
+    // int sub_universe[rank_rows + 2][N];
+    int * sub_universe = calloc((rank_rows + 2) * N, sizeof(int)); // a single row
+    /*error: variable-sized object may not be initialized */
+    /* use this trick: https://stackoverflow.com/questions/3082914/c-compile-error-variable-sized-object-may-not-be-initialized*/
+
+    // memset( sub_universe, 0, (rank_rows + 2) * N * sizeof(int)); /* row-majored; sequential memory allocation; for mpi scatter*/
+    // still supports indexing
+
+    // int ** universe = calloc(N, sizeof(int *));
+    // for(int i = 0; i < N; i ++){
+    //     universe[i] = calloc(N, sizeof(int));
+    // int universe[N][N];
+    int * universe = calloc(N * N, sizeof(int));  // a single row
+    // memset( universe, 0, N * N * sizeof(int)); // still supports indexing       
+
+    start_cycles = GetTimeBase();
+
 
     // int MPI_Scatter(const void *sendbuf, int sendcount, MPI_Datatype sendtype,
     //         void *recvbuf, int recvcount, MPI_Datatype recvtype, int root,
     //         MPI_Comm comm)
 
-        MPI_Scatter(universe, rank_rows, MPI_INT *, sub_universe+1,  // ghost rows
-                                rank_rows, MPI_INT *, 0, MPI_COMM_WORLD)
-    }
+    MPI_Scatter(universe, rank_rows * N, MPI_INT, sub_universe + N,  // ghost rows
+                                rank_rows * N, MPI_INT, 0, MPI_COMM_WORLD);
+
+    free(universe); 
+    
 
 // Initalize the universe (including "ghost" rows) with every cell being ALIVE
     for(int i = 0; i < rank_rows + 2; i ++){
         for(int j = 0; j < N; j ++){
-            sub_universe[i][j] = ALIVE;
+            *(sub_universe + (i * N + j)) = ALIVE;
         }
     }    
 
 // Create Pthreads here.
     pthread_t tid[thread_n];
-    int * ALIVE_cells = call(ticks, sizeof(int)); /* modified by threads */
-    int * ALIVE_cells_sum = call(ticks, sizeof(int));
+    int * ALIVE_cells = calloc(ticks, sizeof(int)); /* modified by threads */
+    int * ALIVE_cells_sum = calloc(ticks, sizeof(int));
 
 
     update_arg * args_ = calloc(thread_n, sizeof(update_arg));
@@ -146,7 +165,7 @@ int main(int argc, char *argv[])
         args_[i].sub_universe = sub_universe; // thread share the rank's sub_universe and operate on it in parallel
         args_[i].ALIVE_cells = ALIVE_cells; // thread modify time ticks ALIVE_cells using mutex lock
         
-        pthread_create(&tid[i], NULL, update, (void *) &args_[i]);
+        pthread_create(&tid[i], NULL, update, (void *)&args_[i]);
     }
 
     for(int i = 0; i < thread_n; i ++){
@@ -156,9 +175,14 @@ int main(int argc, char *argv[])
     /* int MPI_Reduce(const void *sendbuf, void *recvbuf, int count,
                       MPI_Datatype datatype, MPI_Op op, int root,
                       MPI_Comm comm) */
-    MPI_Reduce(ALIVE_cells, ALIVE_cells_sum, ticks, MPI_INT, MPI_Sum, 0, MPI_COMM_WORLD);
+    MPI_Reduce(ALIVE_cells, ALIVE_cells_sum, ticks, MPI_INT, MPI_SUM, 0, MPI_COMM_WORLD);
 
 
+    if(mpi_myrank == 0){
+        end_cycles = GetTimeBase();
+        time_in_secs_mpi = ((double)(end_cycles - start_cycles)) / g_processor_frequency;
+
+    }
     /* some experiment required*/
 
 
@@ -177,7 +201,7 @@ int main(int argc, char *argv[])
 /***************************************************************************/
 
 
-void * update( void ** args_ ){
+void * update( void * args_ ){
 
     /* within thread 
     
@@ -198,7 +222,7 @@ void * update( void ** args_ ){
     int thread_no = args->thread_no;
     int no_of_threads = args->no_of_threads;
     int rows = args->rows;
-    int ** sub_universe = args->sub_universe;  
+    int * sub_universe = args->sub_universe;  
     int * ALIVE_cells = args->ALIVE_cells;
 
     int mpi_myrank;
@@ -241,9 +265,9 @@ void * update( void ** args_ ){
             /* int MPI_Irecv(      void *buf, int count, MPI_Datatype datatype, int source, 
                 int tag, MPI_Comm comm, MPI_Request *request) */
             if(mpi_myrank == 0){
-                MPI_Isend(sub_universe[1], N, MPI_INT, mpi_commsize - 1, MPI_tag, MPI_COMM_WORLD, &request);
+                MPI_Isend(sub_universe + (1 * N), N, MPI_INT, mpi_commsize - 1, MPI_tag, MPI_COMM_WORLD, &request);
             }else{
-                MPI_Isend(sub_universe[1], N, MPI_INT, mpi_myrank - 1, MPI_tag, MPI_COMM_WORLD, &request);   
+                MPI_Isend(sub_universe + (1 * N), N, MPI_INT, mpi_myrank - 1, MPI_tag, MPI_COMM_WORLD, &request);   
             }
             
             /* int MPI_Wait(MPI_Request *request, MPI_Status *status)*/
@@ -251,26 +275,26 @@ void * update( void ** args_ ){
             /* another way is to do while loop for MPI_Test and check `flag` */
 
             if(mpi_myrank == mpi_commsize-1){
-                MPI_Isend(sub_universe[rows-1], N, MPI_INT, 0, MPI_tag, MPI_COMM_WORLD, &request);
+                MPI_Isend(sub_universe + (rows-1) * N, N, MPI_INT, 0, MPI_tag, MPI_COMM_WORLD, &request);
             }else{
-                MPI_Isend(sub_universe[rows-1], N, MPI_INT, mpi_myrank + 1, MPI_tag, MPI_COMM_WORLD, &request);
+                MPI_Isend(sub_universe + (rows-1) * N, N, MPI_INT, mpi_myrank + 1, MPI_tag, MPI_COMM_WORLD, &request);
 
             }
 
             MPI_Wait(&request, MPI_STATUS_IGNORE); // Wait block until request succeed, `request` deallocated
 
             if(mpi_myrank == 0){
-                MPI_Irecv(sub_universe[0], N, MPI_INT, mpi_commsize - 1, MPI_tag, MPI_COMM_WORLD, &request);
+                MPI_Irecv(sub_universe, N, MPI_INT, mpi_commsize - 1, MPI_tag, MPI_COMM_WORLD, &request);
             }else{
-                MPI_Irecv(sub_universe[0], N, MPI_INT, mpi_myrank - 1, MPI_tag, MPI_COMM_WORLD, &request);
+                MPI_Irecv(sub_universe, N, MPI_INT, mpi_myrank - 1, MPI_tag, MPI_COMM_WORLD, &request);
             }
 
             MPI_Wait(&request, MPI_STATUS_IGNORE); // Wait block until request succeed, `request` deallocated
 
             if(mpi_myrank == mpi_commsize-1){
-                MPI_Irecv(sub_universe[rows], N, MPI_INT, 0, MPI_tag, MPI_COMM_WORLD, &request);
+                MPI_Irecv(sub_universe + rows * N, N, MPI_INT, 0, MPI_tag, MPI_COMM_WORLD, &request);
             }else{
-                MPI_Irecv(sub_universe[rows], N, MPI_INT, mpi_myrank + 1, MPI_tag, MPI_COMM_WORLD, &request);
+                MPI_Irecv(sub_universe + rows * N, N, MPI_INT, mpi_myrank + 1, MPI_tag, MPI_COMM_WORLD, &request);
             }
 
             MPI_Wait(&request, MPI_STATUS_IGNORE); // Wait block until request succeed, `request` deallocated
@@ -326,6 +350,8 @@ void * update( void ** args_ ){
                 return DEAD;
             }
 
+            //todo, use RNG
+
         }
 
         int alives;
@@ -354,59 +380,59 @@ void * update( void ** args_ ){
                 living_nbrs = 0
 
                 /* 2: previous row corresponding cell */
-                living_nbrs += sub_universe[thread_rows_0 + i - 1][j];
+                living_nbrs += *(sub_universe + (thread_rows_0 + i - 1) * N + j);
                 /* 6: next row corresponding cell */
-                living_nbrs += sub_universe[thread_rows_0 + i + 1][j];
+                living_nbrs += *(sub_universe + (thread_rows_0 + i + 1) * N + j);
 
                 if((j == 0) || (j == N-1)){ /* row ends; utilizing the end of the rows for missing left/right nbrs */
                     if(j == 0){
                         /* 1: previous row last cell*/ 
-                        living_nbrs += sub_universe[thread_rows_0 + i - 1][N-1]; //
+                        living_nbrs += *(sub_universe + (thread_rows_0 + i - 1) * N + (N-1)); //
                         /* 3: previous next cell */
-                        living_nbrs += sub_universe[thread_rows_0 + i - 1][j+1];
+                        living_nbrs += *(sub_universe + (thread_rows_0 + i - 1) * N + (j+1)); // todo
                         /* 4: current row next cell */
-                        living_nbrs += sub_universe[thread_rows_0 + i ][j+1];
+                        living_nbrs += *(sub_universe + (thread_rows_0 + i) * N + (j+1));
                         /* 5: next row next cell */
-                        living_nbrs += sub_universe[thread_rows_0 + i + 1][j+1];
+                        living_nbrs += *(sub_universe + (thread_rows_0 + i + 1) * N + (j+1));
                         /* 7: next row last cell */ 
-                        living_nbrs += sub_universe[thread_rows_0 + i + 1][N-1]; //
+                        living_nbrs += *(sub_universe + (thread_rows_0 + i + 1) + (N-1)); //
                         /* 8: current row last cell */ 
-                        living_nbrs += sub_universe[thread_rows_0 + i][N+1]; //
+                        living_nbrs += *(sub_universe + (thread_rows_0 + i) * N + (N+1)); //
                     }
                     else{
                         /* 1: previous row previous cell*/
-                        living_nbrs += sub_universe[thread_rows_0 + i - 1][j-1];
+                        living_nbrs += *(sub_universe + (thread_rows_0 + i - 1) * N + (j-1));
                         /* 3: previous head cell */
-                        living_nbrs += sub_universe[thread_rows_0 + i - 1][0]; //
+                        living_nbrs += *(sub_universe + (thread_rows_0 + i - 1) * N); //
                         /* 4: current row head cell */
-                        living_nbrs += sub_universe[thread_rows_0 + i ][0]; //
+                        living_nbrs += *(sub_universe + (thread_rows_0 + i) * N); //
                         /* 5: next row head cell */
-                        living_nbrs += sub_universe[thread_rows_0 + i + 1][0]; //
+                        living_nbrs += *(sub_universe + (thread_rows_0 + i + 1) * N); //
                         /* 7: next row previous cell */
-                        living_nbrs += sub_universe[thread_rows_0 + i + 1][j-1];
+                        living_nbrs += *(sub_universe + (thread_rows_0 + i + 1) * N + j-1);
                         /* 8: current row previous cell */
-                        living_nbrs += sub_universe[thread_rows_0 + i][j-1];
+                        living_nbrs += *(sub_universe + (thread_rows_0 + i) * N + j-1);
 
                     }
 
                 }else{
                     /* 1: previous row previous cell*/
-                    living_nbrs += sub_universe[thread_rows_0 + i - 1][j-1];
+                    living_nbrs += *(sub_universe + (thread_rows_0 + i - 1) * N + j-1);
                     /* 3: previous next cell */
-                    living_nbrs += sub_universe[thread_rows_0 + i - 1][j+1];
+                    living_nbrs += *(sub_universe + (thread_rows_0 + i - 1) * N + j+1);
                     /* 4: current row next cell */
-                    living_nbrs += sub_universe[thread_rows_0 + i ][j+1];
+                    living_nbrs += *(sub_universe + (thread_rows_0 + i) * N + j+1);
                     /* 5: next row next cell */
-                    living_nbrs += sub_universe[thread_rows_0 + i + 1][j+1];
+                    living_nbrs += *(sub_universe + (thread_rows_0 + i + 1) * N + j+1);
                     /* 7: next row previous cell */
-                    living_nbrs += sub_universe[thread_rows_0 + i + 1][j-1];
+                    living_nbrs += *(sub_universe + (thread_rows_0 + i + 1) * N + j-1);
                     /* 8: current row previous cell */
-                    living_nbrs += sub_universe[thread_rows_0 + i][j-1];
+                    living_nbrs += *(sub_universe + (thread_rows_0 + i) * N + j-1);
                 }
 
-                state = get_state(sub_universe[thread_rows[0] + i + 1][j], living_nbrs);
+                state = get_state(*(sub_universe + (thread_rows[0] + i + 1) * N + j), living_nbrs);
                 /* thread_rows index from non-ghost row*/
-                sub_universe_thread_part_copy[thread_rows[0] + i + 1][j] = state;
+                *(sub_universe_thread_part_copy + (thread_rows[0] + i + 1) * N + j) = state;
 
                 if(state == ALIVE){
                     alives += 1;
