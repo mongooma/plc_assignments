@@ -114,7 +114,7 @@ void Init( long v, long w) {
 }
 
 
-double GenVal( Gen g) {
+double GenVal( Gen g) { // g larger than 0
   long k,s;
   double u=0.0;
 

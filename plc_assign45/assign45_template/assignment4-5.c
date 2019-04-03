@@ -7,18 +7,17 @@
 /* Includes ****************************************************************/
 /***************************************************************************/
 
-#include<stdio.h>
-#include<stdlib.h>
-#include<string.h>
-#include<errno.h>
-#include<math.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <errno.h>
+#include <math.h>
 
-#include"clcg4.h"
+#include "clcg4.h"
 
-#include<mpi.h>
-#include<pthread.h>
-#include<unistd.h>
-
+#include <mpi.h>
+#include <pthread.h>
+#include <unistd.h>
 // #define BGQ 1 // when running BG/Q, comment out when testing on mastiff
 
 #ifdef BGQ
@@ -102,15 +101,17 @@ int main(int argc, char *argv[])
     MPI_Comm_size( MPI_COMM_WORLD, &mpi_commsize);
     MPI_Comm_rank( MPI_COMM_WORLD, &mpi_myrank);
     
-// Init 32,768 RNG streams - each * rank *  has an independent stream
-
+// Init 32,768 RNG streams - each row  has an independent *stream* -> and not a single value
+/* value return by the RNG is greater than a set THRESHOLD, 
+    then perform the above described basic rules for each cell. Otherwise, randomly pick state ofLIVEorDEAD*/
+    
     InitDefault();
 
 // Note, used the i to select which RNG stream to use.
 // You must replace mpi_myrank with the right row being used.
 // This just show you how to call the RNG.    
-    printf("Rank %d of %d has been started and a first Random Value of %lf\n", 
-       mpi_myrank, mpi_commsize, GenVal(mpi_myrank));
+//     printf("Rank %d of %d has been started and a first Random Value of %lf\n", 
+//        mpi_myrank, mpi_commsize, GenVal(mpi_myrank));
     
 
 // Allocate My rank’s chunk of the universe + space for "ghost" rows.
@@ -284,7 +285,7 @@ void * update( void * args_ ){
     int state;
 
     /* notice each thread execute their time ticks - local time*/
-    for( int i = 0; i < ticks; i++) { 
+    for( int t = 0; t < ticks; t++) { 
         alives = 0;
 
         /* Exchange row data with MPI ranks using MPI_Isend/Irecv from thread 0 
@@ -440,21 +441,39 @@ void * update( void * args_ ){
 
         **/
 
-        int get_state(int previous_state, int living_nbrs){
+        int get_state(int previous_state, int living_nbrs, int local_row, int rank_no, int rank_total){
+            /*
+            Each row has its own RNG stream
+            */
 
-            if(living_nbrs < 2){
-                return DEAD;
-            }else if (living_nbrs == 2)
-            {
-                if(previous_state == ALIVE){
+            int global_row = rank_no * (N / rank_total) + local_row;
+            long double rand_clcg = GenVal(global_row);
+            double rand_rand = (double)rand() / (double)RAND_MAX; // [0, 1aq]
+
+            if(rand_clcg > 0.25){
+                
+                if(living_nbrs < 2){
+                    return DEAD;
+                }else if (living_nbrs == 2)
+                {
+                    if(previous_state == ALIVE){
+                        return ALIVE;
+                    }else{
+                        return DEAD;
+                    }
+                }else if(living_nbrs == 3){
+                    return ALIVE;
+                }else if(living_nbrs > 3){
+                    return DEAD;
+                }
+
+            }else{
+                if(rand_rand > 0.5){
                     return ALIVE;
                 }else{
                     return DEAD;
                 }
-            }else if(living_nbrs == 3){
-                return ALIVE;
-            }else if(living_nbrs > 3){
-                return DEAD;
+
             }
 
             //todo, use RNG
@@ -538,9 +557,10 @@ void * update( void * args_ ){
                     living_nbrs += *(sub_universe + (thread_rows_0 + i) * N + j-1);
                 }
 
-                state = get_state(*(sub_universe + (thread_rows_0 + i + 1) * N + j), living_nbrs);
+            // int get_state(int previous_state, int living_nbrs, int local_row, int rank_no, int rank_total){
+                state = get_state(*(sub_universe + (thread_rows_0 + i) * N + j), living_nbrs, i, mpi_myrank, mpi_commsize);
                 /* thread_rows index from non-ghost row*/
-                *(sub_universe_thread_part_copy + (thread_rows_0 + i + 1) * N + j) = state;
+                *(sub_universe_thread_part_copy + (thread_rows_0 + i) * N + j) = state;
 
                 if(state == ALIVE){
                     alives += 1;
@@ -565,7 +585,7 @@ void * update( void * args_ ){
         */ 
 
         pthread_mutex_lock( &lock);
-        ALIVE_cells[i] += alives; /*i : index of ticks*/
+        ALIVE_cells[t] += alives; /*i : index of ticks*/
         pthread_mutex_unlock( &lock);
 
         // change the rank's sub_universe (rows * N) (in parallel)
