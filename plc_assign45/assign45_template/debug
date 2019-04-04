@@ -1,0 +1,4354 @@
+thread 3: wait... 
+thread 0: here, start MPI send/recv
+thread 2: wait... 
+thread 1: wait... 
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 0: here, 0
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 2: here, 0
+thread 2: here, 1
+thread 2: wait... 
+thread 1: here, 0
+thread 1: here, 1
+thread 1: wait... 
+thread 3: here, 0
+thread 3: here, 1
+thread 3: wait... 
+thread 3: here, 0
+thread 3: here, 1
+thread 3: wait... 
+thread 0: here, 0
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 2: here, 0
+thread 2: here, 1
+thread 2: wait... 
+thread 1: here, 0
+thread 1: here, 1
+thread 1: wait... 
+thread 1: here, 0
+thread 1: here, 1
+thread 1: wait... 
+thread 2: here, 0
+thread 2: here, 1
+thread 2: wait... 
+thread 3: here, 0
+thread 3: here, 1
+thread 3: wait... 
+thread 0: here, 0
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 0: here, 0
+thread 2: here, 0
+thread 2: here, 1
+thread 2: wait... 
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 1: here, 0
+thread 1: here, 1
+thread 1: wait... 
+thread 3: here, 0
+thread 3: here, 1
+thread 3: wait... 
+thread 3: here, 0
+thread 3: here, 1
+thread 3: wait... 
+thread 1: here, 0
+thread 1: here, 1
+thread 1: wait... 
+thread 2: here, 0
+thread 2: here, 1
+thread 2: wait... 
+thread 0: here, 0
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 0: here, 0
+thread 1: here, 0
+thread 3: here, 0
+thread 3: here, 1
+thread 3: wait... 
+thread 2: here, 0
+thread 2: here, 1
+thread 2: wait... 
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 1: here, 1
+thread 1: wait... 
+thread 1: here, 0
+thread 1: here, 1
+thread 1: wait... 
+thread 0: here, 0
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 3: here, 0
+thread 3: here, 1
+thread 3: wait... 
+thread 2: here, 0
+thread 2: here, 1
+thread 2: wait... 
+thread 2: here, 0
+thread 2: here, 1
+thread 0: here, 0
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 1: here, 0
+thread 1: here, 1
+thread 1: wait... 
+thread 3: here, 0
+thread 3: here, 1
+thread 3: wait... 
+thread 2: wait... 
+thread 2: here, 0
+thread 2: here, 1
+thread 2: wait... 
+thread 0: here, 0
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 1: here, 0
+thread 1: here, 1
+thread 1: wait... 
+thread 3: here, 0
+thread 3: here, 1
+thread 3: wait... 
+thread 3: here, 0
+thread 3: here, 1
+thread 1: here, 0
+thread 1: here, 1
+thread 1: wait... 
+thread 0: here, 0
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 2: here, 0
+thread 2: here, 1
+thread 2: wait... 
+thread 3: wait... 
+thread 3: here, 0
+thread 3: here, 1
+thread 0: here, 0
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 1: here, 0
+thread 2: here, 0
+thread 2: here, 1
+thread 2: wait... 
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 1: here, 1
+thread 1: wait... 
+thread 3: wait... 
+thread 3: here, 0
+thread 1: here, 0
+thread 1: here, 1
+thread 1: wait... 
+thread 2: here, 0
+thread 2: here, 1
+thread 2: wait... 
+thread 0: here, 0
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 3: here, 1
+thread 3: wait... 
+thread 3: here, 0
+thread 0: here, 0
+thread 0: here, 1
+thread 2: here, 0
+thread 2: here, 1
+thread 2: wait... 
+thread 3: here, 1
+thread 3: wait... 
+thread 0: here, start MPI send/recv
+thread 0: here, 0 
+thread 1: here, 0
+thread 1: here, 1
+thread 1: wait... 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 0: here, 0
+thread 0: here, 1
+thread 3: here, 0
+thread 3: here, 1
+thread 3: wait... 
+thread 1: here, 0
+thread 0: here, start MPI send/recv
+thread 0: here, 0 
+thread 1: here, 1
+thread 1: wait... 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 2: here, 0
+thread 2: here, 1
+thread 2: wait... 
+thread 2: here, 0
+thread 2: here, 1
+thread 2: wait... 
+thread 0: here, 0
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 0: here, 0 
+thread 0: here, 1 
+thread 3: here, 0
+thread 3: here, 1
+thread 3: wait... 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 1: here, 0
+thread 1: here, 1
+thread 1: wait... 
+thread 1: here, 0
+thread 1: here, 1
+thread 1: wait... 
+thread 3: here, 0
+thread 3: here, 1
+thread 3: wait... 
+thread 2: here, 0
+thread 2: here, 1
+thread 2: wait... 
+thread 0: here, 0
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 0: here, 0
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 1: here, 0
+thread 1: here, 1
+thread 1: wait... 
+thread 2: here, 0
+thread 2: here, 1
+thread 2: wait... 
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 3: here, 0
+thread 3: here, 1
+thread 3: wait... 
+thread 3: here, 0
+thread 3: here, 1
+thread 3: wait... 
+thread 0: here, 0
+thread 2: here, 0
+thread 2: here, 1
+thread 2: wait... 
+thread 1: here, 0
+thread 1: here, 1
+thread 1: wait... 
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 0: here, 0
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 2: here, 0
+thread 2: here, 1
+thread 2: wait... 
+thread 3: here, 0
+thread 3: here, 1
+thread 3: wait... 
+thread 1: here, 0
+thread 1: here, 1
+thread 1: wait... 
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 0: here, 0
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 1: here, 0
+thread 1: here, 1
+thread 0: wait... 
+thread 2: here, 0
+thread 2: here, 1
+thread 2: wait... 
+thread 3: here, 0
+thread 3: here, 1
+thread 3: wait... 
+thread 1: wait... 
+thread 1: here, 0
+thread 3: here, 0
+thread 3: here, 1
+thread 3: wait... 
+thread 1: here, 1
+thread 1: wait... 
+thread 2: here, 0
+thread 2: here, 1
+thread 2: wait... 
+thread 0: here, 0
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 0: here, 0
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 3: here, 0
+thread 3: here, 1
+thread 3: wait... 
+thread 2: here, 0
+thread 2: here, 1
+thread 2: wait... 
+thread 1: here, 0
+thread 1: here, 1
+thread 1: wait... 
+thread 0: wait... 
+thread 0: here, 0
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 1: here, 0
+thread 1: here, 1
+thread 1: wait... 
+thread 3: here, 0
+thread 3: here, 1
+thread 3: wait... 
+thread 2: here, 0
+thread 2: here, 1
+thread 2: wait... 
+thread 2: here, 0
+thread 2: here, 1
+thread 2: wait... 
+thread 3: here, 0
+thread 3: here, 1
+thread 3: wait... 
+thread 0: here, 0
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 1: here, 0
+thread 1: here, 1
+thread 1: wait... 
+thread 1: here, 0
+thread 0: here, 0
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 3: here, 0
+thread 3: here, 1
+thread 3: wait... 
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 2: here, 0
+thread 2: here, 1
+thread 2: wait... 
+thread 1: here, 1
+thread 1: wait... 
+thread 1: here, 0
+thread 1: here, 1
+thread 1: wait... 
+thread 0: here, 0
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 2: here, 0
+thread 2: here, 1
+thread 2: wait... 
+thread 3: here, 0
+thread 3: here, 1
+thread 3: wait... 
+thread 3: here, 0
+thread 3: here, 1
+thread 3: wait... 
+thread 2: here, 0
+thread 2: here, 1
+thread 2: wait... 
+thread 1: here, 0
+thread 1: here, 1
+thread 1: wait... 
+thread 0: here, 0
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 0: here, 0
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 2: here, 0
+thread 2: here, 1
+thread 2: wait... 
+thread 1: here, 0
+thread 1: here, 1
+thread 1: wait... 
+thread 3: here, 0
+thread 3: here, 1
+thread 3: wait... 
+thread 3: here, 0
+thread 3: here, 1
+thread 3: wait... 
+thread 2: here, 0
+thread 2: here, 1
+thread 2: wait... 
+thread 0: here, 0
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 1: here, 0
+thread 1: here, 1
+thread 1: wait... 
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 0: here, 0
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 3: here, 0
+thread 3: here, 1
+thread 3: wait... 
+thread 1: here, 0
+thread 1: here, 1
+thread 1: wait... 
+thread 2: here, 0
+thread 2: here, 1
+thread 2: wait... 
+thread 2: here, 0
+thread 2: here, 1
+thread 2: wait... 
+thread 1: here, 0
+thread 1: here, 1
+thread 1: wait... 
+thread 0: here, 0
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 3: here, 0
+thread 3: here, 1
+thread 3: wait... 
+thread 3: here, 0
+thread 3: here, 1
+thread 3: wait... 
+thread 0: here, 0
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 1: here, 0
+thread 1: here, 1
+thread 1: wait... 
+thread 2: here, 0
+thread 2: here, 1
+thread 2: wait... 
+thread 2: here, 0
+thread 1: here, 0
+thread 1: here, 1
+thread 1: wait... 
+thread 0: here, 0
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 2: here, 1
+thread 2: wait... 
+thread 3: here, 0
+thread 3: here, 1
+thread 3: wait... 
+thread 3: here, 0
+thread 3: here, 1
+thread 3: wait... 
+thread 2: here, 0
+thread 2: here, 1
+thread 2: wait... 
+thread 1: here, 0
+thread 1: here, 1
+thread 1: wait... 
+thread 0: here, 0
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 0: here, 0
+thread 1: here, 0
+thread 1: here, 1
+thread 1: wait... 
+thread 3: here, 0
+thread 3: here, 1
+thread 3: wait... 
+thread 2: here, 0
+thread 2: here, 1
+thread 2: wait... 
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 0: here, 0
+thread 2: here, 0
+thread 2: here, 1
+thread 2: wait... 
+thread 1: here, 0
+thread 1: here, 1
+thread 1: wait... 
+thread 3: here, 0
+thread 3: here, 1
+thread 3: wait... 
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 0: here, 0
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 2: here, 0
+thread 2: here, 1
+thread 2: wait... 
+thread 1: here, 0
+thread 1: here, 1
+thread 1: wait... 
+thread 3: here, 0
+thread 3: here, 1
+thread 3: wait... 
+thread 3: here, 0
+thread 3: here, 1
+thread 3: wait... 
+thread 1: here, 0
+thread 1: here, 1
+thread 1: wait... 
+thread 2: here, 0
+thread 2: here, 1
+thread 2: wait... 
+thread 0: here, 0
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 0: here, 0
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 1: here, 0
+thread 1: here, 1
+thread 1: wait... 
+thread 2: here, 0
+thread 2: here, 1
+thread 2: wait... 
+thread 3: here, 0
+thread 3: here, 1
+thread 3: wait... 
+thread 3: here, 0
+thread 3: here, 1
+thread 3: wait... 
+thread 1: here, 0
+thread 1: here, 1
+thread 1: wait... 
+thread 0: here, 0
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 2: here, 0
+thread 2: here, 1
+thread 2: wait... 
+thread 2: here, 0
+thread 2: here, 1
+thread 2: wait... 
+thread 3: here, 0
+thread 3: here, 1
+thread 3: wait... 
+thread 1: here, 0
+thread 1: here, 1
+thread 1: wait... 
+thread 0: here, 0
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 0: here, 0
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 3: here, 0
+thread 3: here, 1
+thread 3: wait... 
+thread 1: here, 0
+thread 1: here, 1
+thread 1: wait... 
+thread 2: here, 0
+thread 2: here, 1
+thread 2: wait... 
+thread 2: here, 0
+thread 1: here, 0
+thread 1: here, 1
+thread 1: wait... 
+thread 0: here, 0
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 2: here, 1
+thread 2: wait... 
+thread 3: here, 0
+thread 3: here, 1
+thread 3: wait... 
+thread 3: here, 0
+thread 2: here, 0
+thread 2: here, 1
+thread 2: wait... 
+thread 1: here, 0
+thread 1: here, 1
+thread 1: wait... 
+thread 0: here, 0
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 3: here, 1
+thread 3: wait... 
+thread 3: here, 0
+thread 3: here, 1
+thread 3: wait... 
+thread 2: here, 0
+thread 2: here, 1
+thread 2: wait... 
+thread 0: here, 0
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 1: here, 0
+thread 1: here, 1
+thread 1: wait... 
+thread 1: here, 0
+thread 0: here, 0
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 3: here, 0
+thread 3: here, 1
+thread 3: wait... 
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 2: here, 0
+thread 2: here, 1
+thread 2: wait... 
+thread 1: here, 1
+thread 1: wait... 
+thread 1: here, 0
+thread 1: here, 1
+thread 1: wait... 
+thread 2: here, 0
+thread 2: here, 1
+thread 2: wait... 
+thread 3: here, 0
+thread 3: here, 1
+thread 3: wait... 
+thread 0: here, 0
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 0: here, 0
+thread 3: here, 0
+thread 3: here, 1
+thread 3: wait... 
+thread 1: here, 0
+thread 1: here, 1
+thread 1: wait... 
+thread 2: here, 0
+thread 2: here, 1
+thread 2: wait... 
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 0: here, 0
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 1: here, 0
+thread 1: here, 1
+thread 1: wait... 
+thread 2: here, 0
+thread 2: here, 1
+thread 2: wait... 
+thread 3: here, 0
+thread 3: here, 1
+thread 3: wait... 
+thread 3: here, 0
+thread 2: here, 0
+thread 2: here, 1
+thread 2: wait... 
+thread 0: here, 0
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 3: here, 1
+thread 3: wait... 
+thread 1: here, 0
+thread 1: here, 1
+thread 1: wait... 
+thread 1: here, 0
+thread 1: here, 1
+thread 1: wait... 
+thread 3: here, 0
+thread 3: here, 1
+thread 3: wait... 
+thread 2: here, 0
+thread 2: here, 1
+thread 2: wait... 
+thread 0: here, 0
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 0: here, 0
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 2: here, 0
+thread 2: here, 1
+thread 2: wait... 
+thread 3: here, 0
+thread 3: here, 1
+thread 3: wait... 
+thread 0: wait... 
+thread 1: here, 0
+thread 1: here, 1
+thread 1: wait... 
+thread 1: here, 0
+thread 1: here, 1
+thread 1: wait... 
+thread 2: here, 0
+thread 2: here, 1
+thread 2: wait... 
+thread 3: here, 0
+thread 3: here, 1
+thread 3: wait... 
+thread 0: here, 0
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 0: here, 0
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 1: here, 0
+thread 1: here, 1
+thread 1: wait... 
+thread 3: here, 0
+thread 3: here, 1
+thread 3: wait... 
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 2: here, 0
+thread 2: here, 1
+thread 2: wait... 
+thread 2: here, 0
+thread 2: here, 1
+thread 2: wait... 
+thread 0: here, 0
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 1: here, 0
+thread 1: here, 1
+thread 1: wait... 
+thread 3: here, 0
+thread 3: here, 1
+thread 3: wait... 
+thread 3: here, 0
+thread 3: here, 1
+thread 3: wait... 
+thread 1: here, 0
+thread 1: here, 1
+thread 1: wait... 
+thread 2: here, 0
+thread 2: here, 1
+thread 2: wait... 
+thread 0: here, 0
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 0: here, 0
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 1: here, 0
+thread 1: here, 1
+thread 1: wait... 
+thread 2: here, 0
+thread 2: here, 1
+thread 2: wait... 
+thread 3: here, 0
+thread 3: here, 1
+thread 3: wait... 
+thread 3: here, 0
+thread 3: here, 1
+thread 3: wait... 
+thread 2: here, 0
+thread 2: here, 1
+thread 2: wait... 
+thread 0: here, 0
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 1: here, 0
+thread 1: here, 1
+thread 1: wait... 
+thread 1: here, 0
+thread 1: here, 1
+thread 1: wait... 
+thread 0: here, 0
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 2: here, 0
+thread 2: here, 1
+thread 2: wait... 
+thread 3: here, 0
+thread 3: here, 1
+thread 3: wait... 
+thread 3: here, 0
+thread 3: here, 1
+thread 3: wait... 
+thread 2: here, 0
+thread 2: here, 1
+thread 2: wait... 
+thread 1: here, 0
+thread 1: here, 1
+thread 1: wait... 
+thread 0: here, 0
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 0: here, 0
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 3: here, 0
+thread 3: here, 1
+thread 3: wait... 
+thread 1: here, 0
+thread 1: here, 1
+thread 1: wait... 
+thread 2: here, 0
+thread 2: here, 1
+thread 2: wait... 
+thread 2: here, 0
+thread 2: here, 1
+thread 2: wait... 
+thread 1: here, 0
+thread 1: here, 1
+thread 1: wait... 
+thread 0: here, 0
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 3: here, 0
+thread 3: here, 1
+thread 3: wait... 
+thread 3: here, 0
+thread 3: here, 1
+thread 3: wait... 
+thread 0: here, 0
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 1: here, 0
+thread 1: here, 1
+thread 1: wait... 
+thread 2: here, 0
+thread 2: here, 1
+thread 2: wait... 
+thread 2: here, 0
+thread 1: here, 0
+thread 1: here, 1
+thread 1: wait... 
+thread 3: here, 0
+thread 3: here, 1
+thread 3: wait... 
+thread 0: here, 0
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 2: here, 1
+thread 2: wait... 
+thread 2: here, 0
+thread 2: here, 1
+thread 2: wait... 
+thread 0: here, 0
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 3: here, 0
+thread 3: here, 1
+thread 3: wait... 
+thread 1: here, 0
+thread 1: here, 1
+thread 1: wait... 
+thread 1: here, 0
+thread 1: here, 1
+thread 1: wait... 
+thread 3: here, 0
+thread 3: here, 1
+thread 3: wait... 
+thread 0: here, 0
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 2: here, 0
+thread 2: here, 1
+thread 2: wait... 
+thread 2: here, 0
+thread 2: here, 1
+thread 2: wait... 
+thread 0: here, 0
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 3: here, 0
+thread 3: here, 1
+thread 3: wait... 
+thread 1: here, 0
+thread 1: here, 1
+thread 1: wait... 
+thread 1: here, 0
+thread 3: here, 0
+thread 3: here, 1
+thread 3: wait... 
+thread 2: here, 0
+thread 2: here, 1
+thread 2: wait... 
+thread 0: here, 0
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 1: here, 1
+thread 1: wait... 
+thread 1: here, 0
+thread 1: here, 1
+thread 1: wait... 
+thread 0: here, 0
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 2: here, 0
+thread 2: here, 1
+thread 2: wait... 
+thread 3: here, 0
+thread 3: here, 1
+thread 3: wait... 
+thread 3: here, 0
+thread 2: here, 0
+thread 2: here, 1
+thread 2: wait... 
+thread 1: here, 0
+thread 1: here, 1
+thread 1: wait... 
+thread 0: here, 0
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 3: here, 1
+thread 3: wait... 
+thread 3: here, 0
+thread 3: here, 1
+thread 3: wait... 
+thread 0: here, 0
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 1: here, 0
+thread 1: here, 1
+thread 1: wait... 
+thread 2: here, 0
+thread 2: here, 1
+thread 2: wait... 
+thread 2: here, 0
+thread 2: here, 1
+thread 2: wait... 
+thread 1: here, 0
+thread 1: here, 1
+thread 1: wait... 
+thread 3: here, 0
+thread 3: here, 1
+thread 3: wait... 
+thread 0: here, 0
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 0: here, 0
+thread 3: here, 0
+thread 3: here, 1
+thread 3: wait... 
+thread 1: here, 0
+thread 1: here, 1
+thread 1: wait... 
+thread 2: here, 0
+thread 2: here, 1
+thread 2: wait... 
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 0: here, 0
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 1: here, 0
+thread 1: here, 1
+thread 1: wait... 
+thread 2: here, 0
+thread 2: here, 1
+thread 2: wait... 
+thread 3: here, 0
+thread 3: here, 1
+thread 3: wait... 
+thread 3: here, 0
+thread 3: here, 1
+thread 3: wait... 
+thread 0: here, 0
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 1: here, 0
+thread 1: here, 1
+thread 1: wait... 
+thread 2: here, 0
+thread 2: here, 1
+thread 2: wait... 
+thread 2: here, 0
+thread 2: here, 1
+thread 2: wait... 
+thread 1: here, 0
+thread 1: here, 1
+thread 1: wait... 
+thread 3: here, 0
+thread 3: here, 1
+thread 3: wait... 
+thread 0: here, 0
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 0: here, 0
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 1: here, 0
+thread 1: here, 1
+thread 1: wait... 
+thread 3: here, 0
+thread 3: here, 1
+thread 3: wait... 
+thread 2: here, 0
+thread 2: here, 1
+thread 2: wait... 
+thread 2: here, 0
+thread 3: here, 0
+thread 3: here, 1
+thread 3: wait... 
+thread 0: here, 0
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 2: here, 1
+thread 2: wait... 
+thread 1: here, 0
+thread 1: here, 1
+thread 1: wait... 
+thread 1: here, 0
+thread 1: here, 1
+thread 1: wait... 
+thread 0: here, 0
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 2: here, 0
+thread 2: here, 1
+thread 2: wait... 
+thread 3: here, 0
+thread 3: here, 1
+thread 3: wait... 
+thread 3: here, 0
+thread 3: here, 1
+thread 3: wait... 
+thread 2: here, 0
+thread 2: here, 1
+thread 2: wait... 
+thread 1: here, 0
+thread 1: here, 1
+thread 1: wait... 
+thread 0: here, 0
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 0: here, 0
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 1: here, 0
+thread 1: here, 1
+thread 1: wait... 
+thread 3: here, 0
+thread 3: here, 1
+thread 3: wait... 
+thread 2: here, 0
+thread 2: here, 1
+thread 2: wait... 
+thread 2: here, 0
+thread 3: here, 0
+thread 3: here, 1
+thread 3: wait... 
+thread 0: here, 0
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 1: here, 0
+thread 1: here, 1
+thread 1: wait... 
+thread 2: here, 1
+thread 2: wait... 
+thread 2: here, 0
+thread 0: here, 0
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 2: here, 1
+thread 2: wait... 
+thread 1: here, 0
+thread 1: here, 1
+thread 1: wait... 
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 3: here, 0
+thread 3: here, 1
+thread 3: wait... 
+thread 3: here, 0
+thread 3: here, 1
+thread 3: wait... 
+thread 2: here, 0
+thread 2: here, 1
+thread 2: wait... 
+thread 1: here, 0
+thread 1: here, 1
+thread 1: wait... 
+thread 0: here, 0
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 0: here, 0
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 2: here, 0
+thread 2: here, 1
+thread 2: wait... 
+thread 3: here, 0
+thread 3: here, 1
+thread 3: wait... 
+thread 1: here, 0
+thread 1: here, 1
+thread 1: wait... 
+thread 1: here, 0
+thread 1: here, 1
+thread 1: wait... 
+thread 3: here, 0
+thread 3: here, 1
+thread 3: wait... 
+thread 2: here, 0
+thread 2: here, 1
+thread 2: wait... 
+thread 0: here, 0
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 0: here, 0
+thread 2: here, 0
+thread 2: here, 1
+thread 2: wait... 
+thread 3: here, 0
+thread 3: here, 1
+thread 3: wait... 
+thread 1: here, 0
+thread 1: here, 1
+thread 1: wait... 
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 0: here, 0
+thread 1: here, 0
+thread 1: here, 1
+thread 1: wait... 
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 3: here, 0
+thread 3: here, 1
+thread 3: wait... 
+thread 2: here, 0
+thread 2: here, 1
+thread 2: wait... 
+thread 2: here, 0
+thread 3: here, 0
+thread 2: here, 1
+thread 2: wait... 
+thread 0: here, 0
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 3: here, 1
+thread 3: wait... 
+thread 1: here, 0
+thread 1: here, 1
+thread 1: wait... 
+thread 1: here, 0
+thread 0: here, 0
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 2: here, 0
+thread 2: here, 1
+thread 2: wait... 
+thread 1: here, 1
+thread 1: wait... 
+thread 0: here, 3 
+thread 0: wait... 
+thread 3: here, 0
+thread 3: here, 1
+thread 3: wait... 
+thread 3: here, 0
+thread 3: here, 1
+thread 3: wait... 
+thread 0: here, 0
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 1: here, 0
+thread 1: here, 1
+thread 1: wait... 
+thread 2: here, 0
+thread 2: here, 1
+thread 2: wait... 
+thread 2: here, 0
+thread 2: here, 1
+thread 2: wait... 
+thread 0: here, 0
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 1: here, 0
+thread 1: here, 1
+thread 1: wait... 
+thread 3: here, 0
+thread 3: here, 1
+thread 3: wait... 
+thread 3: here, 0
+thread 1: here, 0
+thread 1: here, 1
+thread 1: wait... 
+thread 2: here, 0
+thread 2: here, 1
+thread 2: wait... 
+thread 0: here, 0
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 3: here, 1
+thread 3: wait... 
+thread 3: here, 0
+thread 0: here, 0
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 3: here, 1
+thread 3: wait... 
+thread 1: here, 0
+thread 1: here, 1
+thread 1: wait... 
+thread 2: here, 0
+thread 2: here, 1
+thread 2: wait... 
+thread 2: here, 0
+thread 1: here, 0
+thread 0: here, 0
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 3: here, 0
+thread 3: here, 1
+thread 3: wait... 
+thread 2: here, 1
+thread 2: wait... 
+thread 1: here, 1
+thread 1: wait... 
+thread 1: here, 0
+thread 2: here, 0
+thread 2: here, 1
+thread 2: wait... 
+thread 3: here, 0
+thread 3: here, 1
+thread 3: wait... 
+thread 0: here, 0
+thread 0: here, 1
+thread 1: here, 1
+thread 1: wait... 
+thread 0: here, start MPI send/recv
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 0: here, 0
+thread 2: here, 0
+thread 2: here, 1
+thread 2: wait... 
+thread 3: here, 0
+thread 3: here, 1
+thread 3: wait... 
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 1: here, 0
+thread 1: here, 1
+thread 1: wait... 
+thread 1: here, 0
+thread 3: here, 0
+thread 3: here, 1
+thread 3: wait... 
+thread 0: here, 0
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 1: here, 1
+thread 1: wait... 
+thread 2: here, 0
+thread 2: here, 1
+thread 2: wait... 
+thread 2: here, 0
+thread 0: here, 0
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 3: here, 0
+thread 3: here, 1
+thread 3: wait... 
+thread 2: here, 1
+thread 2: wait... 
+thread 1: here, 0
+thread 1: here, 1
+thread 1: wait... 
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 0: here, 0
+thread 1: here, 0
+thread 1: here, 1
+thread 1: wait... 
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 3: here, 0
+thread 3: here, 1
+thread 3: wait... 
+thread 2: here, 0
+thread 2: here, 1
+thread 2: wait... 
+thread 2: here, 0
+thread 0: here, 0
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 3: here, 0
+thread 3: here, 1
+thread 3: wait... 
+thread 2: here, 1
+thread 2: wait... 
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 1: here, 0
+thread 1: here, 1
+thread 1: wait... 
+thread 1: here, 0
+thread 0: here, 0
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 2: here, 0
+thread 2: here, 1
+thread 2: wait... 
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 1: here, 1
+thread 1: wait... 
+thread 0: here, 3 
+thread 0: wait... 
+thread 3: here, 0
+thread 3: here, 1
+thread 3: wait... 
+thread 3: here, 0
+thread 0: here, 0
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 3: here, 1
+thread 3: wait... 
+thread 2: here, 0
+thread 2: here, 1
+thread 2: wait... 
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 1: here, 0
+thread 1: here, 1
+thread 1: wait... 
+thread 1: here, 0
+thread 0: here, 0
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 2: here, 0
+thread 2: here, 1
+thread 2: wait... 
+thread 1: here, 1
+thread 1: wait... 
+thread 0: here, 3 
+thread 0: wait... 
+thread 3: here, 0
+thread 3: here, 1
+thread 3: wait... 
+thread 3: here, 0
+thread 0: here, 0
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 3: here, 1
+thread 3: wait... 
+thread 1: here, 0
+thread 1: here, 1
+thread 1: wait... 
+thread 2: here, 0
+thread 2: here, 1
+thread 2: wait... 
+thread 2: here, 0
+thread 3: here, 0
+thread 3: here, 1
+thread 3: wait... 
+thread 0: here, 0
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 1: here, 0
+thread 1: here, 1
+thread 1: wait... 
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 2: here, 1
+thread 2: wait... 
+thread 2: here, 0
+thread 0: here, 0
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 2: here, 1
+thread 2: wait... 
+thread 1: here, 0
+thread 1: here, 1
+thread 1: wait... 
+thread 3: here, 0
+thread 3: here, 1
+thread 3: wait... 
+thread 3: here, 0
+thread 3: here, 1
+thread 3: wait... 
+thread 1: here, 0
+thread 1: here, 1
+thread 1: wait... 
+thread 0: here, 0
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 2: here, 0
+thread 2: here, 1
+thread 2: wait... 
+thread 2: here, 0
+thread 2: here, 1
+thread 2: wait... 
+thread 3: here, 0
+thread 3: here, 1
+thread 3: wait... 
+thread 1: here, 0
+thread 1: here, 1
+thread 1: wait... 
+thread 0: here, 0
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 0: here, 0
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 0: here, 0 
+thread 1: here, 0
+thread 1: here, 1
+thread 1: wait... 
+thread 3: here, 0
+thread 3: here, 1
+thread 3: wait... 
+thread 2: here, 0
+thread 2: here, 1
+thread 2: wait... 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 0: here, 0
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 1: here, 0
+thread 1: here, 1
+thread 1: wait... 
+thread 3: here, 0
+thread 3: here, 1
+thread 3: wait... 
+thread 2: here, 0
+thread 2: here, 1
+thread 2: wait... 
+thread 2: here, 0
+thread 0: here, 0
+thread 1: here, 0
+thread 1: here, 1
+thread 1: wait... 
+thread 2: here, 1
+thread 2: wait... 
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 3: here, 0
+thread 3: here, 1
+thread 3: wait... 
+thread 3: here, 0
+thread 3: here, 1
+thread 3: wait... 
+thread 2: here, 0
+thread 2: here, 1
+thread 2: wait... 
+thread 1: here, 0
+thread 1: here, 1
+thread 1: wait... 
+thread 0: here, 0
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 0: here, 0
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 3: here, 0
+thread 3: here, 1
+thread 3: wait... 
+thread 1: here, 0
+thread 1: here, 1
+thread 1: wait... 
+thread 2: here, 0
+thread 2: here, 1
+thread 2: wait... 
+thread 2: here, 0
+thread 2: here, 1
+thread 2: wait... 
+thread 1: here, 0
+thread 1: here, 1
+thread 1: wait... 
+thread 0: here, 0
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 3: here, 0
+thread 3: here, 1
+thread 3: wait... 
+thread 3: here, 0
+thread 3: here, 1
+thread 1: here, 0
+thread 1: here, 1
+thread 1: wait... 
+thread 0: here, 0
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 3: wait... 
+thread 2: here, 0
+thread 2: here, 1
+thread 2: wait... 
+thread 2: here, 0
+thread 3: here, 0
+thread 3: here, 1
+thread 3: wait... 
+thread 1: here, 0
+thread 1: here, 1
+thread 1: wait... 
+thread 2: here, 1
+thread 2: wait... 
+thread 0: here, 0
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 0: here, 0
+thread 2: here, 0
+thread 2: here, 1
+thread 2: wait... 
+thread 3: here, 0
+thread 3: here, 1
+thread 3: wait... 
+thread 1: here, 0
+thread 1: here, 1
+thread 1: wait... 
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 0: here, 0
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 3: here, 0
+thread 3: here, 1
+thread 3: wait... 
+thread 2: here, 0
+thread 2: here, 1
+thread 2: wait... 
+thread 1: here, 0
+thread 1: here, 1
+thread 1: wait... 
+thread 1: here, 0
+thread 3: here, 0
+thread 3: here, 1
+thread 3: wait... 
+thread 0: here, 0
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 2: here, 0
+thread 2: here, 1
+thread 2: wait... 
+thread 1: here, 1
+thread 1: wait... 
+thread 1: here, 0
+thread 2: here, 0
+thread 2: here, 1
+thread 2: wait... 
+thread 3: here, 0
+thread 3: here, 1
+thread 3: wait... 
+thread 0: here, 0
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 1: here, 1
+thread 1: wait... 
+thread 0: here, 3 
+thread 0: wait... 
+thread 0: here, 0
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 1: here, 0
+thread 1: here, 1
+thread 1: wait... 
+thread 3: here, 0
+thread 3: here, 1
+thread 3: wait... 
+thread 2: here, 0
+thread 2: here, 1
+thread 2: wait... 
+thread 2: here, 0
+thread 1: here, 0
+thread 1: here, 1
+thread 1: wait... 
+thread 0: here, 0
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 3: here, 0
+thread 3: here, 1
+thread 3: wait... 
+thread 2: here, 1
+thread 2: wait... 
+thread 2: here, 0
+thread 3: here, 0
+thread 3: here, 1
+thread 3: wait... 
+thread 1: here, 0
+thread 1: here, 1
+thread 1: wait... 
+thread 0: here, 0
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 2: here, 1
+thread 2: wait... 
+thread 2: here, 0
+thread 2: here, 1
+thread 2: wait... 
+thread 3: here, 0
+thread 3: here, 1
+thread 3: wait... 
+thread 1: here, 0
+thread 1: here, 1
+thread 1: wait... 
+thread 0: here, 0
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 0: here, 0
+thread 2: here, 0
+thread 2: here, 1
+thread 2: wait... 
+thread 3: here, 0
+thread 3: here, 1
+thread 3: wait... 
+thread 1: here, 0
+thread 1: here, 1
+thread 1: wait... 
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 0: here, 0
+thread 1: here, 0
+thread 1: here, 1
+thread 1: wait... 
+thread 2: here, 0
+thread 2: here, 1
+thread 2: wait... 
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 3: here, 0
+thread 3: here, 1
+thread 3: wait... 
+thread 3: here, 0
+thread 3: here, 1
+thread 3: wait... 
+thread 0: here, 0
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 2: here, 0
+thread 2: here, 1
+thread 2: wait... 
+thread 1: here, 0
+thread 1: here, 1
+thread 1: wait... 
+thread 1: here, 0
+thread 1: here, 1
+thread 1: wait... 
+thread 0: here, 0
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 3: here, 0
+thread 3: here, 1
+thread 3: wait... 
+thread 2: here, 0
+thread 2: here, 1
+thread 2: wait... 
+thread 2: here, 0
+thread 3: here, 0
+thread 3: here, 1
+thread 3: wait... 
+thread 1: here, 0
+thread 1: here, 1
+thread 1: wait... 
+thread 2: here, 1
+thread 2: wait... 
+thread 0: here, 0
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 0: here, 0
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 1: here, 0
+thread 1: here, 1
+thread 1: wait... 
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 3: here, 0
+thread 3: here, 1
+thread 3: wait... 
+thread 2: here, 0
+thread 2: here, 1
+thread 2: wait... 
+thread 2: here, 0
+thread 3: here, 0
+thread 3: here, 1
+thread 3: wait... 
+thread 1: here, 0
+thread 1: here, 1
+thread 1: wait... 
+thread 2: here, 1
+thread 2: wait... 
+thread 0: here, 0
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 0: here, 0
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 2: here, 0
+thread 2: here, 1
+thread 2: wait... 
+thread 1: here, 0
+thread 1: here, 1
+thread 1: wait... 
+thread 3: here, 0
+thread 3: here, 1
+thread 3: wait... 
+thread 3: here, 0
+thread 2: here, 0
+thread 2: here, 1
+thread 2: wait... 
+thread 0: here, 0
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 3: here, 1
+thread 3: wait... 
+thread 1: here, 0
+thread 1: here, 1
+thread 1: wait... 
+thread 1: here, 0
+thread 0: here, 0
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 2: here, 0
+thread 2: here, 1
+thread 2: wait... 
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 1: here, 1
+thread 1: wait... 
+thread 3: here, 0
+thread 3: here, 1
+thread 3: wait... 
+thread 3: here, 0
+thread 1: here, 0
+thread 1: here, 1
+thread 1: wait... 
+thread 2: here, 0
+thread 2: here, 1
+thread 2: wait... 
+thread 3: here, 1
+thread 3: wait... 
+thread 0: here, 0
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 0: here, 0
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 1: here, 0
+thread 1: here, 1
+thread 1: wait... 
+thread 3: here, 0
+thread 3: here, 1
+thread 3: wait... 
+thread 2: here, 0
+thread 2: here, 1
+thread 2: wait... 
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 0: here, 0
+thread 3: here, 0
+thread 3: here, 1
+thread 3: wait... 
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 1: here, 0
+thread 1: here, 1
+thread 1: wait... 
+thread 2: here, 0
+thread 2: here, 1
+thread 2: wait... 
+thread 2: here, 0
+thread 2: here, 1
+thread 2: wait... 
+thread 1: here, 0
+thread 1: here, 1
+thread 1: wait... 
+thread 3: here, 0
+thread 3: here, 1
+thread 3: wait... 
+thread 0: here, 0
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 0: here, 0
+thread 3: here, 0
+thread 3: here, 1
+thread 3: wait... 
+thread 2: here, 0
+thread 2: here, 1
+thread 2: wait... 
+thread 1: here, 0
+thread 1: here, 1
+thread 1: wait... 
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 0: here, 0
+thread 1: here, 0
+thread 1: here, 1
+thread 1: wait... 
+thread 3: here, 0
+thread 3: here, 1
+thread 3: wait... 
+thread 2: here, 0
+thread 2: here, 1
+thread 2: wait... 
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 0: here, 0
+thread 2: here, 0
+thread 2: here, 1
+thread 2: wait... 
+thread 3: here, 0
+thread 3: here, 1
+thread 3: wait... 
+thread 1: here, 0
+thread 1: here, 1
+thread 1: wait... 
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 0: here, 0
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 2: here, 0
+thread 2: here, 1
+thread 2: wait... 
+thread 1: here, 0
+thread 1: here, 1
+thread 1: wait... 
+thread 3: here, 0
+thread 3: here, 1
+thread 3: wait... 
+thread 3: here, 0
+thread 0: here, 0
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 2: here, 0
+thread 2: here, 1
+thread 2: wait... 
+thread 3: here, 1
+thread 3: wait... 
+thread 1: here, 0
+thread 1: here, 1
+thread 1: wait... 
+thread 1: here, 0
+thread 3: here, 0
+thread 3: here, 1
+thread 3: wait... 
+thread 0: here, 0
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 1: here, 1
+thread 1: wait... 
+thread 2: here, 0
+thread 2: here, 1
+thread 2: wait... 
+thread 2: here, 0
+thread 2: here, 1
+thread 2: wait... 
+thread 3: here, 0
+thread 3: here, 1
+thread 3: wait... 
+thread 0: here, 0
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 1: here, 0
+thread 1: here, 1
+thread 1: wait... 
+thread 1: here, 0
+thread 1: here, 1
+thread 1: wait... 
+thread 0: here, 0
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 2: here, 0
+thread 2: here, 1
+thread 2: wait... 
+thread 3: here, 0
+thread 3: here, 1
+thread 3: wait... 
+thread 3: here, 0
+thread 3: here, 1
+thread 3: wait... 
+thread 2: here, 0
+thread 2: here, 1
+thread 2: wait... 
+thread 0: here, 0
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 1: here, 0
+thread 1: here, 1
+thread 1: wait... 
+thread 1: here, 0
+thread 1: here, 1
+thread 1: wait... 
+thread 3: here, 0
+thread 3: here, 1
+thread 3: wait... 
+thread 0: here, 0
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 2: here, 0
+thread 2: here, 1
+thread 2: wait... 
+thread 2: here, 0
+thread 0: here, 0
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 1: here, 0
+thread 1: here, 1
+thread 1: wait... 
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 3: here, 0
+thread 3: here, 1
+thread 3: wait... 
+thread 2: here, 1
+thread 2: wait... 
+thread 2: here, 0
+thread 2: here, 1
+thread 2: wait... 
+thread 0: here, 0
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 3: here, 0
+thread 3: here, 1
+thread 3: wait... 
+thread 1: here, 0
+thread 1: here, 1
+thread 1: wait... 
+thread 1: here, 0
+thread 1: here, 1
+thread 1: wait... 
+thread 0: here, 0
+thread 2: here, 0
+thread 2: here, 1
+thread 2: wait... 
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 3: here, 0
+thread 3: here, 1
+thread 3: wait... 
+thread 3: here, 0
+thread 3: here, 1
+thread 3: wait... 
+thread 0: here, 0
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 2: here, 0
+thread 2: here, 1
+thread 2: wait... 
+thread 1: here, 0
+thread 1: here, 1
+thread 1: wait... 
+thread 1: here, 0
+thread 1: here, 1
+thread 1: wait... 
+thread 3: here, 0
+thread 3: here, 1
+thread 3: wait... 
+thread 0: here, 0
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 2: here, 0
+thread 2: here, 1
+thread 2: wait... 
+thread 2: here, 0
+thread 2: here, 1
+thread 2: wait... 
+thread 0: here, 0
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 0: here, 0 
+thread 0: here, 1 
+thread 3: here, 0
+thread 3: here, 1
+thread 3: wait... 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 1: here, 0
+thread 1: here, 1
+thread 1: wait... 
+thread 1: here, 0
+thread 1: here, 1
+thread 1: wait... 
+thread 0: here, 0
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 0: here, 0 
+thread 2: here, 0
+thread 2: here, 1
+thread 2: wait... 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 3: here, 0
+thread 3: here, 1
+thread 3: wait... 
+thread 3: here, 0
+thread 0: here, 0
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 2: here, 0
+thread 2: here, 1
+thread 2: wait... 
+thread 3: here, 1
+thread 3: wait... 
+thread 1: here, 0
+thread 1: here, 1
+thread 1: wait... 
+thread 1: here, 0
+thread 3: here, 0
+thread 3: here, 1
+thread 3: wait... 
+thread 0: here, 0
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 2: here, 0
+thread 2: here, 1
+thread 2: wait... 
+thread 1: here, 1
+thread 1: wait... 
+thread 1: here, 0
+thread 2: here, 0
+thread 2: here, 1
+thread 2: wait... 
+thread 3: here, 0
+thread 3: here, 1
+thread 3: wait... 
+thread 0: here, 0
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 1: here, 1
+thread 1: wait... 
+thread 1: here, 0
+thread 1: here, 1
+thread 1: wait... 
+thread 2: here, 0
+thread 2: here, 1
+thread 2: wait... 
+thread 3: here, 0
+thread 3: here, 1
+thread 3: wait... 
+thread 0: here, 0
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 0: here, 0
+thread 3: here, 0
+thread 3: here, 1
+thread 3: wait... 
+thread 1: here, 0
+thread 1: here, 1
+thread 1: wait... 
+thread 2: here, 0
+thread 2: here, 1
+thread 2: wait... 
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 0: here, 0
+thread 2: here, 0
+thread 2: here, 1
+thread 2: wait... 
+thread 3: here, 0
+thread 3: here, 1
+thread 3: wait... 
+thread 1: here, 0
+thread 1: here, 1
+thread 1: wait... 
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 0: here, 0
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 3: here, 0
+thread 3: here, 1
+thread 3: wait... 
+thread 2: here, 0
+thread 2: here, 1
+thread 2: wait... 
+thread 1: here, 0
+thread 1: here, 1
+thread 1: wait... 
+thread 1: here, 0
+thread 2: here, 0
+thread 2: here, 1
+thread 2: wait... 
+thread 0: here, 0
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 1: here, 1
+thread 1: wait... 
+thread 3: here, 0
+thread 3: here, 1
+thread 3: wait... 
+thread 3: here, 0
+thread 3: here, 1
+thread 3: wait... 
+thread 0: here, 0
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 2: here, 0
+thread 2: here, 1
+thread 2: wait... 
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 1: here, 0
+thread 1: here, 1
+thread 1: wait... 
+thread 1: here, 0
+thread 1: here, 1
+thread 1: wait... 
+thread 0: here, 0
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 2: here, 0
+thread 2: here, 1
+thread 2: wait... 
+thread 3: here, 0
+thread 3: here, 1
+thread 3: wait... 
+thread 3: here, 0
+thread 3: here, 1
+thread 0: here, 0
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 1: here, 0
+thread 1: here, 1
+thread 1: wait... 
+thread 3: wait... 
+thread 2: here, 0
+thread 2: here, 1
+thread 2: wait... 
+thread 2: here, 0
+thread 3: here, 0
+thread 0: here, 0
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 3: here, 1
+thread 3: wait... 
+thread 2: here, 1
+thread 2: wait... 
+thread 1: here, 0
+thread 1: here, 1
+thread 1: wait... 
+thread 1: here, 0
+thread 2: here, 0
+thread 2: here, 1
+thread 2: wait... 
+thread 0: here, 0
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 1: here, 1
+thread 1: wait... 
+thread 3: here, 0
+thread 3: here, 1
+thread 3: wait... 
+thread 3: here, 0
+thread 3: here, 1
+thread 3: wait... 
+thread 1: here, 0
+thread 2: here, 0
+thread 2: here, 1
+thread 2: wait... 
+thread 1: here, 1
+thread 1: wait... 
+thread 0: here, 0
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 0: here, 0
+thread 2: here, 0
+thread 2: here, 1
+thread 2: wait... 
+thread 1: here, 0
+thread 1: here, 1
+thread 1: wait... 
+thread 3: here, 0
+thread 3: here, 1
+thread 3: wait... 
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 0: here, 0
+thread 3: here, 0
+thread 3: here, 1
+thread 3: wait... 
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 2: here, 0
+thread 2: here, 1
+thread 2: wait... 
+thread 1: here, 0
+thread 1: here, 1
+thread 1: wait... 
+thread 1: here, 0
+thread 1: here, 1
+thread 1: wait... 
+thread 0: here, 0
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 3: here, 0
+thread 3: here, 1
+thread 3: wait... 
+thread 2: here, 0
+thread 2: here, 1
+thread 2: wait... 
+thread 2: here, 0
+thread 2: here, 1
+thread 2: wait... 
+thread 3: here, 0
+thread 3: here, 1
+thread 3: wait... 
+thread 1: here, 0
+thread 1: here, 1
+thread 1: wait... 
+thread 0: here, 0
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 0: here, 0
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 0: here, 0 
+thread 0: here, 1 
+thread 2: here, 0
+thread 2: here, 1
+thread 2: wait... 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 3: here, 0
+thread 3: here, 1
+thread 3: wait... 
+thread 1: here, 0
+thread 1: here, 1
+thread 1: wait... 
+thread 1: here, 0
+thread 1: here, 1
+thread 1: wait... 
+thread 0: here, 0
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 0: here, 0 
+thread 0: here, 1 
+thread 2: here, 0
+thread 2: here, 1
+thread 2: wait... 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 3: here, 0
+thread 3: here, 1
+thread 3: wait... 
+thread 3: here, 0
+thread 3: here, 1
+thread 3: wait... 
+thread 1: here, 0
+thread 1: here, 1
+thread 1: wait... 
+thread 2: here, 0
+thread 2: here, 1
+thread 2: wait... 
+thread 0: here, 0
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 0: here, 0
+thread 2: here, 0
+thread 2: here, 1
+thread 2: wait... 
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 1: here, 0
+thread 1: here, 1
+thread 1: wait... 
+thread 3: here, 0
+thread 3: here, 1
+thread 3: wait... 
+thread 3: here, 0
+thread 1: here, 0
+thread 1: here, 1
+thread 1: wait... 
+thread 2: here, 0
+thread 2: here, 1
+thread 2: wait... 
+thread 3: here, 1
+thread 3: wait... 
+thread 0: here, 0
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 0: here, 0
+thread 3: here, 0
+thread 3: here, 1
+thread 3: wait... 
+thread 2: here, 0
+thread 2: here, 1
+thread 2: wait... 
+thread 1: here, 0
+thread 1: here, 1
+thread 1: wait... 
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 0: here, 0
+thread 2: here, 0
+thread 2: here, 1
+thread 2: wait... 
+thread 3: here, 0
+thread 3: here, 1
+thread 3: wait... 
+thread 1: here, 0
+thread 1: here, 1
+thread 1: wait... 
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 0: here, 0
+thread 1: here, 0
+thread 1: here, 1
+thread 1: wait... 
+thread 2: here, 0
+thread 2: here, 1
+thread 2: wait... 
+thread 3: here, 0
+thread 3: here, 1
+thread 3: wait... 
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 0: here, 0
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 3: here, 0
+thread 3: here, 1
+thread 3: wait... 
+thread 1: here, 0
+thread 1: here, 1
+thread 1: wait... 
+thread 2: here, 0
+thread 2: here, 1
+thread 2: wait... 
+thread 2: here, 0
+thread 1: here, 0
+thread 1: here, 1
+thread 1: wait... 
+thread 0: here, 0
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 3: here, 0
+thread 3: here, 1
+thread 3: wait... 
+thread 0: wait... 
+thread 2: here, 1
+thread 2: wait... 
+thread 2: here, 0
+thread 0: here, 0
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 2: here, 1
+thread 2: wait... 
+thread 1: here, 0
+thread 1: here, 1
+thread 1: wait... 
+thread 3: here, 0
+thread 3: here, 1
+thread 3: wait... 
+thread 3: here, 0
+thread 2: here, 0
+thread 3: here, 1
+thread 3: wait... 
+thread 2: here, 1
+thread 2: wait... 
+thread 0: here, 0
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 1: here, 0
+thread 1: here, 1
+thread 1: wait... 
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 0: here, 0
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 1: here, 0
+thread 1: here, 1
+thread 1: wait... 
+thread 3: here, 0
+thread 3: here, 1
+thread 3: wait... 
+thread 2: here, 0
+thread 2: here, 1
+thread 2: wait... 
+thread 2: here, 0
+thread 1: here, 0
+thread 1: here, 1
+thread 1: wait... 
+thread 0: here, 0
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 3: here, 0
+thread 3: here, 1
+thread 3: wait... 
+thread 2: here, 1
+thread 2: wait... 
+thread 2: here, 0
+thread 3: here, 0
+thread 3: here, 1
+thread 3: wait... 
+thread 1: here, 0
+thread 1: here, 1
+thread 1: wait... 
+thread 2: here, 1
+thread 2: wait... 
+thread 0: here, 0
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 0: here, 0
+thread 3: here, 0
+thread 3: here, 1
+thread 3: wait... 
+thread 1: here, 0
+thread 1: here, 1
+thread 1: wait... 
+thread 2: here, 0
+thread 2: here, 1
+thread 2: wait... 
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 0: here, 0
+thread 2: here, 0
+thread 2: here, 1
+thread 2: wait... 
+thread 3: here, 0
+thread 3: here, 1
+thread 3: wait... 
+thread 1: here, 0
+thread 1: here, 1
+thread 1: wait... 
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 0: here, 0
+thread 3: here, 0
+thread 3: here, 1
+thread 3: wait... 
+thread 2: here, 0
+thread 2: here, 1
+thread 2: wait... 
+thread 1: here, 0
+thread 1: here, 1
+thread 1: wait... 
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 0: here, 0
+thread 1: here, 0
+thread 1: here, 1
+thread 1: wait... 
+thread 3: here, 0
+thread 3: here, 1
+thread 3: wait... 
+thread 2: here, 0
+thread 2: here, 1
+thread 2: wait... 
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 0: here, 0
+thread 1: here, 0
+thread 1: here, 1
+thread 1: wait... 
+thread 3: here, 0
+thread 3: here, 1
+thread 3: wait... 
+thread 2: here, 0
+thread 2: here, 1
+thread 2: wait... 
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 0: here, 0
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 3: here, 0
+thread 3: here, 1
+thread 3: wait... 
+thread 2: here, 0
+thread 2: here, 1
+thread 2: wait... 
+thread 1: here, 0
+thread 1: here, 1
+thread 1: wait... 
+thread 1: here, 0
+thread 1: here, 1
+thread 1: wait... 
+thread 2: here, 0
+thread 2: here, 1
+thread 2: wait... 
+thread 0: here, 0
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 3: here, 0
+thread 3: here, 1
+thread 3: wait... 
+thread 3: here, 0
+thread 3: here, 1
+thread 3: wait... 
+thread 0: here, 0
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 2: here, 0
+thread 2: here, 1
+thread 2: wait... 
+thread 1: here, 0
+thread 1: here, 1
+thread 1: wait... 
+thread 1: here, 0
+thread 1: here, 1
+thread 1: wait... 
+thread 2: here, 0
+thread 2: here, 1
+thread 2: wait... 
+thread 3: here, 0
+thread 3: here, 1
+thread 3: wait... 
+thread 0: here, 0
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 0: here, 0
+thread 3: here, 0
+thread 3: here, 1
+thread 3: wait... 
+thread 1: here, 0
+thread 1: here, 1
+thread 1: wait... 
+thread 2: here, 0
+thread 2: here, 1
+thread 2: wait... 
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 0: here, 0
+thread 2: here, 0
+thread 2: here, 1
+thread 2: wait... 
+thread 3: here, 0
+thread 3: here, 1
+thread 3: wait... 
+thread 1: here, 0
+thread 1: here, 1
+thread 1: wait... 
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 0: here, 0
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 2: here, 0
+thread 2: here, 1
+thread 2: wait... 
+thread 1: here, 0
+thread 1: here, 1
+thread 1: wait... 
+thread 3: here, 0
+thread 3: here, 1
+thread 3: wait... 
+thread 3: here, 0
+thread 3: here, 1
+thread 3: wait... 
+thread 0: here, 0
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 1: here, 0
+thread 1: here, 1
+thread 1: wait... 
+thread 2: here, 0
+thread 2: here, 1
+thread 2: wait... 
+thread 2: here, 0
+thread 2: here, 1
+thread 2: wait... 
+thread 3: here, 0
+thread 3: here, 1
+thread 3: wait... 
+thread 0: here, 0
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 1: here, 0
+thread 1: here, 1
+thread 1: wait... 
+thread 1: here, 0
+thread 0: here, 0
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 3: here, 0
+thread 3: here, 1
+thread 3: wait... 
+thread 2: here, 0
+thread 2: here, 1
+thread 2: wait... 
+thread 1: here, 1
+thread 1: wait... 
+thread 1: here, 0
+thread 1: here, 1
+thread 1: wait... 
+thread 2: here, 0
+thread 2: here, 1
+thread 2: wait... 
+thread 0: here, 0
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 3: here, 0
+thread 3: here, 1
+thread 3: wait... 
+thread 0: here, 3 
+thread 0: wait... 
+thread 0: here, 0
+thread 3: here, 0
+thread 3: here, 1
+thread 3: wait... 
+thread 1: here, 0
+thread 1: here, 1
+thread 1: wait... 
+thread 2: here, 0
+thread 2: here, 1
+thread 2: wait... 
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 0: here, 0
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 2: here, 0
+thread 2: here, 1
+thread 2: wait... 
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 1: here, 0
+thread 1: here, 1
+thread 1: wait... 
+thread 3: here, 0
+thread 3: here, 1
+thread 3: wait... 
+thread 0: here, 3 
+thread 0: wait... 
+thread 0: here, 0
+thread 2: here, 0
+thread 2: here, 1
+thread 2: wait... 
+thread 1: here, 0
+thread 1: here, 1
+thread 1: wait... 
+thread 3: here, 0
+thread 3: here, 1
+thread 3: wait... 
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 0: here, 0
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 3: here, 0
+thread 3: here, 1
+thread 3: wait... 
+thread 1: here, 0
+thread 1: here, 1
+thread 1: wait... 
+thread 2: here, 0
+thread 2: here, 1
+thread 2: wait... 
+thread 2: here, 0
+thread 2: here, 1
+thread 2: wait... 
+thread 1: here, 0
+thread 1: here, 1
+thread 1: wait... 
+thread 0: here, 0
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 0: here, 0 
+thread 0: here, 1 
+thread 3: here, 0
+thread 3: here, 1
+thread 3: wait... 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 0: here, 0
+thread 3: here, 0
+thread 3: here, 1
+thread 3: wait... 
+thread 1: here, 0
+thread 1: here, 1
+thread 1: wait... 
+thread 2: here, 0
+thread 2: here, 1
+thread 2: wait... 
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 0: here, 0
+thread 2: here, 0
+thread 2: here, 1
+thread 2: wait... 
+thread 3: here, 0
+thread 3: here, 1
+thread 3: wait... 
+thread 1: here, 0
+thread 1: here, 1
+thread 1: wait... 
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 0: here, 0
+thread 1: here, 0
+thread 2: here, 0
+thread 2: here, 1
+thread 2: wait... 
+thread 3: here, 0
+thread 3: here, 1
+thread 3: wait... 
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 1: here, 1
+thread 1: wait... 
+thread 1: here, 0
+thread 0: here, 0
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 0: here, 0 
+thread 0: here, 1 
+thread 3: here, 0
+thread 3: here, 1
+thread 3: wait... 
+thread 1: here, 1
+thread 1: wait... 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 2: here, 0
+thread 2: here, 1
+thread 2: wait... 
+thread 2: here, 0
+thread 2: here, 1
+thread 2: wait... 
+thread 1: here, 0
+thread 1: here, 1
+thread 1: wait... 
+thread 3: here, 0
+thread 3: here, 1
+thread 3: wait... 
+thread 0: here, 0
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 0: here, 0
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 3: here, 0
+thread 3: here, 1
+thread 3: wait... 
+thread 2: here, 0
+thread 2: here, 1
+thread 2: wait... 
+thread 1: here, 0
+thread 1: here, 1
+thread 1: wait... 
+thread 1: here, 0
+thread 1: here, 1
+thread 1: wait... 
+thread 0: here, 0
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 2: here, 0
+thread 2: here, 1
+thread 2: wait... 
+thread 3: here, 0
+thread 3: here, 1
+thread 3: wait... 
+thread 3: here, 0
+thread 3: here, 1
+thread 3: wait... 
+thread 2: here, 0
+thread 2: here, 1
+thread 2: wait... 
+thread 1: here, 0
+thread 1: here, 1
+thread 1: wait... 
+thread 0: here, 0
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 0: here, 0
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 3: here, 0
+thread 3: here, 1
+thread 3: wait... 
+thread 1: here, 0
+thread 1: here, 1
+thread 1: wait... 
+thread 2: here, 0
+thread 2: here, 1
+thread 2: wait... 
+thread 2: here, 0
+thread 2: here, 1
+thread 2: wait... 
+thread 1: here, 0
+thread 1: here, 1
+thread 1: wait... 
+thread 0: here, 0
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 3: here, 0
+thread 3: here, 1
+thread 3: wait... 
+thread 3: here, 0
+thread 3: here, 1
+thread 3: wait... 
+thread 2: here, 0
+thread 2: here, 1
+thread 2: wait... 
+thread 0: here, 0
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 1: here, 0
+thread 1: here, 1
+thread 1: wait... 
+thread 1: here, 0
+thread 1: here, 1
+thread 1: wait... 
+thread 2: here, 0
+thread 2: here, 1
+thread 2: wait... 
+thread 3: here, 0
+thread 3: here, 1
+thread 3: wait... 
+thread 0: here, 0
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 0: here, 0
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 1: here, 0
+thread 1: here, 1
+thread 1: wait... 
+thread 2: here, 0
+thread 2: here, 1
+thread 2: wait... 
+thread 3: here, 0
+thread 3: here, 1
+thread 3: wait... 
+thread 3: here, 0
+thread 3: here, 1
+thread 3: wait... 
+thread 2: here, 0
+thread 2: here, 1
+thread 2: wait... 
+thread 0: here, 0
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 1: here, 0
+thread 1: here, 1
+thread 1: wait... 
+thread 1: here, 0
+thread 1: here, 1
+thread 1: wait... 
+thread 3: here, 0
+thread 3: here, 1
+thread 3: wait... 
+thread 2: here, 0
+thread 2: here, 1
+thread 2: wait... 
+thread 0: here, 0
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 0: here, 0
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 3: here, 0
+thread 3: here, 1
+thread 3: wait... 
+thread 2: here, 0
+thread 2: here, 1
+thread 2: wait... 
+thread 1: here, 0
+thread 1: here, 1
+thread 1: wait... 
+thread 1: here, 0
+thread 1: here, 1
+thread 1: wait... 
+thread 2: here, 0
+thread 2: here, 1
+thread 2: wait... 
+thread 0: here, 0
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 3: here, 0
+thread 3: here, 1
+thread 3: wait... 
+thread 3: here, 0
+thread 3: here, 1
+thread 3: wait... 
+thread 2: here, 0
+thread 2: here, 1
+thread 2: wait... 
+thread 1: here, 0
+thread 1: here, 1
+thread 1: wait... 
+thread 0: here, 0
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 0: here, 0
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 3: here, 0
+thread 3: here, 1
+thread 3: wait... 
+thread 1: here, 0
+thread 1: here, 1
+thread 1: wait... 
+thread 2: here, 0
+thread 2: here, 1
+thread 2: wait... 
+thread 2: here, 0
+thread 2: here, 1
+thread 2: wait... 
+thread 1: here, 0
+thread 1: here, 1
+thread 1: wait... 
+thread 0: here, 0
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 3: here, 0
+thread 3: here, 1
+thread 3: wait... 
+thread 3: here, 0
+thread 3: here, 1
+thread 3: wait... 
+thread 0: here, 0
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 1: here, 0
+thread 1: here, 1
+thread 1: wait... 
+thread 2: here, 0
+thread 2: here, 1
+thread 2: wait... 
+thread 2: here, 0
+thread 2: here, 1
+thread 2: wait... 
+thread 1: here, 0
+thread 1: here, 1
+thread 1: wait... 
+thread 3: here, 0
+thread 3: here, 1
+thread 3: wait... 
+thread 0: here, 0
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 0: here, 0
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 2: here, 0
+thread 2: here, 1
+thread 2: wait... 
+thread 3: here, 0
+thread 3: here, 1
+thread 3: wait... 
+thread 1: here, 0
+thread 1: here, 1
+thread 1: wait... 
+thread 1: here, 0
+thread 1: here, 1
+thread 1: wait... 
+thread 3: here, 0
+thread 3: here, 1
+thread 3: wait... 
+thread 0: here, 0
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 2: here, 0
+thread 2: here, 1
+thread 2: wait... 
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 0: here, 0
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 3: here, 0
+thread 3: here, 1
+thread 3: wait... 
+thread 2: here, 0
+thread 2: here, 1
+thread 2: wait... 
+thread 1: here, 0
+thread 1: here, 1
+thread 1: wait... 
+thread 1: here, 0
+thread 1: here, 1
+thread 1: wait... 
+thread 2: here, 0
+thread 2: here, 1
+thread 2: wait... 
+thread 0: here, 0
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 3: here, 0
+thread 3: here, 1
+thread 3: wait... 
+thread 3: here, 0
+thread 3: here, 1
+thread 3: wait... 
+thread 0: here, 0
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 1: here, 0
+thread 1: here, 1
+thread 1: wait... 
+thread 2: here, 0
+thread 2: here, 1
+thread 2: wait... 
+thread 2: here, 0
+thread 2: here, 1
+thread 2: wait... 
+thread 1: here, 0
+thread 1: here, 1
+thread 1: wait... 
+thread 3: here, 0
+thread 3: here, 1
+thread 3: wait... 
+thread 0: here, 0
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 0: here, 0
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 1: here, 0
+thread 1: here, 1
+thread 1: wait... 
+thread 3: here, 0
+thread 3: here, 1
+thread 3: wait... 
+thread 2: here, 0
+thread 2: here, 1
+thread 2: wait... 
+thread 2: here, 0
+thread 2: here, 1
+thread 2: wait... 
+thread 1: here, 0
+thread 1: here, 1
+thread 1: wait... 
+thread 0: here, 0
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 3: here, 0
+thread 3: here, 1
+thread 3: wait... 
+thread 3: here, 0
+thread 3: here, 1
+thread 3: wait... 
+thread 2: here, 0
+thread 2: here, 1
+thread 2: wait... 
+thread 1: here, 0
+thread 1: here, 1
+thread 1: wait... 
+thread 0: here, 0
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 0: here, 0
+thread 1: here, 0
+thread 1: here, 1
+thread 1: wait... 
+thread 3: here, 0
+thread 3: here, 1
+thread 3: wait... 
+thread 2: here, 0
+thread 2: here, 1
+thread 2: wait... 
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 0: here, 0
+thread 2: here, 0
+thread 2: here, 1
+thread 2: wait... 
+thread 1: here, 0
+thread 1: here, 1
+thread 1: wait... 
+thread 3: here, 0
+thread 3: here, 1
+thread 3: wait... 
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 0: here, 0
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 1: here, 0
+thread 1: here, 1
+thread 1: wait... 
+thread 2: here, 0
+thread 2: here, 1
+thread 2: wait... 
+thread 3: here, 0
+thread 3: here, 1
+thread 3: wait... 
+thread 3: here, 0
+thread 3: here, 1
+thread 3: wait... 
+thread 1: here, 0
+thread 1: here, 1
+thread 1: wait... 
+thread 0: here, 0
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 2: here, 0
+thread 2: here, 1
+thread 2: wait... 
+thread 2: here, 0
+thread 2: here, 1
+thread 2: wait... 
+thread 1: here, 0
+thread 1: here, 1
+thread 1: wait... 
+thread 0: here, 0
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 3: here, 0
+thread 3: here, 1
+thread 3: wait... 
+thread 3: here, 0
+thread 3: here, 1
+thread 3: wait... 
+thread 0: here, 0
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 1: here, 0
+thread 1: here, 1
+thread 1: wait... 
+thread 2: here, 0
+thread 2: here, 1
+thread 2: wait... 
+thread 2: here, 0
+thread 2: here, 1
+thread 2: wait... 
+thread 1: here, 0
+thread 1: here, 1
+thread 1: wait... 
+thread 0: here, 0
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 3: here, 0
+thread 3: here, 1
+thread 3: wait... 
+thread 3: here, 0
+thread 3: here, 1
+thread 3: wait... 
+thread 1: here, 0
+thread 1: here, 1
+thread 1: wait... 
+thread 2: here, 0
+thread 2: here, 1
+thread 2: wait... 
+thread 0: here, 0
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 0: here, 0
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 1: here, 0
+thread 1: here, 1
+thread 1: wait... 
+thread 2: here, 0
+thread 2: here, 1
+thread 2: wait... 
+thread 3: here, 0
+thread 3: here, 1
+thread 3: wait... 
+thread 3: here, 0
+thread 3: here, 1
+thread 3: wait... 
+thread 2: here, 0
+thread 2: here, 1
+thread 2: wait... 
+thread 0: here, 0
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 1: here, 0
+thread 1: here, 1
+thread 1: wait... 
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 0: here, 0
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 1: here, 0
+thread 1: here, 1
+thread 1: wait... 
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 3: here, 0
+thread 3: here, 1
+thread 3: wait... 
+thread 2: here, 0
+thread 2: here, 1
+thread 2: wait... 
+thread 2: here, 0
+thread 2: here, 1
+thread 2: wait... 
+thread 3: here, 0
+thread 3: here, 1
+thread 3: wait... 
+thread 1: here, 0
+thread 1: here, 1
+thread 1: wait... 
+thread 0: here, 0
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 0: here, 0
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 3: here, 0
+thread 3: here, 1
+thread 3: wait... 
+thread 1: here, 0
+thread 1: here, 1
+thread 1: wait... 
+thread 2: here, 0
+thread 2: here, 1
+thread 2: wait... 
+thread 2: here, 0
+thread 2: here, 1
+thread 2: wait... 
+thread 1: here, 0
+thread 1: here, 1
+thread 1: wait... 
+thread 3: here, 0
+thread 3: here, 1
+thread 3: wait... 
+thread 0: here, 0
+thread 0: here, 1
+thread 0: here, start MPI send/recv
+thread 0: here, 0 
+thread 0: here, 1 
+thread 0: here, 2 
+thread 0: here, 3 
+thread 0: wait... 
+thread 0: here, 0
+thread 0: here, 1
+thread 3: here, 0
+thread 3: here, 1
+thread 2: here, 0
+thread 2: here, 1
+thread 1: here, 0
+thread 1: here, 1
+time: 0, 
+ alive: 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 

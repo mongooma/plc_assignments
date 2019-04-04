@@ -3,10 +3,6 @@
 /*   mam6@rpi.edu            **(*****************************************/
 /***************************************************************************/
 
-/***************************************************************************/
-/* Includes ****************************************************************/
-/***************************************************************************/
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -18,6 +14,8 @@
 #include <mpi.h>
 #include <pthread.h>
 #include <unistd.h>
+
+
 // #define BGQ 1 // when running BG/Q, comment out when testing on mastiff
 
 #ifdef BGQ
@@ -33,35 +31,14 @@
 #define ALIVE 1
 #define DEAD  0
 
-/***************************************************************************/
-/* Global Vars *************************************************************/
-/***************************************************************************/
-
 double g_time_in_secs = 0;
 double g_processor_frequency = 1600000000.0; // processing speed for BG/Q
 unsigned long long g_start_cycles=0;
 unsigned long long g_end_cycles=0;
 
-typedef struct update_args
-{
-    int ticks;
-    int thread_no;
-    int no_of_threads;
-    int rows;
-    int * sub_universe; 
-    int * ALIVE_cells;
-}update_arg;
-
-// You define these
-
-int N = 1024;
-int thread_n  = 64;
+int N = 4;
+int thread_n  = 4;
 int ticks = 256;
-
-MPI_Request request_send_1;
-MPI_Request request_send_2;
-MPI_Request request_recv_1;
-MPI_Request request_recv_2;
 
 #ifdef DEBUG
 int hanging_tids = 0; //DEBUG
@@ -73,18 +50,28 @@ pthread_mutex_t lock_universeUpdate = PTHREAD_MUTEX_INITIALIZER;
 pthread_mutex_t lock_DEBUG = PTHREAD_MUTEX_INITIALIZER;
 #endif
 
-/***************************************************************************/
-/* Function Decs ***********************************************************/
-/***************************************************************************/
+pthread_barrier_t barrier; 
+pthread_barrier_t barrier_1; 
+// pthread_barrierattr_t attr;
+
+MPI_Request request_send_1;
+MPI_Request request_send_2;
+MPI_Request request_recv_1;
+MPI_Request request_recv_2;
+
+typedef struct update_args
+{
+    int ticks;
+    int thread_no;
+    int no_of_threads;
+    int rows;
+    int * sub_universe; 
+    int * ALIVE_cells;
+}update_arg;
+
 
 void * update( void * args_ );
 
-// You define these
-
-
-/***************************************************************************/
-/* Function: Main **********************************************************/
-/***************************************************************************/
 
 int main(int argc, char *argv[])
 {
@@ -159,6 +146,9 @@ int main(int argc, char *argv[])
 
 // Create Pthreads here.
     pthread_t tid[thread_n];
+    pthread_barrier_init(&barrier, NULL, thread_n);
+    pthread_barrier_init(&barrier_1, NULL, thread_n);
+
     int * ALIVE_cells = calloc(ticks, sizeof(int)); /* modified by threads */
     int * ALIVE_cells_sum = calloc(ticks, sizeof(int));
 
@@ -190,12 +180,14 @@ int main(int argc, char *argv[])
         
         pthread_create(&tid[i], NULL, update, (void *)&args_[i]);
 
-
-        pthread_join(tid[i], (void *)&tmp);
         /* int pthread_create(pthread_t *thread, const pthread_attr_t *attr,
                           void *(*start_routine) (void *), void *arg); 
             arg is passed as the sole argument for start_rountine;
                           */
+    }
+
+    for(int i = 0; i < thread_n; i ++){
+        pthread_join(tid[i], (void *)&tmp);
     }
 
     
@@ -250,6 +242,7 @@ int main(int argc, char *argv[])
 /***************************************************************************/
 
 
+
 void * update( void * args_ ){
 
     /* within thread 
@@ -284,7 +277,17 @@ void * update( void * args_ ){
     int living_nbrs;
     int state;
 
-    /* notice each thread execute their time ticks - local time*/
+    /* notice thread using global time ticks*/
+
+    /* 
+        2. The expected heatmap for the 0% threshold is a completely dead universe except for maybe 
+        a few cells alive at the right edge of the universe. If you don't see this, they you have some 
+        sort of bug or other algorithm difference in your implementation. This happens because of the use 
+        of a single copy universe which results in the initial 100% ALIVE universe turns to completely DEAD 
+        after the first turn and never recovers due to the GOL rules.*/
+
+    pthread_barrier_wait(&barrier_1);
+
     for( int t = 0; t < ticks; t++) { 
         alives = 0;
 
@@ -372,34 +375,36 @@ void * update( void * args_ ){
 
             // MPI_Wait(&request_recv_2, MPI_STATUS_IGNORE); // Wait block until request succeed, `request` deallocated
 
+            MPI_Wait(&request_send_1, MPI_STATUS_IGNORE); // Wait block until request succeed, `request` deallocated
+                #ifdef DEBUG
+                printf("thread %d: here, 0 \n", thread_no); // not reached
+                #endif
+                        
+            MPI_Wait(&request_send_2, MPI_STATUS_IGNORE); // Wait block until request succeed, `request` deallocated
+                #ifdef DEBUG
+                printf("thread %d: here, 1 \n", thread_no); // reached
+                #endif
+            
+            MPI_Wait(&request_recv_1, MPI_STATUS_IGNORE); // Wait block until request succeed, `request` deallocated
+                #ifdef DEBUG
+                printf("thread %d: here, 2 \n", thread_no); // reached
+                #endif
+            
+            MPI_Wait(&request_recv_2, MPI_STATUS_IGNORE); // Wait block until request succeed, `request` deallocated
+                #ifdef DEBUG
+                printf("thread %d: here, 3 \n", thread_no); // reached
+                #endif
 
             // #ifdef DEBUG
             // printf("thread %d: here, 3 \n", thread_no); // reached
             // #endif
         }
 
-        MPI_Wait(&request_send_1, MPI_STATUS_IGNORE); // Wait block until request succeed, `request` deallocated
-            #ifdef DEBUG
-            printf("thread %d: here, 0 \n", thread_no); // not reached
-            #endif
-                    
-        MPI_Wait(&request_send_2, MPI_STATUS_IGNORE); // Wait block until request succeed, `request` deallocated
-            #ifdef DEBUG
-            printf("thread %d: here, 1 \n", thread_no); // reached
-            #endif
-        
-        MPI_Wait(&request_recv_1, MPI_STATUS_IGNORE); // Wait block until request succeed, `request` deallocated
-            #ifdef DEBUG
-            printf("thread %d: here, 2 \n", thread_no); // reached
-            #endif
-        
-        MPI_Wait(&request_recv_2, MPI_STATUS_IGNORE); // Wait block until request succeed, `request` deallocated
-            #ifdef DEBUG
-            printf("thread %d: here, 3 \n", thread_no); // reached
-            #endif
-
-
-        MPI_Barrier(MPI_COMM_WORLD); // notice: at the rank level synchronization
+        #ifdef DEBUG
+        printf("thread %d: wait... \n", thread_no);
+        #endif
+        pthread_barrier_wait(&barrier); // thread level synchronization // todo: stuck here
+        MPI_Barrier(MPI_COMM_WORLD); // rank level synchronization
 
         // #ifdef DEBUG
         // printf("rank %d: finished initialization. \n", mpi_myrank);
@@ -450,7 +455,7 @@ void * update( void * args_ ){
             long double rand_clcg = GenVal(global_row);
             double rand_rand = (double)rand() / (double)RAND_MAX; // [0, 1aq]
 
-            if(rand_clcg > 0.25){
+            if(rand_clcg > 0.25){ //
                 
                 if(living_nbrs < 2){
                     return DEAD;
@@ -615,5 +620,4 @@ void * update( void * args_ ){
     return tmp;
 
 }
-
 
